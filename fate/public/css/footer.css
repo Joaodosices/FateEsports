@@ -1,0 +1,138 @@
+*{
+    font-family:"Mukta";
+}
+
+footer{
+ 
+    
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height:545px;
+        background-color:#2A2828;
+        color: white;
+        text-align: center;
+        margin-top:00px;
+
+
+}
+
+div#logofooter{
+    margin-left:300px;
+    float:left;
+    margin-top:80px;
+}
+
+div#redessociaisfooter{
+    float:left;
+    margin-top:280px;
+    margin-left:-210px;
+}
+
+img#discord,img#facebook,img#reddit,img#instagram,img#youtube,img#linkedin,img#twitch,img#twitter{
+    margin-right:20px;
+    margin-bottom:20px;
+}
+
+div#fateesportsfooter{
+
+    float:left;
+    margin-left:140px;
+    margin-top:60px;
+    text-align:left;
+}
+
+footer h3{
+    font-weight:900;
+    color:#D50101;
+    font-size:30px;
+}
+
+footer p{
+    font-size:25px;
+    margin-top:-10px;
+    font-weight:900;
+}
+
+div#equipasfooter{
+    margin-top:60px;
+    text-align:left;
+    float:left;
+    margin-left:140px;
+}
+
+footer h4{
+    font-weight:900;
+    font-size:30px;
+    margin-top:88px;
+    margin-right:80px;
+    margin-bottom:0px;
+}
+
+footer h4:before{
+    color:red;
+    content: "S";
+}
+
+input#emailnewsletter{
+    background-color:#353535;
+    border:#BD0202 1px solid;
+    width:385px;
+    height:50px;
+    margin-top:-50px;
+  margin-right:-20px;
+}
+
+::placeholder { 
+    color: white;
+    font-size:25px; 
+    font-weight:900;
+
+  }
+
+  div#newsletterfooter button{
+      width:87px;
+      height:58px;
+      font-size:25px;
+      background-color:#BD0202;
+      color:white;
+      font-weight:900;
+  }
+
+  div#newsletterfooter{
+      float:right;
+      margin-right:190px;
+  }
+
+  footer h5{
+    font-weight:900;
+    font-size:30px;
+  margin-top:40px;
+
+}
+
+footer h5:before{
+    color:red;
+    content: "M";
+}
+
+div#metodosdepagamentofooter{
+    margin-right:370px;
+    margin-top:10px;
+    float:right;
+}
+
+img#ApplePay,img#GooglePay,img#Mastercard,img#Maestro,img#PayPal,img#Visa{
+   margin-right:20px;
+    margin-bottom:20px;
+}
+
+div#imagenspagamentofooter{
+    margin-top:-30px;
+    margin-right:0px;
+}
+
+.copyrightfooter{
+    margin-top:490px;
+    font-size:20px;
+}
