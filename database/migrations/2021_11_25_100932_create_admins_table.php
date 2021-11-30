@@ -20,8 +20,8 @@ class CreateAdminsTable extends Migration
             $table->string('facebook');
             $table->string('instagram');
             $table->string('twitter');
-            $table->unsignedBigInteger('id_user_admins'); 
-            $table->foreign('id_user_admins')->references('id')->on('users');
+            $table->unsignedBigInteger('id_user'); 
+            $table->foreign('id_user')->references('id')->on('users');
             $table->timestamps();
         });
     }

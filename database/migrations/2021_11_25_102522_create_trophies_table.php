@@ -19,8 +19,8 @@ class CreateTrophiesTable extends Migration
             $table->date('date');
             $table->integer('position');
             $table->string('linktournament',255);
-            $table->unsignedBigInteger('id_game_trophies'); 
-            $table->foreign('id_game_trophies')->references('id')->on('games');
+            $table->unsignedBigInteger('id_game'); 
+            $table->foreign('id_game')->references('id')->on('games');
             $table->timestamps();
         });
     }

@@ -19,8 +19,8 @@ class CreatePlayersTable extends Migration
             $table->string('img');
             $table->unsignedBigInteger('id_game'); 
             $table->foreign('id_game')->references('id')->on('games');
-            $table->unsignedBigInteger('id_user_games'); 
-            $table->foreign('id_user_games')->references('id')->on('users');
+            $table->unsignedBigInteger('id_user')->nullable(); 
+            $table->foreign('id_user')->references('id')->on('users');
             $table->timestamps();
         });
     }

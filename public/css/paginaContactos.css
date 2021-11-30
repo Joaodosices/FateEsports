@@ -42,7 +42,7 @@ form{
     padding-top: 8%;
     padding-bottom: 15px;
 }
-form input{
+.areaNome{
     width: 228px;
     height: 41px;
     background-color: var(--brancoGelo);

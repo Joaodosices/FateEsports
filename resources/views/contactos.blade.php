@@ -48,7 +48,7 @@
                             </div>
                         </div>
                         <label for="">EMAIL:</label> <br />
-                        <input type="email" name="email" class="inputForm" />
+                        <input type="email" name="email" class="areaNome inputForm" />
                         <br />
                         <label for="">ESCOLHA UM TÓPICO:</label><br />
                         <select name="topic" class="inputForm">

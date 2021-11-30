@@ -17,8 +17,8 @@ class CreateImagesgamesTable extends Migration
             $table->id();
             $table->text('description',1000);
             $table->string('img');
-            $table->unsignedBigInteger('id_game_images'); 
-            $table->foreign('id_game_images')->references('id')->on('games');
+            $table->unsignedBigInteger('id_game'); 
+            $table->foreign('id_game')->references('id')->on('games');
             $table->timestamps();
         });
     }
