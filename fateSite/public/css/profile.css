@@ -1,0 +1,137 @@
+  
+  html {
+      font-family: Mukta, Vaani, sans-serif;
+      font-weight: bold;
+  
+  }
+
+  h1 {
+      margin-top: 100px;
+      font-size: 50px;
+  }
+
+  .container h3 {
+      position: relative;
+      left: 600px;
+      bottom: 260px;
+  }
+
+   .container {
+    max-width: 75%;
+    margin: 0 auto;
+    margin-top: 70px;
+    margin-left: 20px;
+  }
+
+  .container li {
+    display: list-item;
+    width: 390px;
+
+  }
+
+  .container ul li a {
+    padding: 15px;
+  }
+
+
+  .container ul {
+    height: 350px;
+    font-size: 29px;
+    margin-top: 100px;
+  }
+
+  .container ul li a {
+    display: flex;
+    align-items: center;
+    position: relative;
+    border: 1px solid black;
+    text-decoration: none;
+    color: inherit;
+  }
+
+ .container .active {
+   color: #bd0202;
+   border-left: 5px solid #bd0202;
+ }
+
+ form label {
+   font-size: 15pt;
+ } 
+  
+ #primeiro_nome {
+   position: relative;
+   left: 600px;
+   bottom: 363px;
+ }
+
+ #ultimo_nome {
+  position: relative;
+  left: 970px;
+  bottom: 429px;
+}
+
+#email1 {
+  position: relative; /* criar class no email e input */
+  left: 600px;
+  bottom: 400px;
+}
+
+#email2 {
+  position: relative; /* criar class no email e input */
+  left: 600px;
+  bottom: 400px;
+}
+
+form input[type=text] {
+  width: 320px;
+  height: 25px;
+}
+
+form input[type=email] {
+  width: 692px;
+  height: 25px;
+}
+
+.submitbtn {
+  color: #fff;
+  background-color: #bd0202;
+  border: 1px solid #bd0202;
+  font-size: 18px;
+  font-weight: 700;
+  min-width: 216px;
+  padding: 13px 30px;
+  transition: 0.3s;
+
+  position: relative;
+  bottom: 360px;
+  left: 600px;
+}
+
+.submitbtn:hover {
+  color: #bd0202;
+  background-color: #fff;
+border: 1px solid #bd0202;
+
+}
+
+.submitbtn2 {
+  color: #fff;
+  background-color: #bd0202;
+  border: 1px solid #bd0202;
+  font-size: 18px;
+  font-weight: 700;
+  min-width: 216px;
+  padding: 13px 30px;
+  transition: 0.3s;
+
+  position: relative;
+  bottom: 240px;
+  left: 600px;
+}
+
+.submitbtn2:hover {
+  color: #bd0202;
+  background-color: #fff;
+border: 1px solid #bd0202;
+
+}
