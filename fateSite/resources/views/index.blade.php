@@ -46,13 +46,13 @@
             
                 <div class="ondeEstamos--texto">
                     <div class="textColumn1 caixaOndeEstamos">
-                    <h1>Onde <span>Estamos?</span></h1>
-                    <p>A Fate Esports conta com equipas em ínumeros jogos, todos com o objetivo de ganhar e doar!</p>
-                    <br>
-                    <p>Alguns jogos onde a Fate participa:</p>
+                        <h1>Onde <span>Estamos?</span></h1>
+                        <p>A Fate Esports conta com equipas em ínumeros jogos, todos com o objetivo de ganhar e doar!</p>
+                        <br>
+                        <p>Alguns jogos onde a Fate participa:</p>
+                    </div>
                 </div>
-                </div>
-            
+
             <div class="ondeEstamos--jogos">
                 <div class="imgJogo">
                     <img src="img/homePage/jogos/apexLegendsLogo.png" alt="Logotipo do jogo Apex Legends">
@@ -71,6 +71,19 @@
                 </div>
             </div>
         </section>
+        @if (Auth::check())
+            <div class="painelAdmin">
+                <h1 class="tituloPainel">Painel Admin</h1>
+                <div class="painelAdmin--conteudo">
+                    <div class="conteudo--imgs">
+                        <h1>asj</h1>
+                    </div>
+                    <div class="conteudo--adicionarImg">
+                        <h1>sad</h1>
+                    </div>
+                </div>
+            </div>
+        @endif
         <section class="ajudaAjudarArea" id="mover">
             <div class="textColumn">
             <h1>Ajuda-nos a <span>ajudar!</span></h1>

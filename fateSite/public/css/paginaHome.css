@@ -279,3 +279,26 @@ button, input, a{
         grid-template-columns: repeat(auto-fit, 150px);
     }
 }
+
+/* ---------- */
+/* ADMIN SIDE */
+/* ---------- */
+
+.painelAdmin{
+    width: 75%;
+    margin: 0 auto;
+    background-color: var(--secundaryColor);
+}
+.tituloPainel{
+    text-align: center;
+    color: var(--primaryColor);
+    margin: 0;
+    padding-top: 1.3rem;
+}
+.painelAdmin--conteudo{
+    display: flex;
+    flex-direction: row;
+}
+.conteudo--imgs, .conteudo--adicionarImg{
+    width: 50%;
+}
