@@ -79,7 +79,7 @@
                         <h1>asj</h1>
                     </div>
                     <div class="conteudo--adicionarImg">
-                        <h1>sad</h1>
+                        <h1>banana</h1>
                     </div>
                 </div>
             </div>
