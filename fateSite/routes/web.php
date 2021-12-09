@@ -24,11 +24,16 @@ Route::get('/parcerias', function () {
     return view('parcerias');
 })->name('gm.parcerias');
 
+//Rota para form CONTACTOS
 Route::get('/contactos', function () {
     return view('contactos');
 })->name('gm.contactos');
 
+//Rota para submeter form CONTACTOS
 Route::post('/contactos', [ContactController::class, 'store'])->name('contacts.store');
+
+//BACKOFFICE: Rota para CONTACTOS 
+Route::get('/admin/contactos', [ContactController::class, 'index'])->name('contacts.index');
 
 Route::get('/sobre', function () {
     return view('sobre');
