@@ -6,7 +6,7 @@
         <div class="header-conteudo">
             <nav>
                 <ul>
-                    <li> <a class="active" href="{{route('gm.index')}}">HOME</a> </li>
+                    <li> <a class="active" href="{{route('index.main')}}">HOME</a> </li>
             <li> <a href="#loja" class="left">LOJA</a> </li>
             <li> <a href="#equipas">EQUIPAS</a> </li>
             <li> <a href="{{route('gm.parcerias')}}">PARCERIAS</a> </li>

@@ -16,12 +16,15 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ImgHomePageController;
+use App\Http\Controllers\gameController;
 
+// Routes para a página index
 Route::get('/', function () {
     return view('index');
 })->name('gm.index');
+Route::get('/', [ImgHomePageController::class, 'index'])->name('index.main');
 Route::post('/', [ImgHomePageController::class, 'store'])->name('index.store');
-
+//--------------------
 
 
 Route::get('/parcerias', function () {

@@ -28,6 +28,6 @@ class HomeController extends Controller
     }
     function flush(Request $request){
         $request->session()->flush();
-        return redirect()->route('gm.index');
+        return redirect()->route('index.main');
     }
 }

@@ -91,10 +91,9 @@
                             @csrf
                             <label for="listaJogos" class="lblListaJogos">Selecionar jogo: </label>
                             <select name="id_game" id="listaJogos">
-                                <option value="1">Jogo 1</option>
-                                <option value="">Jogo 2</option>
-                                <option value="">Jogo 3</option>
-                                <option value="">Jogo 4</option>
+                                @foreach($games as $game)
+                                    <option value="{{ $game->id }}">{{ $game->name }}</option>
+                                @endforeach
                             </select> <br>
                             <input placeholder="Link Imgur com imagem..." type="text" class="inputImg" name="img"> <br>
                             <button type="submit" class="addImgJogoBtn">Adicionar</button>

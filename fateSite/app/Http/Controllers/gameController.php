@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Imagesgame;
 use App\Models\Game;
-use App\Http\Controllers\Controller;
+// use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ImgHomePageController extends Controller
+class gameController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +15,7 @@ class ImgHomePageController extends Controller
      */
     public function index()
     {
-        $games = Game::all();
-        return view('index', compact('games'));
+        //
     }
 
     /**
@@ -38,22 +36,16 @@ class ImgHomePageController extends Controller
      */
     public function store(Request $request)
     {
-        $Imagesgames = Imagesgame::create([
-            'description' => "Monocromatico",
-            'img' => $request->img,
-            'id_game_images' => $request->id_game
-        ]);
-
-        return redirect()->route('index.main')->withSuccess("Imagem submetida");
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\HomePageImg  $homePageImg
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(HomePageImg $homePageImg)
+    public function show(Game $game)
     {
         //
     }
@@ -61,10 +53,10 @@ class ImgHomePageController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\HomePageImg  $homePageImg
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(HomePageImg $homePageImg)
+    public function edit($id)
     {
         //
     }
@@ -73,10 +65,10 @@ class ImgHomePageController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\HomePageImg  $homePageImg
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, HomePageImg $homePageImg)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -84,10 +76,10 @@ class ImgHomePageController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\HomePageImg  $homePageImg
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(HomePageImg $homePageImg)
+    public function destroy($id)
     {
         //
     }
