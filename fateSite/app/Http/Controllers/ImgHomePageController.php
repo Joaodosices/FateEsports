@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\HomePageImg;
+use App\Models\Imagesgame;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -36,7 +36,13 @@ class ImgHomePageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $Imagesgames = Imagesgame::create([
+            'description' => "Monocromatico",
+            'img' => $request->img,
+            'id_game' => $request->id_game
+        ]);
+
+        return redirect()->route('gm.index')->withSuccess("Imagem submetida");
     }
 
     /**

@@ -87,15 +87,16 @@
                         </div>
                     </div>
                     <div class="conteudo--adicionarImg">
-                        <form action="" method="post">
+                        <form action="{{ route('index.store') }}" method="POST">
+                            @csrf
                             <label for="listaJogos" class="lblListaJogos">Selecionar jogo: </label>
-                            <select name="listaJogos" id="listaJogos">
-                                <option value="">Jogo 1</option>
+                            <select name="id_game" id="listaJogos">
+                                <option value="1">Jogo 1</option>
                                 <option value="">Jogo 2</option>
                                 <option value="">Jogo 3</option>
                                 <option value="">Jogo 4</option>
                             </select> <br>
-                            <input placeholder="Link Imgur com imagem..." type="text" class="inputImg"> <br>
+                            <input placeholder="Link Imgur com imagem..." type="text" class="inputImg" name="img"> <br>
                             <button type="submit" class="addImgJogoBtn">Adicionar</button>
                         </form>
                     </div>
