@@ -6,9 +6,6 @@
 
 @section('content')
     <div id="wrap">
-        <!-- HEADER -->
-        @yield("header")
-        <!-- HEADER -->
         <div class="textColumn">
             <section class="heroLanding">
                 <div class="heroLanding--texto">
@@ -66,7 +63,54 @@
                 <h1 class="tituloPainel">Painel Admin</h1>
                 <div class="painelAdmin--conteudo">
                     <div class="conteudo--imgs">
-                        <h1>asj</h1>
+                        <div class="conteudo--imgs__background">
+                            <div class="adminImgArea">
+                                <img src="https://unsplash.it/150/150" alt="">
+                                <a href="#" class="adminImgArea__sairArea"><img src="img\autenticacao\close.png" alt=""></a>
+                            </div>
+                            <div class="adminImgArea">
+                                <img src="https://unsplash.it/150/150" alt="">
+                                <a href="#" class="adminImgArea__sairArea"><img src="img\autenticacao\close.png" alt=""></a>
+                            </div>
+                            <div class="adminImgArea">
+                                <img src="https://unsplash.it/150/150" alt="">
+                                <a href="#" class="adminImgArea__sairArea"><img src="img\autenticacao\close.png" alt=""></a>
+                            </div>
+                            <div class="adminImgArea">
+                                <img src="https://unsplash.it/150/150" alt="">
+                                <a href="#" class="adminImgArea__sairArea"><img src="img\autenticacao\close.png" alt=""></a>
+                            </div>
+                            <div class="adminImgArea">
+                                <img src="https://unsplash.it/150/150" alt="">
+                                <a href="#" class="adminImgArea__sairArea"><img src="img\autenticacao\close.png" alt=""></a>
+                            </div>
+                            <div class="adminImgArea">
+                                <img src="https://unsplash.it/150/150" alt="">
+                                <a href="#" class="adminImgArea__sairArea"><img src="img\autenticacao\close.png" alt=""></a>
+                            </div><div class="adminImgArea">
+                                <img src="https://unsplash.it/150/150" alt="">
+                                <a href="#" class="adminImgArea__sairArea"><img src="img\autenticacao\close.png" alt=""></a>
+                            </div>
+                            <div class="adminImgArea">
+                                <img src="https://unsplash.it/150/150" alt="">
+                                <a href="#" class="adminImgArea__sairArea"><img src="img\autenticacao\close.png" alt=""></a>
+                            </div>
+                            <div class="adminImgArea">
+                                <img src="https://unsplash.it/150/150" alt="">
+                                <a href="#" class="adminImgArea__sairArea"><img src="img\autenticacao\close.png" alt=""></a>
+                            </div><div class="adminImgArea">
+                                <img src="https://unsplash.it/150/150" alt="">
+                                <a href="#" class="adminImgArea__sairArea"><img src="img\autenticacao\close.png" alt=""></a>
+                            </div>
+                            <div class="adminImgArea">
+                                <img src="https://unsplash.it/150/150" alt="">
+                                <a href="#" class="adminImgArea__sairArea"><img src="img\autenticacao\close.png" alt=""></a>
+                            </div>
+                            <div class="adminImgArea">
+                                <img src="https://unsplash.it/150/150" alt="">
+                                <a href="#" class="adminImgArea__sairArea"><img src="img\autenticacao\close.png" alt=""></a>
+                            </div>
+                        </div>
                     </div>
                     <div class="conteudo--adicionarImg">
                         <h1>banana</h1>
