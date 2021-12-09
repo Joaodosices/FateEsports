@@ -36,7 +36,7 @@
    </div>
 
    <div id="metodosdepagamentofooter">
-      <h5>Métodos de Pagamento</h5><br>
+      <h5>étodos de Pagamento</h5><br>
 
       <img id="ApplePay" src="img/footer/apay.png" alt="" width="70"> 
       <img id="GooglePay" src="img/footer/gpay.jpg.png" alt="" width="70">

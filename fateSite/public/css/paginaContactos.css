@@ -98,6 +98,7 @@ form select{
     border-radius: 3px;
     font-family: var(--fontePrincipal);
     font-weight: bold;
+    justify-content: center;
 }
 .inputForm{
     width: 86%;
