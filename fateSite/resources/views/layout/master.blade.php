@@ -8,8 +8,6 @@
 
     <title>Fate Esports</title>
     
-    
-    <link rel="stylesheet" href="{{ asset('css/paginaHome.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('css/normalize.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('css/header.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}" type="text/css">
@@ -34,6 +32,7 @@
     @include("layout.partials.autenticacao")
 
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/autenticacao.js') }}"></script>
     @yield('scripts')
 </body>
 

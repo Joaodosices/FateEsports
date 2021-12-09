@@ -62,4 +62,5 @@
 
 @section('scripts')
     <script src="{{ asset('js/autenticacao.js') }}"></script>
+
 @endsection
