@@ -5,7 +5,6 @@ const formRegister = document.getElementById("formRegister");
 document.getElementsByClassName("clickProfile")[0].onclick = function () { 
     if (authArea.style.display = "none") {
         authArea.style.display = "flex";
-        console.log("banana");
     }
 }
 document.getElementById("closeLogin").onclick = function () {
