@@ -59,61 +59,45 @@
             </div>
         </section>
         @if (Auth::check())
-            <div class="painelAdmin">
+            <div class="painelAdmin" id="Removido">
                 <h1 class="tituloPainel">Painel Admin</h1>
                 <div class="painelAdmin--conteudo">
                     <div class="conteudo--imgs">
                         <div class="conteudo--imgs__background">
                             <div class="adminImgArea">
                                 <img src="https://unsplash.it/150/150" alt="">
-                                <a href="#" class="adminImgArea__sairArea"><img src="img\autenticacao\close.png" alt=""></a>
+                                <a href="#Removido" class="adminImgArea__sairArea"><img src="img\autenticacao\close.png" alt=""></a>
                             </div>
                             <div class="adminImgArea">
                                 <img src="https://unsplash.it/150/150" alt="">
-                                <a href="#" class="adminImgArea__sairArea"><img src="img\autenticacao\close.png" alt=""></a>
+                                <a href="#Removido" class="adminImgArea__sairArea"><img src="img\autenticacao\close.png" alt=""></a>
                             </div>
                             <div class="adminImgArea">
                                 <img src="https://unsplash.it/150/150" alt="">
-                                <a href="#" class="adminImgArea__sairArea"><img src="img\autenticacao\close.png" alt=""></a>
+                                <a href="#Removido" class="adminImgArea__sairArea"><img src="img\autenticacao\close.png" alt=""></a>
                             </div>
                             <div class="adminImgArea">
                                 <img src="https://unsplash.it/150/150" alt="">
-                                <a href="#" class="adminImgArea__sairArea"><img src="img\autenticacao\close.png" alt=""></a>
+                                <a href="#Removido" class="adminImgArea__sairArea"><img src="img\autenticacao\close.png" alt=""></a>
                             </div>
                             <div class="adminImgArea">
                                 <img src="https://unsplash.it/150/150" alt="">
-                                <a href="#" class="adminImgArea__sairArea"><img src="img\autenticacao\close.png" alt=""></a>
-                            </div>
-                            <div class="adminImgArea">
-                                <img src="https://unsplash.it/150/150" alt="">
-                                <a href="#" class="adminImgArea__sairArea"><img src="img\autenticacao\close.png" alt=""></a>
-                            </div><div class="adminImgArea">
-                                <img src="https://unsplash.it/150/150" alt="">
-                                <a href="#" class="adminImgArea__sairArea"><img src="img\autenticacao\close.png" alt=""></a>
-                            </div>
-                            <div class="adminImgArea">
-                                <img src="https://unsplash.it/150/150" alt="">
-                                <a href="#" class="adminImgArea__sairArea"><img src="img\autenticacao\close.png" alt=""></a>
-                            </div>
-                            <div class="adminImgArea">
-                                <img src="https://unsplash.it/150/150" alt="">
-                                <a href="#" class="adminImgArea__sairArea"><img src="img\autenticacao\close.png" alt=""></a>
-                            </div><div class="adminImgArea">
-                                <img src="https://unsplash.it/150/150" alt="">
-                                <a href="#" class="adminImgArea__sairArea"><img src="img\autenticacao\close.png" alt=""></a>
-                            </div>
-                            <div class="adminImgArea">
-                                <img src="https://unsplash.it/150/150" alt="">
-                                <a href="#" class="adminImgArea__sairArea"><img src="img\autenticacao\close.png" alt=""></a>
-                            </div>
-                            <div class="adminImgArea">
-                                <img src="https://unsplash.it/150/150" alt="">
-                                <a href="#" class="adminImgArea__sairArea"><img src="img\autenticacao\close.png" alt=""></a>
+                                <a href="#Removido" class="adminImgArea__sairArea"><img src="img\autenticacao\close.png" alt=""></a>
                             </div>
                         </div>
                     </div>
                     <div class="conteudo--adicionarImg">
-                        <h1>banana</h1>
+                        <form action="" method="post">
+                            <label for="listaJogos" class="lblListaJogos">Selecionar jogo: </label>
+                            <select name="listaJogos" id="listaJogos">
+                                <option value="">Jogo 1</option>
+                                <option value="">Jogo 2</option>
+                                <option value="">Jogo 3</option>
+                                <option value="">Jogo 4</option>
+                            </select> <br>
+                            <input placeholder="Link Imgur com imagem..." type="text" class="inputImg"> <br>
+                            <button type="submit" class="addImgJogoBtn">Adicionar</button>
+                        </form>
                     </div>
                 </div>
             </div>
