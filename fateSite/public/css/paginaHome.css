@@ -322,23 +322,15 @@ button, input, a{
     align-content: center;
     border-radius: 50%;
     padding: 0;
-    top: 0;
-    right: 0;
+    top: 4px;
+    right: 4px;
     width: 40px;
     height: 40px;
     background: transparent;
     transition: 400ms ease-in-out;
-    animation: sairHover 1s infinite;
-}
-@keyframes sairHover {
-    0%{
-        background: transparent;
-    }
-    50%{
-        
-    }
 }
 .adminImgArea__sairArea:hover{
+    background: hsla(var(--primaryColor), 0.2);
     background: var(--primaryColor);
 }
 .adminImgArea__sairArea img{
@@ -346,4 +338,30 @@ button, input, a{
 }
 .conteudo--imgs, .conteudo--adicionarImg{
     width: 50%;
+}
+.conteudo--adicionarImg{
+    padding: 2rem 1rem 1rem 1rem;
+}
+.conteudo--adicionarImg{
+    font-size: var(--sizeTexto);
+}
+.lblListaJogos{
+    color: white;
+}
+#listaJogos{
+    font-size: var(--sizeButao);
+}
+.inputImg{
+    margin-top: 1rem;
+    background: var(--accentColor);
+}
+.inputImg::placeholder{
+    font-size: var(--sizeButao);
+    color: black;
+}
+.addImgJogoBtn{
+    margin-top: 1rem;
+}
+.inputImg, .addImgJogoBtn{
+    border: 0;
 }
