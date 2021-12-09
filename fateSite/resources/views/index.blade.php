@@ -1,38 +1,28 @@
-@include("layout.master")
+@extends("layout.master")
 
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('css/paginaHome.css') }}" type="text/css">
+@endsection
 
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    @yield("linkCSS")
-    <link rel="stylesheet" href="css/paginaHome.css" type="text/css">
-    <title>Home Page</title>
-</head>
-
-<body>
+@section('content')
     <div id="wrap">
         <!-- HEADER -->
         @yield("header")
         <!-- HEADER -->
         <div class="textColumn">
-        <section class="heroLanding">
+            <section class="heroLanding">
                 <div class="heroLanding--texto">
                     <h1>Fate <br> Esports</h1>
                     <h2>Está a chegar a melhor organização do país</h2>
                     <div>
                         <a href="#">Registar</a>
                     </div>
-                
-            </div>
-            <div class="heroLanding--AreaImg">
-                <img src="img/logo/logoFate.png" alt="Logotipo da Fate Esports">
-            </div>
-        </section>
-    </div>
+                </div>
+                <div class="heroLanding--AreaImg">
+                    <img src="img/logo/logoFate.png" alt="Logotipo da Fate Esports">
+                </div>
+            </section>
+        </div>
         <div class="areaSeta">
             <a href="#mover">
                 <div class="areaArrow">
@@ -116,9 +106,8 @@
                
             </div>
         </section> -->
-        @yield("footer")
-        @yield("auth")
     </div>
-</body>
+@endsection
 
-</html>
+@section('scripts')
+@endsection

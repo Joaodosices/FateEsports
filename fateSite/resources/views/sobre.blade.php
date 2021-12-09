@@ -1,38 +1,15 @@
-@include("layout.master")
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@extends("layout.master")
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    @yield("linkCSS")
+@section('styles')
     <link rel="stylesheet" href="css/sobre/bootstrap.min.css">
     <link rel="stylesheet" href="css/sobre/all.min.css">
-
     <link rel="stylesheet" href="css/sobre/flaticon.css">
     <link rel="stylesheet" href="css/sobre/lightcase.css">
     <link rel="stylesheet" href="css/sobre/odometer.css">
-
-
     <link rel="stylesheet" href="css/sobre/main.css">
+    @endsection
 
-    <link rel="shortcut icon" href="img/sobre/logo.png" type="image/x-icon">
-    <!--mudar -->
-
-    <title>Fate Esports</title>
-
-
-</head>
-
-<body>
-
-<!-- HEADER -->
-
-@yield("header")
-
-<!-- HEADER -->
-
+@section('content')
     <!-- ==========hero-area========== -->
     <section class="hero-section">
         <div class="hero-area bg_img" data-background="img/sobre/hero.jpg">
@@ -292,31 +269,22 @@
             </div>
         </div>
     </div>
-    <!-- ==========counter-section========== -->
+    
+@endsection
 
-
-
-    <!-- ==========footer-section========== -->
-
-<!-- footer -->
-@yield("footer")
-        <!-- footer      -->
-        @yield("auth")
-
-    <script src="js/sobre/jquery-3.3.1.min.js"></script>
-    <script src="js/sobre/modernizr-3.6.0.min.js"></script>
-    <script src="js/sobre/plugins.js"></script>
-    <script src="js/sobre/bootstrap.min.js"></script>
-    <script src="js/sobre/isotope.pkgd.min.js"></script>
-    <script src="js/sobre/jquery.ripples-min.js"></script>
-    <script src="js/sobre/lightcase.js"></script>
-    <script src="js/sobre/swiper.min.js"></script>
-    <script src="js/sobre/wow.min.js"></script>
-    <script src="js/sobre/countdown.min.js"></script>
-    <script src="js/sobre/odometer.min.js"></script>
-    <script src="js/sobre/viewport.jquery.js"></script>
-    <script src="js/sobre/nice-select.js"></script>
-    <script src="js/sobre/main.js"></script>
-</body>
-
-</html>
+@section('scripts')
+    <script src="{{ asset('js/sobre/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ asset('js/sobre/modernizr-3.6.0.min.js') }}"></script>
+    <script src="{{ asset('js/sobre/plugins.js') }}"></script>
+    <script src="{{ asset('js/sobre/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/sobre/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ asset('js/sobre/jquery.ripples-min.js') }}"></script>
+    <script src="{{ asset('js/sobre/lightcase.js') }}"></script>
+    <script src="{{ asset('js/sobre/swiper.min.js') }}"></script>
+    <script src="{{ asset('js/sobre/wow.min.js') }}"></script>
+    <script src="{{ asset('js/sobre/countdown.min.js') }}"></script>
+    <script src="{{ asset('js/sobre/odometer.min.js') }}"></script>
+    <script src="{{ asset('js/sobre/viewport.jquery.js') }}"></script>
+    <script src="{{ asset('js/sobre/nice-select.js') }}"></script>
+    <script src="{{ asset('js/sobre/main.js') }}"></script>
+@endsection

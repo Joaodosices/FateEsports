@@ -64,6 +64,12 @@ form label{
     box-shadow: 0px 0px 15px gray;
 }
 
+.alert{
+    margin: 0px auto 15px auto !important;
+    width: 625px !important;
+    
+}
+
 form input{
     margin: 5px 40px 20px 40px  ;
 }

@@ -1,29 +1,10 @@
-@include("layout.master")
+@extends("layout.master")
 
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('css/profile.css') }}" type="text/css">
+@endsection
 
-<head>
-    <meta charset="UTF-8">
-
-    @yield("linkCSS")
-    <link rel="stylesheet" type="text/css" href="css/profile.css">
-    
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil</title>
-</head>
-
-<body>
-    
-    <!-- HEADER -->
-
-    @yield("header")
-
-    <!-- HEADER -->
-
-
+@section('content')
 
     <div class="container">
 
@@ -68,13 +49,8 @@
         <button class="submitbtn2" type="submit" > ALTERAR PASSWORD </button>
 
     </div>
+   
+@endsection
 
-     <!-- footer -->
-     
-     @yield("footer")
-     @yield("auth")
-    <!-- footer      -->
-
-</body>
-
-</html>
+@section('scripts')
+@endsection
