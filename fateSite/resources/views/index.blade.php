@@ -97,6 +97,12 @@
                             </select> <br>
                             <input placeholder="Link Imgur com imagem..." type="text" class="inputImg" name="img"> <br>
                             <button type="submit" class="addImgJogoBtn">Adicionar</button>
+                            @if (Session::has('success'))
+                                <div class="alertSubmit">
+                                    <i class="alertSubmit1"></i> {{ Session::get('success') }}
+                                </div>
+                            @endif 
+                
                         </form>
                     </div>
                 </div>

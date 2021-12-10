@@ -354,6 +354,7 @@ button, input, a{
 .inputImg{
     margin-top: 1rem;
     background: var(--accentColor);
+    color: black;
 }
 .inputImg::placeholder{
     font-size: var(--sizeButao);
@@ -364,4 +365,11 @@ button, input, a{
 }
 .inputImg, .addImgJogoBtn{
     border: 0;
+}
+.alertSubmit{
+    margin: 1rem 0 auto !important;
+    padding: 1rem 1.5rem;
+    width: 300px !important;
+    text-align: center !important;
+    background: #CEFF99 !important;
 }
