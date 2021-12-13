@@ -1,14 +1,14 @@
-@extends("layout.master")
+@extends('layout.master')
 
 @section('styles')
-    <link rel="stylesheet" href="css/sobre/bootstrap.min.css">
-    <link rel="stylesheet" href="css/sobre/all.min.css">
-    <link rel="stylesheet" href="css/sobre/flaticon.css">
-    <link rel="stylesheet" href="css/sobre/lightcase.css">
-    <link rel="stylesheet" href="css/sobre/odometer.css">
-    <link rel="stylesheet" href="css/sobre/main.css">
+    <link rel="stylesheet" href="{{ asset('css/sobre/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/sobre/all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/sobre/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/sobre/lightcase.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/sobre/odometer.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/sobre/main.css') }}">
     @endsection
-
+    <body>
 @section('content')
     <!-- ==========hero-area========== -->
     <section class="hero-section">
