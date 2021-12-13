@@ -41,21 +41,11 @@
                 </div>
 
             <div class="ondeEstamos--jogos">
-                <div class="imgJogo">
-                    <img src="img/homePage/jogos/apexLegendsLogo.png" alt="Logotipo do jogo Apex Legends">
-                </div>
-                <div class="imgJogo">
-                    <img src="img/homePage/jogos/CSGO-LOGO.png" alt="Logotipo do jogo Counter Strike Global Offensive">
-                </div>
-                <div class="imgJogo">
-                    <img src="img/homePage/jogos/LolLogo.png" alt="Logotipo do jogo League Of Legends">
-                </div>
-                <div class="imgJogo">
-                    <img src="img/homePage/jogos/Rainbow-Six-Logo.png" alt="Logotipo do jogo Rainbow Six Siege">
-                </div>
-                <div class="imgJogo">
-                    <img src="img/homePage/jogos/rocketLogo.png" alt="Logotipo do jogo Rocket League">
-                </div>
+                @foreach($imgs as $img)
+                    <div class="imgJogo">
+                        <img src="{{ $img->img }}" alt="">
+                    </div>
+                @endforeach
             </div>
         </section>
         @if (Auth::check())

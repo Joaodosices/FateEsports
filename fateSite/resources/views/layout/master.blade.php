@@ -22,7 +22,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 </head> 
 
-<body>
+<body id="masterPage">
     @include("layout.partials.header")
 
     @yield('content')

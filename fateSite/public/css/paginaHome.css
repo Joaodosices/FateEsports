@@ -159,10 +159,10 @@ button, input, a{
 .ondeEstamos--jogos{
     display: grid;
     grid-gap: 2rem;
-    grid-template-columns: repeat(auto-fit, 200px);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-rows: repeat(3);
     margin: 2rem auto;
-    justify-content: center;
+    place-items: center;
     max-width: 27rem;
 }
 .imgJogo{
