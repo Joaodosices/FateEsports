@@ -15,14 +15,14 @@ class ContactController extends Controller
     public function index()
     {
         $contacts = Contact::all();
-        return view('backoffice.contactosBackOffice', compact('contacts'));
+        return view('contactos', compact('contacts'));
     }
 
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
-     */
+     */ 
     public function create()
     {
         //
@@ -44,7 +44,7 @@ class ContactController extends Controller
             'comment' => $request->comment,
         ]);
 
-        return redirect()->route('gm.contactos')->withSuccess("Comentário submetido com sucesso");
+        return redirect()->route('contacts.index')->withSuccess("Comentário submetido com sucesso");
     }
 
     /**
@@ -87,8 +87,10 @@ class ContactController extends Controller
      * @param  \App\Models\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Contact $contact)
+    public function destroy($id)
     {
-        //
+        $contactDel = Contact::find($id);
+        $contactDel->delete();
+        return redirect()->route('contacts.index')->withSuccess("Mensagem apagada!");
     }
 }

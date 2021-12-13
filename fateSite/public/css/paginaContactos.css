@@ -19,12 +19,12 @@ span{
 }
 
 #areaContacto{
-margin-bottom: 100px;
+margin-bottom: 50px;
 }
 .tituloPrincipal h1{
     font-size: var(--tituloPrincipal);
     text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     margin-top: 0px;
 }
 .tituloSecundario p{
@@ -134,6 +134,41 @@ form select{
 #areaTexto{
     margin-top: 115px;
 }
+
+#tabela-admin{
+    margin: 40px auto;
+}
+#tabela-admin table, 
+#tabela-admin td, 
+#tabela-admin tr, 
+#tabela-admin th{
+    border: 1px solid var(--pretoCinza);
+}
+
+#tabela-admin td{
+padding: 10px;
+text-align: center;
+}
+#tabela-admin tr:nth-child(even){
+    background-color: var(--brancoGelo);
+}
+#tabela-admin th{
+    padding: 10px;
+    background-color: var(--redDetalhes);
+    text-align: center;
+    }
+
+.botao-delete{
+    width: 35px;
+    height: 35px;
+    transition: 800ms;
+}
+
+.botao-delete:hover{
+    transform: scale(1.5);
+    /* transition: 400ms; */
+}
+
 
 @media (max-width: 1200px) {
 
