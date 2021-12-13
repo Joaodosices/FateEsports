@@ -83,6 +83,9 @@
             </div>
                             @if(Auth::check())
                             <div id="area-tabela-admin">
+                                <div  class="tituloPrincipal">
+                                    <h1 >ADMIN <span>SIDE</span></h1>
+                                </div>
                             <!-- como buscar informação -->
                             <table id="tabela-admin">
                                 <tbody>
@@ -99,7 +102,7 @@
                                         <td>{{ $contact->email }}</td>
                                         <td>{{ $contact->topic }}</td>
                                         <td>{{ $contact->comment }}</td>
-                                        <td><a href="contactos/delete/{{ $contact->id }}"><img src="{{ asset('img\autenticacao\close.png') }}" alt="cruz para apagar"></a></td>
+                                        <td><a href="contactos/delete/{{ $contact->id }}"><img class="botao-delete"  src="{{ asset('img\autenticacao\close.png') }}" alt="cruz para apagar"></a></td>
                                     </tr>
                                     @endforeach
                                 </tbody>

@@ -19,12 +19,12 @@ span{
 }
 
 #areaContacto{
-margin-bottom: 100px;
+margin-bottom: 50px;
 }
 .tituloPrincipal h1{
     font-size: var(--tituloPrincipal);
     text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     margin-top: 0px;
 }
 .tituloSecundario p{
@@ -157,6 +157,17 @@ text-align: center;
     background-color: var(--redDetalhes);
     text-align: center;
     }
+
+.botao-delete{
+    width: 35px;
+    height: 35px;
+    transition: 800ms;
+}
+
+.botao-delete:hover{
+    transform: scale(1.5);
+    /* transition: 400ms; */
+}
 
 
 @media (max-width: 1200px) {
