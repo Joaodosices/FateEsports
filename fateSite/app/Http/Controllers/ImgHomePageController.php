@@ -17,7 +17,8 @@ class ImgHomePageController extends Controller
     public function index()
     {
         $games = Game::all();
-        return view('index', compact('games'));
+        $imgs = Imagesgame::all();
+        return view('index', compact('games', 'imgs'));
     }
 
     /**
@@ -87,8 +88,10 @@ class ImgHomePageController extends Controller
      * @param  \App\Models\HomePageImg  $homePageImg
      * @return \Illuminate\Http\Response
      */
-    public function destroy(HomePageImg $homePageImg)
+    public function destroy($id)
     {
-        //
+        $imgDel = Imagesgame::find($id);
+        $imgDel->delete();
+        return redirect()->route('index.main')->withSuccess("Imagem apagada!");
     }
 }

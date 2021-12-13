@@ -328,6 +328,10 @@ button, input, a{
     height: 40px;
     background: transparent;
     transition: 400ms ease-in-out;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
 }
 .adminImgArea__sairArea:hover{
     background: hsla(var(--primaryColor), 0.2);

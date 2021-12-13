@@ -22,6 +22,7 @@ use App\Http\Controllers\gameController;
 Route::get('/', function () {
     return view('index');
 })->name('gm.index');
+Route::get('delete/{id}', [ImgHomePageController::class, 'destroy']);
 Route::get('/', [ImgHomePageController::class, 'index'])->name('index.main');
 Route::post('/', [ImgHomePageController::class, 'store'])->name('index.store');
 //--------------------

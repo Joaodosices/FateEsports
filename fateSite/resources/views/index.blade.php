@@ -64,26 +64,13 @@
                 <div class="painelAdmin--conteudo">
                     <div class="conteudo--imgs">
                         <div class="conteudo--imgs__background">
-                            <div class="adminImgArea">
-                                <img src="https://unsplash.it/150/150" alt="">
-                                <a href="#Removido" class="adminImgArea__sairArea"><img src="img\autenticacao\close.png" alt=""></a>
-                            </div>
-                            <div class="adminImgArea">
-                                <img src="https://unsplash.it/150/150" alt="">
-                                <a href="#Removido" class="adminImgArea__sairArea"><img src="img\autenticacao\close.png" alt=""></a>
-                            </div>
-                            <div class="adminImgArea">
-                                <img src="https://unsplash.it/150/150" alt="">
-                                <a href="#Removido" class="adminImgArea__sairArea"><img src="img\autenticacao\close.png" alt=""></a>
-                            </div>
-                            <div class="adminImgArea">
-                                <img src="https://unsplash.it/150/150" alt="">
-                                <a href="#Removido" class="adminImgArea__sairArea"><img src="img\autenticacao\close.png" alt=""></a>
-                            </div>
-                            <div class="adminImgArea">
-                                <img src="https://unsplash.it/150/150" alt="">
-                                <a href="#Removido" class="adminImgArea__sairArea"><img src="img\autenticacao\close.png" alt=""></a>
-                            </div>
+                            @foreach($imgs as $img)
+                                <div class="adminImgArea">
+                                    <form action="" method="post"></form>
+                                    <img src="{{ $img->img }}" alt="">
+                                    <a href="delete/{{ $img->id }}" class='adminImgArea__sairArea'><img src="img\autenticacao\close.png" alt=""></a>
+                                </div>
+                            @endforeach
                         </div>
                     </div>
                     <div class="conteudo--adicionarImg">
@@ -92,7 +79,7 @@
                             <label for="listaJogos" class="lblListaJogos">Selecionar jogo: </label>
                             <select name="id_game" id="listaJogos">
                                 @foreach($games as $game)
-                                    <option value="{{ $game->id }}">{{ $game->name }}</option>
+                                        <option value="{{ $game->id }}">{{ $game->name }}</option>
                                 @endforeach
                             </select> <br>
                             <input placeholder="Link Imgur com imagem..." type="text" class="inputImg" name="img"> <br>
@@ -102,7 +89,6 @@
                                     <i class="alertSubmit1"></i> {{ Session::get('success') }}
                                 </div>
                             @endif 
-                
                         </form>
                     </div>
                 </div>
