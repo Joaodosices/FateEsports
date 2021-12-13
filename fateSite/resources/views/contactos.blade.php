@@ -80,8 +80,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
-                            @if(Auth::check())
+            </div>                
+        </div>
+    </div>  
+        @if(Auth::check())
                             <div id="area-tabela-admin">
                                 <div  class="tituloPrincipal">
                                     <h1 >ADMIN <span>SIDE</span></h1>
@@ -102,7 +104,7 @@
                                         <td>{{ $contact->email }}</td>
                                         <td>{{ $contact->topic }}</td>
                                         <td>{{ $contact->comment }}</td>
-                                        <td><a href="contactos/delete/{{ $contact->id }}"><img class="botao-delete"  src="{{ asset('img\autenticacao\close.png') }}" alt="cruz para apagar"></a></td>
+                                        <td><a href="contactos/delete/{{ $contact->id }}"><img class="botao-delete"  src="{{ asset('img\paginacontactos\trash.png') }}" alt="cruz para apagar"></a></td>
                                     </tr>
                                     @endforeach
                                 </tbody>
@@ -110,13 +112,9 @@
                             </div>
                             @endif
 
-
-        </div>
-          
-        </div>  
         <div id="localizacao" class="tituloPrincipal">
                 <h1>FATE ESPORTS <span>ESCRITÓRIOS</span> LEIRIA</h1>
-                <div style="width: 100%"><iframe width="100%" height="414" frameborder="0" scrolling="no" 
+                <div style="width: 99%"><iframe width="100%" height="414" frameborder="0" scrolling="no" 
                     marginheight="0" marginwidth="0" 
                     src="https://maps.google.com/maps?width=100%25&amp;height=414&amp;hl=en&amp;q=Campus%202%20-%20Morro%20do%20Lena,%20Alto%20do%20Vieiro,%20Apt%204163,%20Edif%C3%ADcio%20D,%202411-901%20Leiria+(Escrit%C3%B3rios%20FATE%20ESPORTS)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
                     <a href="http://www.gps.ie/">gps devices</a></iframe>

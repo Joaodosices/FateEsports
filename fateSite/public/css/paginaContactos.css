@@ -137,6 +137,7 @@ form select{
 
 #tabela-admin{
     margin: 40px auto;
+    width: 98%;
 }
 #tabela-admin table, 
 #tabela-admin td, 
@@ -154,8 +155,9 @@ text-align: center;
 }
 #tabela-admin th{
     padding: 10px;
-    background-color: var(--redDetalhes);
+    background-color: var(--redCallAction);
     text-align: center;
+    color: var(--branco ); 
     }
 
 .botao-delete{
@@ -165,7 +167,7 @@ text-align: center;
 }
 
 .botao-delete:hover{
-    transform: scale(1.5);
+    transform: scale(1.2);
     /* transition: 400ms; */
 }
 
