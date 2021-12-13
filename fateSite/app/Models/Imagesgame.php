@@ -12,6 +12,6 @@ class Imagesgame extends Model
     protected $fillable = [
         'description',
         'img',
-        'id_game_images',
+        'id_game',
     ];
 }

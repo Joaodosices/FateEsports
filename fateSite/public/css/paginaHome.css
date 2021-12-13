@@ -307,13 +307,18 @@ button, input, a{
     margin: 1rem;
     padding: 1rem;
     background: white;
-    border: 0.5rem solid black;
 }
 .adminImgArea{
     position: relative;
+    transition: 400ms ease-in-out;
+    border: 3px solid transparent;
+}
+.adminImgArea:hover{
+    border: 3px solid var(--primaryColor);
 }
 .adminImgArea img{
     object-fit: cover;
+    max-width: 150px;
 }
 .adminImgArea__sairArea{
     position: absolute;
@@ -324,8 +329,8 @@ button, input, a{
     padding: 0;
     top: 4px;
     right: 4px;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     background: transparent;
     transition: 400ms ease-in-out;
     border-top-width: 0px;
@@ -334,12 +339,13 @@ button, input, a{
     border-bottom-width: 0px;
 }
 .adminImgArea__sairArea:hover{
-    background: hsla(var(--primaryColor), 0.2);
     background: var(--primaryColor);
+
 }
 .adminImgArea__sairArea img{
     object-fit: cover;
 }
+
 .conteudo--imgs, .conteudo--adicionarImg{
     width: 50%;
 }

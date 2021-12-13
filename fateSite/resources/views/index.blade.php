@@ -82,8 +82,13 @@
                                         <option value="{{ $game->id }}">{{ $game->name }}</option>
                                 @endforeach
                             </select> <br>
-                            <input placeholder="Link Imgur com imagem..." type="text" class="inputImg" name="img"> <br>
+                            <input placeholder="Link Imgur com imagem..." type="text" class="inputImg @error('img') is-invalid @enderror" name="img"> <br>
                             <button type="submit" class="addImgJogoBtn">Adicionar</button>
+                            @error('img')
+                                <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                             @if (Session::has('success'))
                                 <div class="alertSubmit">
                                     <i class="alertSubmit1"></i> {{ Session::get('success') }}

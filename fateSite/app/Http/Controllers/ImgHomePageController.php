@@ -42,7 +42,7 @@ class ImgHomePageController extends Controller
         $Imagesgames = Imagesgame::create([
             'description' => "Monocromatico",
             'img' => $request->img,
-            'id_game_images' => $request->id_game
+            'id_game' => $request->id_game
         ]);
 
         return redirect()->route('index.main')->withSuccess("Imagem submetida");
