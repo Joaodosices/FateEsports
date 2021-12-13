@@ -38,10 +38,9 @@ Route::get('/contactos', function () {
 })->name('gm.contactos');
 
 //Rota para submeter form CONTACTOS
+Route::get('contactos/delete/{id}', [ContactController::class, 'destroy']);
+Route::get('/contactos', [ContactController::class, 'index'])->name('contacts.index');
 Route::post('/contactos', [ContactController::class, 'store'])->name('contacts.store');
-
-//BACKOFFICE: Rota para CONTACTOS 
-Route::get('/admin/contactos', [ContactController::class, 'index'])->name('contacts.index');
 
 Route::get('/sobre', function () {
     return view('sobre');
