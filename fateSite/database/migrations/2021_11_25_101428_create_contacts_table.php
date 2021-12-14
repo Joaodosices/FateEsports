@@ -20,6 +20,7 @@ class CreateContactsTable extends Migration
             $table->string('email',100);
             $table->enum('topic', ['geral', 'social media','equipa'])->default('geral');
             $table->text('comment',1000);
+            $table->text('resposta',1000)->nullable();
             $table->timestamps();
         });
     }
