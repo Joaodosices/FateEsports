@@ -15,6 +15,6 @@ class Admin extends Model
         'facebook',
         'instagram',
         'twitter',
-        'id_user_admins',
+        'id_user',
     ];
 }

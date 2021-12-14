@@ -26,7 +26,7 @@ class ImgHomePageController extends Controller
         $admins = Admin::all();
         if (Auth::check()) {
             foreach ($admins as $admin) {
-                if ($admin["id_user_admins"] == $id) {
+                if ($admin["id_user"] == $id) {
                     $request->session()->put('authAdmin', '1');
                 } else {
                     $request->session()->put('authAdmin', '0');
