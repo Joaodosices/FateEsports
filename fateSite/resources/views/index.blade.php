@@ -116,14 +116,19 @@
             </div>
             <br><br><br><br>
         </section>
-        <!-- <section class="parcerias">
+        <section class="parcerias">
             <h1>Nossos <span>Parceiros</span></h1>
-            <div>
-               
+            <div class="slider">
+                <div class="slider-track">
+                    @foreach($imgs as $img)
+                        <div class="slide"><img src="{{ $img->img }}" alt=""></div>
+                    @endforeach
+                </div>
             </div>
-        </section> -->
+        </section>
     </div>
 @endsection
 
 @section('scripts')
+    <script src="{{ asset('js/homePageCarrousel.js') }}"></script>
 @endsection

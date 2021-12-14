@@ -383,3 +383,57 @@ button, input, a{
     text-align: center !important;
     background: #CEFF99 !important;
 }
+
+/* Carrousel */
+.parcerias{
+    margin-bottom: 5rem;
+}
+.slider{
+    background-color: white;
+    width: 960px;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+    margin: 2rem auto;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
+}
+.slider::before, .slider::after{
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 2;
+}
+.slider::before{
+    top: 0;
+    left: 0;
+}
+.slider::after{
+    top: 0;
+    right: 0;
+    transform: rotateZ(180deg);
+}
+.slider .slider-track {
+    display: flex;
+    width: calc(150px 8);
+    animation: scroll 20s infinite alternate;
+}
+.slider .slide img{
+    width: 150px;
+    height: 150px;
+}
+.slide{
+    margin-left: 10%;
+}
+@keyframes scroll {
+    0%{
+        transform: translateX(0%);
+    }
+    50%{
+        transform: translateX(calc(-100px * 3));
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
