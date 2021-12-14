@@ -120,8 +120,8 @@
             <h1>Nossos <span>Parceiros</span></h1>
             <div class="slider">
                 <div class="slider-track">
-                    @foreach($imgs as $img)
-                        <div class="slide"><img src="{{ $img->img }}" alt=""></div>
+                    @foreach($partners as $partner)
+                        <div class="slide"><img src="{{ $partner->img }}" alt=""></div>
                     @endforeach
                 </div>
             </div>

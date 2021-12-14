@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Admin;
+use App\Models\Partner;
 
 class ImgHomePageController extends Controller
 {
@@ -20,7 +21,8 @@ class ImgHomePageController extends Controller
     {
         $games = Game::all();
         $imgs = Imagesgame::all();
-        
+        $partners = Partner::all();
+
         //check se o user é admin
         $id = Auth::id();
         $admins = Admin::all();
@@ -34,7 +36,7 @@ class ImgHomePageController extends Controller
             }
         }
 
-        return view('index', compact('games', 'imgs'));
+        return view('index', compact('games', 'imgs', 'partners'));
     }
     /**
      * Show the form for creating a new resource.

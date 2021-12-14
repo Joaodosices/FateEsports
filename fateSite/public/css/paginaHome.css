@@ -396,6 +396,9 @@ button, input, a{
     position: relative;
     margin: 2rem auto;
     box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .slider::before, .slider::after{
     content: '';
@@ -417,14 +420,14 @@ button, input, a{
 .slider .slider-track {
     display: flex;
     width: calc(150px 8);
-    animation: scroll 20s infinite alternate;
+    animation: scroll 10s infinite alternate;
 }
 .slider .slide img{
     width: 150px;
-    height: 150px;
+    height: auto;
 }
 .slide{
-    margin-left: 10%;
+    margin-right: 20%;
 }
 @keyframes scroll {
     0%{
