@@ -18,73 +18,20 @@
 
       <hr>
 
-      <div id="marcas">
+      <div id="grid-marcas">
       
-         <div id="redbullcaixa">
+      @foreach($partners as $partner)
 
-            <img id="redbull" src="img/parcerias/red-bull-logo-2-1.png" alt="" width="223"> 
-
-            <h2 id="redbull">Red Bull</h2>
-
-            <div id="redbulltexto">Lorem ipsum dolor sit amet
-               consectetuer adipiscing elit
-               sed diam nonummy nibh
-               euismod tincidunt ut laoreet
-               dolore magna aliquam era.
-            </div>
-
-               <p id="hipersite"><a href="">Visitar Site</a></p>  
+      <div class="grid-item">
+         
+      <img class="imgmarca" src="{{$partner->img}}">
+        <h2 class="titulomarca"> {{$partner->name}} <h2>
+        <p class="descricaomarca"> {{$partner->description}} </p> <br>
+        <a class="linkmarca" target="_blank" href="{{$partner->linkpartner}}"> Visitar Site</a>
+         
          </div>
 
-
-         <div id="razercaixa">
-
-            <img id="razer" src="img/parcerias/Razer-Logo-Horizontal-1-1.png" alt="" width="223"> 
-
-            <h2 id="razer">Razer</h2>
-
-            <div id="razertexto">Lorem ipsum dolor sit amet
-               consectetuer adipiscing elit
-               sed diam nonummy nibh
-               euismod tincidunt ut laoreet
-               dolore magna aliquam era.
-            </div>
-
-            <p id="hipersite"><a href="">Visitar Site</a></p>  
-         </div> <br>
-
-         <div id="layscaixa">
-
-            <img id="lays" src="img/parcerias/Lays-Logo.png" alt="" width="223"> 
-
-            <h2 id="lays">Lays</h2>
-
-            <div id="laystexto">Lorem ipsum dolor sit amet
-               consectetuer adipiscing elit
-               sed diam nonummy nibh
-               euismod tincidunt ut laoreet
-               dolore magna aliquam era.
-            </div>
-
-               <p id="hipersite"><a href="">Visitar Site</a></p>  
-         </div>
-
-
-         <div id="paypalcaixa">
-
-            <img id="paypal" src="img/parcerias/pngwing.com (2).png" alt="" width="223"> 
-
-            <h2 id="paypal">PayPal</h2>
-
-            <div id="paypaltexto">Lorem ipsum dolor sit amet
-               consectetuer adipiscing elit
-               sed diam nonummy nibh
-               euismod tincidunt ut laoreet
-               dolore magna aliquam era.
-            </div>
-
-            <p id="hipersite"><a href="">Visitar Site</a></p>  
-         </div>
+      @endforeach
          
       </div>
 

@@ -18,6 +18,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ImgHomePageController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\gameController;
+use App\Http\Controllers\PartnerController; 
 
 
 // Routes para a página index
@@ -35,6 +36,7 @@ Route::get('/parcerias', function () {
 })->name('gm.parcerias');
 
 
+<<<<<<< Updated upstream
 
 // Route::get('/email', function () {
 //     return view('email');
@@ -42,6 +44,12 @@ Route::get('/parcerias', function () {
 
 Route::get('/email/{contact}', [ContactController::class, 'email'])->name('gm.email');
 Route::post('/email', [ContactController::class, 'sendEmail'])->name('gm.sendEmail');
+=======
+Route::get('/parcerias', [PartnerController::class, 'index'])->name('partner.index');
+
+
+
+>>>>>>> Stashed changes
 
 //Rota para form CONTACTOS
 Route::get('/contactos', function () {

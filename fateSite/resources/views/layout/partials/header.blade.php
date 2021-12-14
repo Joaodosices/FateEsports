@@ -9,7 +9,7 @@
                     <li> <a class="active" href="{{route('index.main')}}">HOME</a> </li>
             <li> <a href="#loja" class="left">LOJA</a> </li>
             <li> <a href="#equipas">EQUIPAS</a> </li>
-            <li> <a href="{{route('gm.parcerias')}}">PARCERIAS</a> </li>
+            <li> <a href="{{route('partner.index')}}">PARCERIAS</a> </li>
             <li> <a href="{{route('contacts.index')}}">CONTACTOS</a> </li>
             <li> <a href="{{route('gm.sobre')}}">SOBRE</a> </li>
             @guest

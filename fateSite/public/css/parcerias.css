@@ -1,162 +1,98 @@
 *{
-    font-family:"Mukta";
+  font-family:"Mukta";
 }
 
 .container{
-    max-width: 75%;
-  margin: 0 auto;
+  max-width: 75%;
+margin: 0 auto;
 }
 
 h1{
-  text-align:center;
+text-align:center;
 }
 
 div#textoinicio{
-  text-align:left;
-  max-width:40%;
-  margin:0 auto;
-  margin-bottom:40px;
+text-align:left;
+max-width:40%;
+margin:0 auto;
+margin-bottom:40px;
 }
 
 hr{
-  max-width:70%;
-  margin:0 auto;
-  border-color:red;
-  height:10px;
-  background-color:red;
+max-width:75%;
+margin:0 auto;
+border-color:red;
+height:10px;
+background-color:red;
 }
 
-div#marcas{
-  max-width:70%;
-  margin:0 auto;
-  margin-top:50px;
 
+div#grid-marcas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom:50px;
 }
-
-div#redbullcaixa{
+.grid-item {
   border: 1px solid #353535;
-  max-width:45%;
-height:343px;
+  width:601px;
+  height:345px;
+  margin-top:50px;
 }
-
-img#redbull{
-  margin-left:40px; 
+.imgmarca{
+  width:237px;
+  height:133px;
+  float:left;
+  margin-left:40px;
   margin-top:100px;
 }
 
-h2#redbull{
-  float:right;
-  margin-top:50px;
-  margin-right:150px;
+h2.titulomarca{
+  float:left;
   font-size:30pt;
   font-weight:900;
-
-}
-
-div#redbulltexto{
-  float:right;
-  max-width:45%;
-  margin-right:20px;
-  margin-top:-140px;
-  font-size:16pt;
-  text-align:left;
-}
-
-div#razercaixa{
-  border: 1px solid #353535;
-  max-width:45%;
-  margin-top:-345px;
-height:343px;
-float:right;
-}
-
-img#razer{
-  margin-left:40px; 
-  margin-top:120px;
-}
-
-h2#razer{
-  float:right;
+  margin-left:20px;
   margin-top:50px;
-  margin-right:195px;
-  font-size:30pt;
-  font-weight:900;
-
 }
 
-div#razertexto{
-  float:right;
-  max-width:45%;
-  margin-right:20px;
-  margin-top:-120px;
+p.descricaomarca{
   font-size:16pt;
   text-align:left;
+  float:left;
+  font-weight:normal;
+  max-width:270px;
+  max-height:175px;
+  margin-top:-25px;
+  margin-left:20px;
+  overflow: hidden;
 }
 
-div#layscaixa{
-  border: 1px solid #353535;
-  max-width:45%;
-height:343px;
-}
-
-img#lays{
-  margin-left:40px; 
-  margin-top:100px;
-}
-
-h2#lays{
+a.linkmarca{  
   float:right;
-  margin-top:50px;
-  margin-right:215px;
-  font-size:30pt;
-  font-weight:900;
-
+    text-decoration:none;
+    color:#D50101;
+    font-size:25px;
+    margin-top:10px;
+    margin-right:20px;
+    transition:1s;
 }
 
-div#laystexto{
-  float:right;
-  max-width:45%;
-  margin-right:20px;
-  margin-top:-120px;
-  font-size:16pt;
-  text-align:left;
+a.linkmarca:hover{  
+ transform:scale(1.2);
 }
 
-div#paypalcaixa{
-  border: 1px solid #353535;
-  max-width:45%;
-  margin-top:-345px;
-height:343px;
-float:right;
+
+/*Scrollbar*/
+
+*::-webkit-scrollbar-track {
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
 }
 
-img#paypal{
-  margin-left:40px; 
-  margin-top:120px;
+*::-webkit-scrollbar {
+    width: 4px;
+    background-color: #F5F5F5;
 }
 
-h2#paypal{
-  float:right;
-  margin-top:50px;
-  margin-right:175px;
-  font-size:30pt;
-  font-weight:900;
-
-}
-
-div#paypaltexto{
-  float:right;
-  max-width:45%;
-  margin-right:20px;
-  margin-top:-130px;
-  font-size:16pt;
-  text-align:left;
-}
-
-p a{
-  text-decoration:none;
-  color:#D50101;
-  float:right;
-  margin-top:70px;
-  margin-right:20px;
+*::-webkit-scrollbar-thumb {
+    background-color: #000000;
 }
