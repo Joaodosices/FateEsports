@@ -229,7 +229,7 @@
       },
       loop: true,
     })
-    var swiper = new Swiper('.instructor-slider', {
+    var swiper = new Swiper('.CEO-slider', {
       slidesPerView: 3,
       autoplay: {
         delay: 2500,

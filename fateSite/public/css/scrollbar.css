@@ -1,0 +1,17 @@
+*::-webkit-scrollbar-track {
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar {
+    width: 12px;
+    transition: 400ms ease-in-out;
+    background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar-thumb {
+    transition: 400ms ease-in-out;
+    background-color: #000000;
+    border: 1px solid white;
+    border-radius: 50px 50px;
+}

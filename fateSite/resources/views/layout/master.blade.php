@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{{ asset('css/header.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('css/autenticacao.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/scrollbar.css') }}" type="text/css">
     @yield('styles')
     
     <link rel="preconnect" href="https://fonts.googleapis.com" />

@@ -64,8 +64,8 @@
     </section>
     <!-- ==========overview-two-section========== -->
 
-    <!-- ==========instructor-section========== -->
-    <section class="instructor-section padding-top">
+    <!-- ==========CEO-section========== -->
+    <section class="CEO-section padding-top">
         <div class="container">
             <div class="row align-items-end">
                 <div class="col-md-7">
@@ -79,15 +79,15 @@
             </div>
             <div class="row mb-30-none justify-content-center">
                 <div class="col-md-6 col-lg-4 col-sm-10">
-                    <div class="instructor-item instructor-item-two">
+                    <div class="CEO-item CEO-item-two">
                         <div class="c-thumb">
-                            <a href="instructor-profile.html">
-                                <img src="img/sobre/ceo01.jpg" alt="instructor">
+                            <a href="CEO-profile.html">
+                                <img src="img/sobre/ceo01.jpg" alt="CEO">
                             </a>
                         </div>
-                        <div class="instructor-content">
+                        <div class="CEO-content">
                             <h4 class="sub-title">
-                                <a href="instructor-profile.html">Alexandre Maia</a>
+                                <a href="CEO-profile.html">Alexandre Maia</a>
                             </h4>
                             <ul class="social">
                                 <li>
@@ -110,15 +110,15 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 col-sm-10">
-                    <div class="instructor-item instructor-item-two">
+                    <div class="CEO-item CEO-item-two">
                         <div class="c-thumb">
-                            <a href="instructor-profile.html">
-                                <img src="img/sobre/ceo02.jpg" alt="instructor">
+                            <a href="CEO-profile.html">
+                                <img src="img/sobre/ceo02.jpg" alt="CEO">
                             </a>
                         </div>
-                        <div class="instructor-content">
+                        <div class="CEO-content">
                             <h4 class="sub-title">
-                                <a href="instructor-profile.html">Diogo Gonçalves</a>
+                                <a href="CEO-profile.html">Diogo Gonçalves</a>
                             </h4>
                             <ul class="social">
                                 <li>
@@ -141,49 +141,15 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 col-sm-10">
-                    <div class="instructor-item instructor-item-two">
+                    <div class="CEO-item CEO-item-two">
                         <div class="c-thumb">
-                            <a href="instructor-profile.html">
-                                <img src="img/sobre/ceo03.jpg" alt="instructor">
+                            <a href="CEO-profile.html">
+                                <img src="img/sobre/ceo03.jpg" alt="CEO">
                             </a>
                         </div>
-                        <div class="instructor-content">
+                        <div class="CEO-content">
                             <h4 class="sub-title">
-                                <a href="instructor-profile.html">João Fonseca</a>
-                            </h4>
-                            <ul class="social">
-                                <li>
-                                    <a href="#0">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#0">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#0">
-                                        <i class="fab fa-instagram"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div class="col-md-6 col-lg-4 col-sm-10">
-                    <div class="instructor-item instructor-item-two">
-                        <div class="c-thumb">
-                            <a href="instructor-profile.html">
-                                <img src="img/sobre/ceo04.jpg" alt="instructor">
-                            </a>
-                        </div>
-                        <div class="instructor-content">
-                            <h4 class="sub-title">
-                                <a href="instructor-profile.html">Luís Carvalho</a>
+                                <a href="CEO-profile.html">João Fonseca</a>
                             </h4>
                             <ul class="social">
                                 <li>
@@ -209,15 +175,49 @@
 
 
                 <div class="col-md-6 col-lg-4 col-sm-10">
-                    <div class="instructor-item instructor-item-two">
+                    <div class="CEO-item CEO-item-two">
                         <div class="c-thumb">
-                            <a href="instructor-profile.html">
-                                <img src="img/sobre/ceo05.jpg" alt="instructor">
+                            <a href="CEO-profile.html">
+                                <img src="img/sobre/ceo04.jpg" alt="CEO">
                             </a>
                         </div>
-                        <div class="instructor-content">
+                        <div class="CEO-content">
                             <h4 class="sub-title">
-                                <a href="instructor-profile.html">Luís Claudino</a>
+                                <a href="CEO-profile.html">Luís Carvalho</a>
+                            </h4>
+                            <ul class="social">
+                                <li>
+                                    <a href="#0">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#0">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#0">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-6 col-lg-4 col-sm-10">
+                    <div class="CEO-item CEO-item-two">
+                        <div class="c-thumb">
+                            <a href="CEO-profile.html">
+                                <img src="img/sobre/ceo05.jpg" alt="CEO">
+                            </a>
+                        </div>
+                        <div class="CEO-content">
+                            <h4 class="sub-title">
+                                <a href="CEO-profile.html">Luís Claudino</a>
                             </h4>
                             <ul class="social">
                                 <li>
@@ -242,7 +242,7 @@
             </div>
         </div>
     </section>
-    <!-- ==========instructor-section========== -->
+    <!-- ==========CEO-section========== -->
     <br><br>
     <!-- ==========counter-section========== -->
     <div class="counter-two-section padding-top padding-bottom bg_img theme-overlay" data-background="img/sobre/conta.jpg">
