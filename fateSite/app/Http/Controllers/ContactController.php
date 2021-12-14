@@ -46,7 +46,6 @@ class ContactController extends Controller
 
         return redirect()->route('contacts.index')->withSuccess("Comentário submetido com sucesso");
     }
-
     /**
      * Display the specified resource.
      *
@@ -93,4 +92,29 @@ class ContactController extends Controller
         $contactDel->delete();
         return redirect()->route('contacts.index')->withSuccess("Mensagem apagada!");
     }
+    public function sendEmail(Request $request)
+    {
+       dd($request->all());
+
+      $data = [
+        'subject' => $request->subject,
+        'email' => $request->email,
+        'address' => $request->address,
+      ];
+
+    //   Mail::send('email-template', $data, function($message) use ($data) {
+    //     $message->to($data['email'])
+    //     ->subject($data['subject']);
+    //   });
+
+    //   return back()->with(['message' => 'Email successfully sent!']);
+       
+    }
+
+    public function email(Contact $contact)
+    {
+        return view('email')->with(compact('contact'));
+    }
+
+
 }

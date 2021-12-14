@@ -24,7 +24,7 @@
                 @endif 
                 
                     <div id="areaForm">
-                        <form action="{{ route('contacts.store') }}" method="POST">
+                        <form action="" method="POST">
                             @csrf
                             <div id="areaNome">
                                 <div class="areaFormLabel">
@@ -105,7 +105,7 @@
                                         <td>{{ $contact->email }}</td>
                                         <td>{{ $contact->topic }}</td>
                                         <td>{{ $contact->comment }}</td>
-                                        <td><a href="{{route('gm.email')}}"><img class="botao-delete"  src="{{ asset('img\paginacontactos\email.png') }}" alt="cruz para apagar"></a></td>
+                                        <td><a href="{{route('gm.email',$contact )}}"><img class="botao-delete"  src="{{ asset('img\paginacontactos\email.png') }}" alt="cruz para apagar"></a></td>
                                         <td><a href="contactos/delete/{{ $contact->id }}"><img class="botao-delete"  src="{{ asset('img\paginacontactos\trash.png') }}" alt="cruz para apagar"></a></td>
                                     </tr>
                                     @endforeach

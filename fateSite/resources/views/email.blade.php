@@ -8,26 +8,27 @@
 @section('content')
 
     @if(Session::get('authAdmin') == 1)
-
         <div class="container">
             <div id="cabeçalho-email">
             <h4 class="email-head">Nova Resposta</h4>
-            <form action="">
-                <input type="text" name="from" placeholder="from..." class="email-label"  required/><br>
-                <input type="text" name="to" placeholder="subject..." class="email-label" required/><br>
-                <textarea name="email" id="email-text" cols="1" rows="1" required></textarea>
-                    <div id="area-botao">
-                        <div id="area-reset">
-                            <button class="botao-reset" type="reset">
-                            <img src="{{ asset('img\paginacontactos\trash.png') }}">
-                            </button>
+                <form action="{{url('/email')}}" method="post">
+                @csrf
+                    <label for="subject">Subject</label>
+                    <input type="text" name="subject" placeholder="subject..." class="email-label" value="{{$contact->topic}}" required/><br>
+                    <textarea name="email" id="email-text" cols="1" rows="1" required></textarea>
+                    <input type="hidden" name="address" value="{{$contact->email}}">
+                        <div id="area-botao">
+                            <div id="area-reset">
+                                <button class="botao-reset" type="reset">
+                                    <img src="{{ asset('img\paginacontactos\trash.png') }}">
+                                </button>
+                            </div>
+                            <div id="botao-submit">
+                                <input type="submit" name="submit" id="botaoForm" value="ENVIAR" />
+                            </div>
                         </div>
-                        <div id="botao-submit">
-                            <input type="submit" name="submit" id="botaoForm" value="ENVIAR" />
-                        </div>
-                    </div>
-            </form>
-                
+                        
+                </form>
             </div>
 
         </div>
