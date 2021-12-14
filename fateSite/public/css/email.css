@@ -1,0 +1,119 @@
+:root{
+
+    --redCallAction: #bd0202;
+    --redDetalhes: #d50101;
+    --pretoCinza: #353535 ;
+    --preto: #000000;
+    --brancoGelo: #e9e8e8; 
+    --branco: #ffffff; 
+    --fontePrincipal:"mukta","sans-serif";
+    --tituloPrincipal: 60px;
+    --tituloPrincipalMobile: 45px;
+    --tituloSecundario: 30px;
+    --paragrafos: 20px;
+    --paragrafosMobile: 18px;
+    }
+
+.email-label::placeholder {
+    color: var(--pretoCinza);
+    font-size: 10pt;
+    opacity: 50%;
+  }
+
+.email-label{
+      border-radius: 5px;
+      border: 0px;
+      padding: 5px;
+      margin: 10px;
+      width: 98%;
+      transition: 100ms;
+  }
+.email-label:hover{
+    border-left: 3px solid var(--redCallAction);
+   
+}
+.email-label:focus{
+    outline-width: 0;
+}
+
+
+
+#email-text{
+    border-radius: 5px;
+    border: 0px;
+    padding: 5px;
+    margin: 10px;
+    width: 98%;
+    height: 300px;
+    resize: none;
+    transition: 100ms;
+}
+#email-text:hover{
+    border-left: 3px solid var(--redCallAction);
+}
+
+#email-text:focus{
+    outline-width: 0;
+}
+
+#cabeçalho-email{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--brancoGelo);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.email-head{
+    padding: 10px 10px 0px 10px;
+    color: var(--pretoCinza);
+    font-family: var(--fontePrincipal);
+    font-weight: bold;
+}
+
+#botaoForm{
+    background-color: var(--redCallAction);
+    color: white;
+    display: flex;
+    /* margin-right: 15px;
+    margin-left: auto;
+    margin-bottom: 10px; */
+    padding: 5px 15px ;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-family: var(--fontePrincipal);
+    font-weight: bold;
+}
+.botao-reset {
+    border:none; /*remove as bordas*/
+    padding: 0; /*remove os espaços*/
+    background-color: transparent; /*remove o fundo cinza*/
+
+    /*remove a aparência customizada/nativa do navegador*/
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+.botao-reset img{
+    width: 35px;
+    height: 35px;
+    transition: 800ms;
+}
+.botao-reset img:hover{
+    transform: scale(1.2);
+}
+
+#area-botao{
+    display: flex;
+    flex-direction: row;
+    margin-right: 15px;
+    margin-left: auto;
+}
+#area-reset{
+    display: flex;
+    flex-direction: row;
+    margin-right: 15px;
+    margin-left: auto;
+    margin-bottom: 10px;
+}
+
+

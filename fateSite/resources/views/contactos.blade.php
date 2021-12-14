@@ -83,7 +83,7 @@
             </div>                
         </div>
     </div>  
-        @if(Auth::check())
+    @if(Session::get('authAdmin') == 1)
                             <div id="area-tabela-admin">
                                 <div  class="tituloPrincipal">
                                     <h1 >ADMIN <span>SIDE</span></h1>
@@ -96,6 +96,7 @@
                                     <th>Email</th>
                                     <th>Topic</th>
                                     <th>Comment</th>
+                                    <th>Send Email</th>
                                     <th>Delete</th>
                                     @foreach($contacts as $contact)
                                     <tr>
@@ -104,6 +105,7 @@
                                         <td>{{ $contact->email }}</td>
                                         <td>{{ $contact->topic }}</td>
                                         <td>{{ $contact->comment }}</td>
+                                        <td><a href="{{route('gm.email')}}"><img class="botao-delete"  src="{{ asset('img\paginacontactos\email.png') }}" alt="cruz para apagar"></a></td>
                                         <td><a href="contactos/delete/{{ $contact->id }}"><img class="botao-delete"  src="{{ asset('img\paginacontactos\trash.png') }}" alt="cruz para apagar"></a></td>
                                     </tr>
                                     @endforeach

@@ -34,6 +34,12 @@ Route::get('/parcerias', function () {
     return view('parcerias');
 })->name('gm.parcerias');
 
+
+
+Route::get('/email', function () {
+    return view('email');
+})->name('gm.email');
+
 //Rota para form CONTACTOS
 Route::get('/contactos', function () {
     return view('contactos');
