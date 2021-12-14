@@ -6,6 +6,8 @@ use App\Models\Imagesgame;
 use App\Models\Game;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Admin;
 
 class ImgHomePageController extends Controller
 {
@@ -14,13 +16,26 @@ class ImgHomePageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $games = Game::all();
         $imgs = Imagesgame::all();
+        
+        //check se o user é admin
+        $id = Auth::id();
+        $admins = Admin::all();
+        if (Auth::check()) {
+            foreach ($admins as $admin) {
+                if ($admin["id_user_admins"] == $id) {
+                    $request->session()->put('authAdmin', '1');
+                } else {
+                    $request->session()->put('authAdmin', '0');
+                }
+            }
+        }
+
         return view('index', compact('games', 'imgs'));
     }
-
     /**
      * Show the form for creating a new resource.
      *

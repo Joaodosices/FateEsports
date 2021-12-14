@@ -49,8 +49,6 @@
             </div>
         </section>
 
-        <a href="admin/{{ Auth::id() }}">Admin</a>
-
         @if(Session::get('authAdmin') == 1)
             <div class="painelAdmin" id="Removido">
                 <h1 class="tituloPainel">Painel Admin</h1>
