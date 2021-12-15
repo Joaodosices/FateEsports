@@ -12,7 +12,7 @@
                     <h1>Fate <br> Esports</h1>
                     <h2>Está a chegar a melhor organização do país</h2>
                     <div>
-                        <a href="#">Registar</a>
+                        <a href="#" class="clickProfile" >{{ __('Login') }}</a>
                     </div>
                 </div>
                 <div class="heroLanding--AreaImg">
@@ -130,5 +130,4 @@
 @endsection
 
 @section('scripts')
-    <script src="{{ asset('js/homePageCarrousel.js') }}"></script>
 @endsection
