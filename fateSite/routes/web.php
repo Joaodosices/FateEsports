@@ -63,6 +63,8 @@ Route::get('/sobre', function () {
     return view('sobre');
 })->name('gm.sobre');
 
+Route::get('/sobre', [AdminController::class, 'index'])->name('admins.index');
+
 //Rota do Perfil
 Route::get('/perfil', function () {
     return view('perfil');
