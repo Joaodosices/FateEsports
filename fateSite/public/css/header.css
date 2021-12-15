@@ -37,10 +37,16 @@ padding-right: 25px;
   
 }
 
+ #login {
+  position: relative;
+  margin-left: 250px;
+} 
+
 .profile {
   position: relative;
   margin-left: 250px;
 }
+
 
 .user_profile {
   position: relative;
@@ -77,17 +83,13 @@ a:hover {
   display: none;
 }
 
-#burguer {
-  display: none;
-}
-
 
 
 /* Menu burguer */
 
 @media screen and (max-width:900px) {
 
-
+  
   #header-conteudo {
     display: none;
   }
@@ -101,40 +103,33 @@ a:hover {
 
 
   a.icon  {
-    transform: scale(2) !important;
+    transform: scale(2);
   }
 
 
-
-  #burguer ul {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    position: fixed;
-  }
-
-  #burguer a {
+  /* #header-conteudo a {
     color: black;
     text-align: center;
     padding: 12px;
     text-decoration: none;
     line-height: 50px;
   
-}
-
-
-#burguer ul {
-  background-color: #f5f5f5;
-  max-width: 160px;
-  height: 350px;
-  border-top: 2px solid #d50101;
-  border-right: 2px solid #d50101;
-  border-bottom: 2px solid #d50101;
-}
+} */
 
 .user_profile {
   display: none;
 }
+
+
+ #header-conteudo ul {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: white;
+  position: fixed;
+  max-width: 100% ;
+} 
+
 
 #triangle-topleft {
   width: 0;
@@ -146,5 +141,14 @@ a:hover {
   top: -1px;
 }
 
+#login {
+  position: relative;
+  margin-left: 0;
+} 
+
+.profile {
+  position: relative;
+  margin-left: 0;
+}
 
 }

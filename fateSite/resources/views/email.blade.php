@@ -13,8 +13,9 @@
             <h4 class="email-head">Nova Resposta</h4>
                 <form action="{{url('/email')}}" method="post">
                 @csrf
-                    <label for="subject">Subject</label>
+                    <label for="subject" class="email-label-titulos">Assunto:</label>
                     <input type="text" name="subject" placeholder="subject..." class="email-label" value="{{$contact->topic}}" required/><br>
+                    <label for="subject" class="email-label-titulos">Resposta:</label>
                     <textarea name="email" id="email-text" cols="1" rows="1" required></textarea>
                     <input type="hidden" name="address" value="{{$contact->email}}">
                         <div id="area-botao">

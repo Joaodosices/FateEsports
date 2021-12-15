@@ -22,8 +22,8 @@
             <li> <a href="{{route('perfil.index')}}">SOBRE</a> </li>
             @guest
                     @if (Route::has('login'))
-                        <li class="nav-item">
-                            <a class="profile clickProfile" href="#">{{ __('Login') }}</a>
+                        <li>
+                            <a class="clickProfile" id="login" href="#">{{ __('Login') }}</a>
                         </li>
                     @endif
                     @else
@@ -39,10 +39,5 @@
         </ul>
         </nav>
 
-    </div>
-
-    
-
-                   
+    </div>                   
 </header>
-

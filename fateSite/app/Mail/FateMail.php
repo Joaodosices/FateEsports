@@ -11,14 +11,16 @@ class FateMail extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $request;
+
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($request)
     {
-        $this->details = $details;
+        $this->request = $request;
     }
 
     /**
@@ -28,8 +30,9 @@ class FateMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('Mail from ItSolutionStuff.com')
-        ->view('emails.myTestMail');
+        return $this
+            ->subject('RE: ' . $this->request->subject)
+            ->view('emails.FateMailTemplate');
 
     }
 }

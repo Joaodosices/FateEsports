@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Contact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\FateMail;
 
 class ContactController extends Controller
 {
@@ -94,21 +96,10 @@ class ContactController extends Controller
     }
     public function sendEmail(Request $request)
     {
-       dd($request->all());
+        Mail::to($request->address)
+            ->send(new FateMail($request));
 
-      $data = [
-        'subject' => $request->subject,
-        'email' => $request->email,
-        'address' => $request->address,
-      ];
-
-    //   Mail::send('email-template', $data, function($message) use ($data) {
-    //     $message->to($data['email'])
-    //     ->subject($data['subject']);
-    //   });
-
-    //   return back()->with(['message' => 'Email successfully sent!']);
-       
+        return redirect()->route('contacts.store')->withSuccess("Mensagem Enviada!");
     }
 
     public function email(Contact $contact)
