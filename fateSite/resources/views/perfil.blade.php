@@ -9,7 +9,11 @@
 
     <div class="container">
 
-        <h1> BEM-VINDO, USERNAME </h1>
+    @foreach($users as $user)
+                @if($user->id == Auth::id())
+        <h1> Bem-Vindo, <span> {{ $user->name }} </span> </h1>
+            @endif
+        @endforeach
         <ul>
             <li> <a class="active" href="#"> <img src="img/perfil/profile_icon.png" alt="user profile" width="38"
                         height="35"> DETALHES DA CONTA</a> </li>
@@ -20,38 +24,45 @@
         </ul>
 
 
-        <form>
+        <form method="post" action="{{ route('perfil.update' )}}" >
+        @csrf
+            @foreach($users as $user)
+                @if($user->id == Auth::id())
+                    <div id="primeiro_nome">
+                    <label for="fname">PRIMEIRO NOME:</label><br>
+                    <input disabled type="text" id="fname" name="name" value="{{ $user->name }}" ><br>
+                </div>
+
+                <div id="ultimo_nome">
+                    <label for="lname">ÚLTIMO NOME:</label><br>
+                    <input disabled type="text" id="lname" name="surname" value="{{ $user->surname }}">
+                </div>
 
 
+                <div id="email1">
+                    <br><label for="lname">EMAIL:</label><br>
+                </div>
+                <div id="email2">
+                    <input disabled type="email" id="email" name="email" value="{{ $user->email }}">
+                </div>
+                @endif
+            @endforeach
+       
 
-            <div id="primeiro_nome">
-                <label for="fname">PRIMEIRO NOME:</label><br>
-                <input type="text" id="fname" name="fname"><br>
-            </div>
+            <button type="button" class="submitbtn" id="alterar">  ALTERAR DADOS</button>
 
-            <div id="ultimo_nome">
-                <label for="lname">ÚLTIMO NOME:</label><br>
-                <input type="text" id="lname" name="lname">
-            </div>
+            <button class="submitbtn" id="submeter" type="submit" " > SUBMETER </button>
 
+            <h3> ALTERAR PASSWORD </h3>
 
-            <div id="email1">
-                <br><label for="lname">EMAIL:</label><br>
-            </div>
-            <div id="email2">
-                <input type="email" id="email" name="email">
-            </div>
+            <button class="submitbtn2" type="submit" > ALTERAR PASSWORD </button>
         </form>
 
-        <button class="submitbtn" type="submit" > ALTERAR DADOS </button>
-
-        <h3> ALTERAR PASSWORD </h3>
-
-        <button class="submitbtn2" type="submit" > ALTERAR PASSWORD </button>
-
     </div>
-   
+
+
 @endsection
 
 @section('scripts')
+<script src="js/perfil.js" type="text/javascript"></script> 
 @endsection
