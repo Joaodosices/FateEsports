@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Admin;
+use App\Models\User;
 
 class AdminController extends Controller
 {
@@ -15,8 +16,18 @@ class AdminController extends Controller
      */
     public function index()
     {
+        
         $admins=Admin::all();
-        return view('sobre',compact('admins'));
+        $users=User::select('select name,surname from users where id_user');
+    
+        //  foreach ($users as $user) {
+        //     foreach ($admins as $admin) {
+        //         if ($user["id"] == $admin["id_user"]) {
+                    
+        //         }
+        //     }
+        // }
+        return view('sobre',compact('admins','users'));
     }
 
     /**

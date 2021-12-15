@@ -63,11 +63,7 @@
         </div>
     </section>
     <!-- ==========overview-two-section========== -->
-    @foreach($admins as $admin)
-
-{{$admin->id}}
-
-@endforeach
+    @foreach($users as $user){{$user->name}}@endforeach
     <!-- ==========CEO-section========== -->
     <section class="CEO-section padding-top">
         <div class="container">
