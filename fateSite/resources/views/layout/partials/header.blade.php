@@ -16,18 +16,17 @@
         <a href="" class="logo"><img class="nav-logo" src="{{ asset('img/header/logo_fate.png') }}" alt="Logo" width="90" height="90"></a>
         <ul id="lista-nav" >
             <li><a href="{{route('index.main')}}">HOME</a></li>
-            <li><a href="#loja" class="left">LOJA</a></li>
-            <li><a href="#equipas">EQUIPAS</a></li>
+            <li><a href="http://fateshop.infinityfreeapp.com/" class="left">LOJA</a></li>
+            <li><a href="{{route('games.index')}}">EQUIPAS</a></li>
             <li><a href="{{route('partner.index')}}">PARCERIAS</a> </li>
             <li><a href="{{route('contacts.index')}}">CONTACTOS</a></li>
-            <li><a href="{{route('perfil.index')}}">SOBRE</a></li>
+            <li><a href="{{route('admins.index')}}">SOBRE</a></li>
             <div class="nav-gap">
             @guest
                     @if (Route::has('login'))
                     <li class="nav-item">
                         <a class="profile clickProfile" href="#">{{ __('Login') }}</a>
                     </li>
-                    
             @endif
             @else
                 <li> <a class="profile" href="{{route('perfil.index')}}">{{ Auth::user()->name }}</a> </li>

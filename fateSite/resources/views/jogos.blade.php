@@ -10,13 +10,15 @@
 
 <div class="container">
     <div id="area-jogos">
-        @foreach($games as $game)
-        <div id="carta-jogo-frente" class="cartas">
-        <a href=""><img class="img-jogos" src="{{ $game->img }}" alt="imagem de jogos"></a>
-        </div>
-        <!-- <div id="carta-jogo-atras" class="cartas">
-        <img class="img-jogos"  src="{{ $game->img }}" alt="imagem de jogos">
-        </div> -->
+        @foreach($imgGames as $imgGame)
+            @if($imgGame->description == 'paginaJogos')
+                <div id="carta-jogo-frente" class="cartas">
+                    <a href=""><img class="img-jogos" src="{{ $imgGame->img }}" alt="imagem de jogos"></a>
+                </div>
+                <!-- <div id="carta-jogo-atras" class="cartas">
+                    <img class="img-jogos"  src="{{ $imgGame->img }}" alt="imagem de jogos">
+                </div> -->
+            @endif
         @endforeach
     </div>
 </div>
