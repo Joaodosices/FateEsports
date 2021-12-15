@@ -160,7 +160,6 @@ button, input, a{
     display: grid;
     grid-gap: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    grid-template-rows: repeat(3);
     margin: 2rem auto;
     place-items: center;
     max-width: 27rem;
@@ -170,7 +169,7 @@ button, input, a{
     border: 1px solid black;
 }
 .imgJogo img{
-    object-fit: cover;  
+    object-fit: cover;      
     max-width: 100%;
     max-height: 100%;
 }
@@ -438,5 +437,55 @@ button, input, a{
     }
     100%{
         transform: translateX(0%);
+    }
+}
+@media (max-width: 994px){
+    .slider{
+        width: 560px;
+    }
+    .slider .slider-track {
+        display: flex;
+        width: calc(150px 8);
+    }
+
+    .slider .slider-track {
+        animation: scroll 15s infinite alternate;
+    }
+
+    @keyframes scroll {
+        0%{
+            transform: translateX(0%);
+        }
+        50%{
+            transform: translateX(calc(-150px * 3));
+        }
+        100%{
+            transform: translateX(0%);
+        }
+    }
+}
+@media (max-width: 612px){
+    .slider{
+        width: 300px;
+    }
+
+    .slide{
+        margin-left: 10%;
+        margin-right: 0%;
+    }
+    .slide:nth-child(1){
+        margin-left: 37%;
+    }
+
+    @keyframes scroll {
+        0%{
+            transform: translateX(0%);
+        }
+        50%{
+            transform: translateX(calc(-220px * 3));
+        }
+        100%{
+            transform: translateX(0%);
+        }
     }
 }
