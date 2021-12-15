@@ -34,6 +34,7 @@
 
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/autenticacao.js') }}"></script>
+    <script src="{{ asset('js/header.js') }}"> </script>
     @yield('scripts')
 </body>
 

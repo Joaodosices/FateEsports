@@ -19,6 +19,7 @@ use App\Http\Controllers\ImgHomePageController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\gameController;
 use App\Http\Controllers\PartnerController; 
+use App\Http\Controllers\PerfilController;
 
 
 // Routes para a página index
@@ -62,9 +63,13 @@ Route::get('/sobre', function () {
     return view('sobre');
 })->name('gm.sobre');
 
+//Rota do Perfil
 Route::get('/perfil', function () {
     return view('perfil');
 })->name('gm.perfil');
+Route::get('/perfil', [PerfilController::class, 'index'])->name('perfil.index');
+Route::post('/perfil', [PerfilController::class, 'update'])->name('perfil.update');
+
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('index');
