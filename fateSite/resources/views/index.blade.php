@@ -9,10 +9,10 @@
         <div class="textColumn">
             <section class="heroLanding">
                 <div class="heroLanding--texto">
-                    <h1>Fate <br> Esports</h1>
-                    <h2>Está a chegar a melhor organização do país</h2>
+                    <h1 class="titulo-h1">Fate <br> Esports</h1>
+                    <h2 class="titulo-h2">Está a chegar a melhor organização do país</h2>
                     <div>
-                        <a href="#" class="clickProfile" >{{ __('Login') }}</a>
+                        <a href="#" class="clickProfile callToAction" >{{ __('Login') }}</a>
                     </div>
                 </div>
                 <div class="heroLanding--AreaImg">
@@ -33,10 +33,10 @@
             
                 <div class="ondeEstamos--texto">
                     <div class="textColumn1 caixaOndeEstamos">
-                        <h1>Onde <span>Estamos?</span></h1>
-                        <p>A Fate Esports conta com equipas em ínumeros jogos, todos com o objetivo de ganhar e doar!</p>
+                        <h1 class="titulo-h1">Onde <span>Estamos?</span></h1>
+                        <p class="text-p">A Fate Esports conta com equipas em ínumeros jogos, todos com o objetivo de ganhar e doar!</p>
                         <br>
-                        <p>Alguns jogos onde a Fate participa:</p>
+                        <p class="text-p">Alguns jogos onde a Fate participa:</p>
                     </div>
                 </div>
 
@@ -48,10 +48,10 @@
                 @endforeach
             </div>
         </section>
-
+        
         @if(Session::get('authAdmin') == 1)
             <div class="painelAdmin" id="Removido">
-                <h1 class="tituloPainel">Painel Admin</h1>
+                <h1 class="tituloPainel titulo-h1">Painel Admin</h1>
                 <div class="painelAdmin--conteudo">
                     <div class="conteudo--imgs">
                         <div class="conteudo--imgs__background">
@@ -59,7 +59,7 @@
                                 <div class="adminImgArea">
                                     <form action="" method="post"></form>
                                     <img src="{{ $img->img }}" alt="">
-                                    <a href="delete/{{ $img->id }}" class='adminImgArea__sairArea'><img src="img\autenticacao\close.png" alt=""></a>
+                                    <a href="delete/{{ $img->id }}" class='adminImgArea__sairArea callToAction'><img src="img\autenticacao\close.png" alt=""></a>
                                 </div>
                             @endforeach
                         </div>
@@ -73,8 +73,8 @@
                                         <option value="{{ $game->id }}">{{ $game->name }}</option>
                                 @endforeach
                             </select> <br>
-                            <input placeholder="Link Imgur com imagem..." type="text" class="inputImg @error('img') is-invalid @enderror" name="img"> <br>
-                            <button type="submit" class="addImgJogoBtn">Adicionar</button>
+                            <input placeholder="Link Imgur com imagem..." type="text" class="inputImg @error('img') is-invalid @enderror callToAction" name="img"> <br>
+                            <button type="submit" class="addImgJogoBtn callToAction">Adicionar</button>
                             @error('img')
                                 <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -92,32 +92,32 @@
         @endif
         <section class="ajudaAjudarArea" id="mover">
             <div class="textColumn">
-            <h1>Ajuda-nos a <span>ajudar!</span></h1>
-            <p>A Fate Esports tem muitos mais objetivos do que vencer e para isso nós precisamos dos nossos fãs para
+            <h1 class="titulo-h1">Ajuda-nos a <span>ajudar!</span></h1>
+            <p class="text-p">A Fate Esports tem muitos mais objetivos do que vencer e para isso nós precisamos dos nossos fãs para
                 ajudar</p>
-            <p>Maneiras de ajudar a Fate:</p>
+            <p class="text-p">Maneiras de ajudar a Fate:</p>
             </div>    
             <div class="ajudaAjudarArea--propostas">
                 <div class="proposta">
-                    <p>Escolhe ajudar</p>
+                    <p class="text-p">Escolhe ajudar</p>
                     <img src="img/homePage/propostas/caridade.png" alt="">
-                    <p class="padFrase">Tu poderás ajudar-nos a apoiar as instituições</p>
+                    <p class="padFrase text-p">Tu poderás ajudar-nos a apoiar as instituições</p>
                 </div>
                 <div class="proposta">
-                    <p>Comprar Merch</p>
+                    <p class="text-p">Comprar Merch</p>
                     <img src="img/homePage/propostas/merchandising.png" alt="">
-                    <p class="padFrase">Ajudas os jogadores e uma % vai para a caridade</p>
+                    <p class="padFrase text-p">Ajudas os jogadores e uma % vai para a caridade</p>
                 </div>
                 <div class="proposta">
-                    <p>Assistir as competições</p>
+                    <p class="text-p">Assistir as competições</p>
                     <img src="img/homePage/propostas/watching-tv.png" alt="">
-                    <p class="padFrase">Ao assistires as competições já nos ajudas muito!</p>
+                    <p class="padFrase text-p">Ao assistires as competições já nos ajudas muito!</p>
                 </div>
             </div>
             <br><br><br><br>
         </section>
         <section class="parcerias">
-            <h1>Nossos <span>Parceiros</span></h1>
+            <h1 class="titulo-h1">Nossos <span>Parceiros</span></h1>
             <div class="slider">
                 <div class="slider-track">
                     @foreach($partners as $partner)
