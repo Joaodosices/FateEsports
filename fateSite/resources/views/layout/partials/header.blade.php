@@ -15,7 +15,7 @@
         <nav id="header-conteudo">
         <a href="" class="logo"><img class="nav-logo" src="{{ asset('img/header/logo_fate.png') }}" alt="Logo" width="90" height="90"></a>
         <ul id="lista-nav" >
-            <li><a href="{{route('index.main')}}">HOME</a></li>
+            <li><a class="active" href="{{route('index.main')}}">HOME</a></li>
             <li><a href="#loja" class="left">LOJA</a></li>
             <li><a href="#equipas">EQUIPAS</a></li>
             <li><a href="{{route('partner.index')}}">PARCERIAS</a> </li>

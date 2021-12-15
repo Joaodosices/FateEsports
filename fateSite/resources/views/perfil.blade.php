@@ -11,7 +11,7 @@
 
     @foreach($users as $user)
                 @if($user->id == Auth::id())
-        <h1> Bem-Vindo, <span> {{ $user->name }} </span> </h1>
+        <h1> Bem-Vindo, <span> {{ $user->name }} </span>!</h1>
             @endif
         @endforeach
         <ul>

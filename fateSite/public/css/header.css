@@ -155,6 +155,9 @@ li{
   margin-left: 250px;
 }
 
+a.icon  {
+  display: none;
+}
 
 
 @media screen and (max-width:900px) {
@@ -230,6 +233,7 @@ li{
 
 a.icon  {
   transform: scale(2);
+  display: block;
 }
 
 
