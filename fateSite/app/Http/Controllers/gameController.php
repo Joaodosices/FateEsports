@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Game;
-// use App\Http\Controllers\Controller;
+use App\Models\Imagesgame;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class gameController extends Controller
+class GameController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,10 @@ class gameController extends Controller
      */
     public function index()
     {
-        //
+        {
+            $games = Imagesgame::all();
+            return view('jogos', compact('games'));
+        }
     }
 
     /**
@@ -45,7 +48,7 @@ class gameController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Game $game)
+    public function show($id)
     {
         //
     }

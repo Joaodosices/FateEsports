@@ -42,9 +42,11 @@
 
             <div class="ondeEstamos--jogos">
                 @foreach($imgs as $img)
-                    <div class="imgJogo">
-                        <img src="{{ $img->img }}" alt="">
-                    </div>
+                    @if($img->description == 'Monocromatico')
+                        <div class="imgJogo">
+                            <img src="{{ $img->img }}" alt="">
+                        </div>
+                    @endif
                 @endforeach
             </div>
         </section>
@@ -56,11 +58,13 @@
                     <div class="conteudo--imgs">
                         <div class="conteudo--imgs__background">
                             @foreach($imgs as $img)
-                                <div class="adminImgArea">
-                                    <form action="" method="post"></form>
-                                    <img src="{{ $img->img }}" alt="">
-                                    <a href="delete/{{ $img->id }}" class='adminImgArea__sairArea callToAction'><img src="img\autenticacao\close.png" alt=""></a>
-                                </div>
+                                @if($img->description == 'Monocromatico')
+                                    <div class="adminImgArea">
+                                        <form action="" method="post"></form>
+                                        <img src="{{ $img->img }}" alt="">
+                                        <a href="delete/{{ $img->id }}" class='adminImgArea__sairArea callToAction'><img src="img\autenticacao\close.png" alt=""></a>
+                                    </div>
+                                @endif
                             @endforeach
                         </div>
                     </div>
