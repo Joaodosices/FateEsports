@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Admin;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
+
 
 class AdminController extends Controller
 {
@@ -17,8 +19,8 @@ class AdminController extends Controller
     public function index()
     {
         
-        $admins=Admin::all();
-        $users=User::select('select name,surname from users where id_user');
+        //$admins=Admin::all();
+        //$users=User::all();
     
         //  foreach ($users as $user) {
         //     foreach ($admins as $admin) {
@@ -27,7 +29,13 @@ class AdminController extends Controller
         //         }
         //     }
         // }
-        return view('sobre',compact('admins','users'));
+        
+        $users = DB::table('users')
+        ->join('admins', 'users.id', '=', 'admins.id_user')
+        ->select('admins.*','users.name','users.surname')
+        ->get();
+        
+        return view('sobre',compact('users'));
     }
 
     /**

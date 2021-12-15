@@ -150,3 +150,78 @@ span {
 ::placeholder {
   color: black;
 }
+
+@media screen and (max-width:900px) {
+
+  #primeiro_nome {
+    position: relative;
+    left: 30px;
+    bottom: 70px;
+  }
+
+  #ultimo_nome {
+    position: relative;
+    left: 30px;
+    bottom: 25px;
+  }
+
+  #email1 {
+    position: relative; /* criar class no email e input */
+    left: 30px;
+    bottom: 5px;
+  }
+
+  #email2 {
+    position: relative; /* criar class no email e input */
+    left: 30px;
+    bottom: 2px;
+  }
+
+  form input[type=email] {
+    width: 320px;
+    height: 25px;
+  }
+
+  .submitbtn {
+    color: #fff;
+    background-color: #bd0202;
+    border: 1px solid #bd0202;
+    font-size: 18px;
+    font-weight: 700;
+    min-width: 216px;
+    padding: 13px 30px;
+    transition: 0.3s;
+  
+    position: relative;
+    margin-top: 400px;
+    left: 80px;
+  }
+
+  #submeter {
+    position: relative;
+    margin-top: 20px;
+    left: 50px;
+  }
+
+  .container h3 {
+    position: relative;
+    left: 30px;
+    bottom: 260px;
+}
+
+.submitbtn2 {
+  color: #fff;
+  background-color: #bd0202;
+  border: 1px solid #bd0202;
+  font-size: 18px;
+  font-weight: 700;
+  min-width: 216px;
+  padding: 13px 30px;
+  transition: 0.3s;
+
+  position: relative;
+  bottom: 240px;
+  left: 80px;
+}
+
+}
