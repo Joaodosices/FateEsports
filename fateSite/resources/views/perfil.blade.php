@@ -55,7 +55,7 @@
 
             <h3> ALTERAR PASSWORD </h3>
 
-            <button class="submitbtn2" type="submit" > ALTERAR PASSWORD </button>
+            <button type="button" class="submitbtn2" type="submit" > ALTERAR PASSWORD </button>
         </form>
 
     </div>
