@@ -16,10 +16,10 @@
                 <ul>
                     <li> <a class="active" href="{{route('index.main')}}">HOME</a> </li>
             <li> <a href="#loja" class="left">LOJA</a> </li>
-            <li> <a href="#equipas">EQUIPAS</a> </li>
+            <li> <a href="{{route('games.index')}}">EQUIPAS</a> </li>
             <li> <a href="{{route('partner.index')}}">PARCERIAS</a> </li>
             <li> <a href="{{route('contacts.index')}}">CONTACTOS</a> </li>
-            <li> <a href="{{route('perfil.index')}}">SOBRE</a> </li>
+            <li> <a href="{{route('admins.index')}}">SOBRE</a> </li>
             @guest
                     @if (Route::has('login'))
                         <li>

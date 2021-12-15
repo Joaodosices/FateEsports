@@ -17,7 +17,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ImgHomePageController;
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\gameController;
+use App\Http\Controllers\GameController;
 use App\Http\Controllers\PartnerController; 
 use App\Http\Controllers\PerfilController;
 
@@ -36,18 +36,15 @@ Route::get('/parcerias', function () {
     return view('parcerias');
 })->name('gm.parcerias');
 
+// Route::get('/jogos', function () {
+//     return view('jogos');
+// })->name('gm.jogos');
 
-
-// Route::get('/email', function () {
-//     return view('email');
-// })->name('gm.email');
+Route::get('/jogos', [GameController::class, 'index'])->name('games.index');
 
 Route::get('/email/{contact}', [ContactController::class, 'email'])->name('gm.email');
 Route::post('/email', [ContactController::class, 'sendEmail'])->name('gm.sendEmail');
 Route::get('/parcerias', [PartnerController::class, 'index'])->name('partner.index');
-
-
-
 
 //Rota para form CONTACTOS
 Route::get('/contactos', function () {

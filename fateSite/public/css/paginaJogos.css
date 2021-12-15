@@ -1,0 +1,37 @@
+:root{
+
+    --redCallAction: #bd0202;
+    --redDetalhes: #d50101;
+    --pretoCinza: #353535 ;
+    --preto: #000000;
+    --brancoGelo: #e9e8e8; 
+    --branco: #ffffff; 
+    --fontePrincipal:"mukta","sans-serif";
+    --tituloPrincipal: 60px;
+    --tituloPrincipalMobile: 45px;
+    --tituloSecundario: 30px;
+    --paragrafos: 20px;
+    --paragrafosMobile: 18px;
+    }
+#area-jogos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(274px, 1fr)) ;
+    place-items: center;
+
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+
+}
+/* 274x436 */
+.img-jogos{
+margin-bottom: 50px;
+}
+
+#area-video{
+ display: grid;
+ place-items: center;
+ background-color: rgb(54, 54, 54);
+ margin-bottom: 100px;
+ height: 700px;
+}
