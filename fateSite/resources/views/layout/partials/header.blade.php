@@ -19,7 +19,7 @@
             <li> <a href="#equipas">EQUIPAS</a> </li>
             <li> <a href="{{route('partner.index')}}">PARCERIAS</a> </li>
             <li> <a href="{{route('contacts.index')}}">CONTACTOS</a> </li>
-            <li> <a href="{{route('gm.sobre')}}">SOBRE</a> </li>
+            <li> <a href="{{route('perfil.index')}}">SOBRE</a> </li>
             @guest
                     @if (Route::has('login'))
                         <li>
@@ -39,9 +39,5 @@
         </ul>
         </nav>
 
-    </div>
-
-    
-
-                   
+    </div>                   
 </header>
