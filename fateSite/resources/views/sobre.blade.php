@@ -63,7 +63,6 @@
         </div>
     </section>
     <!-- ==========overview-two-section========== -->
-    @foreach($users as $user){{$user->name}}@endforeach
     <!-- ==========CEO-section========== -->
     <section class="CEO-section padding-top">
         <div class="container">
@@ -78,30 +77,31 @@
                 </div>
             </div>
             <div class="row mb-30-none justify-content-center">
+                @foreach($users as $user)
                 <div class="col-md-6 col-lg-4 col-sm-10">
                     <div class="CEO-item CEO-item-two">
                         <div class="c-thumb">
                             <a href="CEO-profile.html">
-                                <img src="img/sobre/ceo01.jpg" alt="CEO">
+                                <img src="{{$user->img}}" alt="CEO">
                             </a>
                         </div>
                         <div class="CEO-content">
                             <h4 class="sub-title">
-                                <a href="CEO-profile.html">Alexandre Maia</a>
+                                <a href="CEO-profile.html">{{$user->name}} {{$user->surname}}</a>
                             </h4>
                             <ul class="social">
                                 <li>
-                                    <a href="#0">
+                                    <a target="_blank" href="{{$user->facebook}}">
                                         <i class="fab fa-facebook-f"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#0">
+                                    <a target="_blank" href="{{$user->twitter}}">
                                         <i class="fab fa-twitter"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#0">
+                                    <a target="_blank" href="{{$user->instagram}}">
                                         <i class="fab fa-instagram"></i>
                                     </a>
                                 </li>
@@ -109,136 +109,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 col-sm-10">
-                    <div class="CEO-item CEO-item-two">
-                        <div class="c-thumb">
-                            <a href="CEO-profile.html">
-                                <img src="img/sobre/ceo02.jpg" alt="CEO">
-                            </a>
-                        </div>
-                        <div class="CEO-content">
-                            <h4 class="sub-title">
-                                <a href="CEO-profile.html">Diogo Gonçalves</a>
-                            </h4>
-                            <ul class="social">
-                                <li>
-                                    <a href="#0">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#0">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#0">
-                                        <i class="fab fa-instagram"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-sm-10">
-                    <div class="CEO-item CEO-item-two">
-                        <div class="c-thumb">
-                            <a href="CEO-profile.html">
-                                <img src="img/sobre/ceo03.jpg" alt="CEO">
-                            </a>
-                        </div>
-                        <div class="CEO-content">
-                            <h4 class="sub-title">
-                                <a href="CEO-profile.html">João Fonseca</a>
-                            </h4>
-                            <ul class="social">
-                                <li>
-                                    <a href="#0">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#0">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#0">
-                                        <i class="fab fa-instagram"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div class="col-md-6 col-lg-4 col-sm-10">
-                    <div class="CEO-item CEO-item-two">
-                        <div class="c-thumb">
-                            <a href="CEO-profile.html">
-                                <img src="img/sobre/ceo04.jpg" alt="CEO">
-                            </a>
-                        </div>
-                        <div class="CEO-content">
-                            <h4 class="sub-title">
-                                <a href="CEO-profile.html">Luís Carvalho</a>
-                            </h4>
-                            <ul class="social">
-                                <li>
-                                    <a href="#0">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#0">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#0">
-                                        <i class="fab fa-instagram"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div class="col-md-6 col-lg-4 col-sm-10">
-                    <div class="CEO-item CEO-item-two">
-                        <div class="c-thumb">
-                            <a href="CEO-profile.html">
-                                <img src="img/sobre/ceo05.jpg" alt="CEO">
-                            </a>
-                        </div>
-                        <div class="CEO-content">
-                            <h4 class="sub-title">
-                                <a href="CEO-profile.html">Luís Claudino</a>
-                            </h4>
-                            <ul class="social">
-                                <li>
-                                    <a href="#0">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#0">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#0">
-                                        <i class="fab fa-instagram"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -255,7 +126,7 @@
                     <h3 class="sub-title">Afiliados</h3>
                 </div>
                 <div class="counter-item counter-item-two">
-                    <div class="odometer plus" data-odometer-final="600">0 <span>+</span></div>
+                    <div class="odometer plus" data-odometer-final="615">0 <span>+</span></div>
                     <h3 class="sub-title">Apoiantes</h3>
                 </div>
                 <div class="counter-item counter-item-two">
