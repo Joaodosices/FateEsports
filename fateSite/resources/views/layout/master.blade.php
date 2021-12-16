@@ -9,12 +9,12 @@
     <title>Fate Esports</title>
     
     <link rel="stylesheet" href="{{ asset('css/normalize.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{ asset('css/header.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{ asset('css/footer.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('css/autenticacao.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('css/scrollbar.css') }}" type="text/css">
     @yield('styles')
     
+    <link rel="stylesheet" href="{{ asset('css/header.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap" rel="stylesheet" />

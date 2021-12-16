@@ -5,6 +5,7 @@
 .container{
   max-width: 75%;
 margin: 0 auto;
+
 }
 
 h1{
@@ -12,7 +13,7 @@ text-align:center;
 }
 
 div#textoinicio{
-text-align:left;
+text-align:center;
 max-width:40%;
 margin:0 auto;
 margin-bottom:40px;
@@ -24,46 +25,54 @@ margin:0 auto;
 border-color:red;
 height:10px;
 background-color:red;
+margin-bottom:50px;
 }
 
 
 div#grid-marcas {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(601px,1fr));
   margin-bottom:50px;
-}
+  max-width:601px;
+  grid-gap:50px;
+ margin-left:90px;
+   place-items:center;
+ 
+  }
 .grid-item {
   border: 1px solid #353535;
   width:601px;
   height:345px;
-  margin-top:50px;
+  position:relative;
 }
 .imgmarca{
   width:237px;
   height:133px;
-  float:left;
+}
+
+div.containerimgmarca{
+  max-width:50%;
   margin-left:40px;
   margin-top:100px;
+  float: left;
 }
 
 h2.titulomarca{
-  float:left;
+
   font-size:30pt;
   font-weight:900;
-  margin-left:20px;
-  margin-top:50px;
+
 }
 
-p.descricaomarca{
+div.containertextomarca{
   font-size:16pt;
   text-align:left;
-  float:left;
   font-weight:normal;
-  max-width:270px;
-  max-height:175px;
-  margin-top:-25px;
-  margin-left:20px;
+  width:50%;
+  max-height:260px;
+  height:100%;
   overflow: hidden;
+  
 }
 
 a.linkmarca{  
@@ -71,28 +80,40 @@ a.linkmarca{
     text-decoration:none;
     color:#D50101;
     font-size:25px;
-    margin-top:10px;
-    margin-right:20px;
     transition:1s;
+    position:absolute;
+    bottom:10px;
+    right:40px;
+    font-weight:900;
 }
 
 a.linkmarca:hover{  
  transform:scale(1.2);
 }
 
-
-/*Scrollbar*/
-
-*::-webkit-scrollbar-track {
-    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
-    background-color: #F5F5F5;
+@media only screen and (max-width: 1530px) {
+  div#grid-marcas {
+  grid-template-columns:  auto;
+  place-items:center;
+  margin:auto;
+  }
 }
 
-*::-webkit-scrollbar {
-    width: 4px;
-    background-color: #F5F5F5;
+@media only screen and (max-width: 700px) {
+  div#grid-marcas {
+  /* grid-template-columns:  auto; */
+  place-items:center;
+  transform:scale(0.7);
+  }
+  div.container{
+    margin:0;
+    width:100%;
+    margin-right:0;
+  }
+
+  div#grid-marcas {
+    margin-left:0;
+  }
+
 }
 
-*::-webkit-scrollbar-thumb {
-    background-color: #000000;
-}

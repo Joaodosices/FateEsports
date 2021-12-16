@@ -6,7 +6,7 @@
 
 @section('content')
 
-   <div class="container"> 
+   <div class="container">  
       <h1> As Nossas Parcerias</h1>
 
       <div id="textoinicio">
@@ -23,10 +23,16 @@
       @foreach($partners as $partner)
 
       <div class="grid-item">
-         
+
+        <div class="containerimgmarca"> 
+
       <img class="imgmarca" src="{{$partner->img}}">
-        <h2 class="titulomarca"> {{$partner->name}} <h2>
-        <p class="descricaomarca"> {{$partner->description}} </p> <br>
+      </div>
+      <div class="containertextomarca">
+
+        <h2 class="titulomarca"> {{$partner->name}} </h2>
+        <p class="descricaomarca"> {{$partner->description}} </p>
+        </div>
         <a class="linkmarca" target="_blank" href="{{$partner->linkpartner}}"> Visitar Site</a>
          
          </div>
