@@ -25,7 +25,7 @@
             @guest
                     @if (Route::has('login'))
                     <li class="nav-item">
-                        <a class="profile clickProfile" href="#">{{ __('Login') }}</a>
+                        <a class="profile clickProfile" id="mobileLogin" href="#">{{ __('Login') }}</a>
                     </li>
             @endif
             @else
