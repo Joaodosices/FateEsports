@@ -70,6 +70,7 @@
     background-color: var(--brancoGelo);
     border-radius: 5px;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 .email-head{
     padding: 10px 10px 0px 10px;

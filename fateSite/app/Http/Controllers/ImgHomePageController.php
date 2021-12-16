@@ -26,17 +26,17 @@ class ImgHomePageController extends Controller
         //check se o user é admin
         $id = Auth::id();
         $admins = Admin::all();
+        
+        
         if (Auth::check()) {
             foreach ($admins as $admin) {
                 if ($admin["id_user"] == $id) {
                     $request->session()->put('authAdmin', '1');
-                } else {
-                    $request->session()->put('authAdmin', '0');
                 }
-            }
+            } 
         }
 
-        return view('index', compact('games', 'imgs', 'partners'));
+        return view('index', compact('games', 'imgs', 'partners', 'admins'));
     }
     /**
      * Show the form for creating a new resource.

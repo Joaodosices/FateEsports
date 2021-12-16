@@ -50,7 +50,7 @@
                 @endforeach
             </div>
         </section>
-        
+      
         @if(Session::get('authAdmin') == 1)
             <div class="painelAdmin" id="Removido">
                 <h1 class="tituloPainel titulo-h1">Painel Admin</h1>
