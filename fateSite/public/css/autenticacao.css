@@ -53,10 +53,10 @@
     width: 100%;
     padding: 0;
 }
-.areainputLogin, .popUpImgSide{
+.areainputAuthForms, .popUpImgSide{
     height: 93%;
 } 
-.areainputLogin{
+.areainputAuthForms{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
@@ -76,6 +76,10 @@
     margin-left: 2rem;
     font-size: 100%;
     align-items: center;
+    transition: 200ms ease-in;
+}
+.popUp--input input:focus{
+    outline: 1px solid var(--primaryColor);
 }
 .popUp--input input:first-child{
     margin-top: 2rem;
@@ -94,6 +98,17 @@
     color: white;
     padding: 0.30em 2.50em;
     border: 0;
+    cursor: pointer;
+    transition: 200ms ease-in-out;
+}
+.popUp--input button:hover{
+    background-color: white;
+    outline: 1px solid var(--primaryColor);
+    color: var(--primaryColor);
+}
+.MessageLogin{
+    margin-left: 2rem;
+    color: var(--primaryColor);
 }
 .popUpImgSide{
     display: flex;
@@ -132,9 +147,18 @@
     color: var(--primaryColor);
     text-decoration: dashed;
 } 
-
-
-
+.linkLogin{
+    margin-top: 1rem;
+    margin-bottom: 0;
+    color: white;
+    text-align: center;
+}
+.linkLogin a{
+    background-color: transparent;
+    padding: 0;
+    color: var(--primaryColor);
+    text-decoration: dashed;
+} 
 
 
 
@@ -183,7 +207,7 @@
     max-height: 200px;
     object-fit: cover;
 }
-.areainputLogin{
+.areainputAuthForms{
     display: flex;
     flex-direction: row;
 }

@@ -1,4 +1,5 @@
 const authArea = document.getElementsByClassName("popUp-background")[0];
+const popUpContent = document.getElementsByClassName("popUp-content")[0];
 const formLogin = document.getElementById("formLogin");
 const formRegister = document.getElementById("formRegister");
 const disableBody = document.getElementById("masterPage");
@@ -21,10 +22,12 @@ document.getElementById("closeLogin").onclick = function () {
 
 document.getElementsByClassName("registarbtn")[0].onclick = function () {
         formLogin.style.display = "none";
-        formRegister.style.display = "grid"
+        formRegister.style.display = "grid";
+        popUpContent.style.maxHeight = "26rem";
 }
 
 document.getElementsByClassName("loginBtn")[0].onclick = function () {
-    formRegister.style.display = "none"
+    formRegister.style.display = "none";
     formLogin.style.display = "grid";
+    popUpContent.style.maxHeight = "20rem";
 }
