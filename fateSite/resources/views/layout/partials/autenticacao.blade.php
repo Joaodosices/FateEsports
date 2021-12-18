@@ -5,23 +5,30 @@
         </div>
         <form action="{{ route('login') }}" method="post" id='formLogin'>
             @csrf
-            <img src="img/logo/logoFate-01.png" alt="">
-            <div class="popUp--input">
-                <input type="email" name="email" class="@error('email') is-invalid @enderror" value="{{ old('email') }}" placeholder="Email" required autocomplete="email"> <br>
-                <input type="password" name="password" class="@error('password') is-invalid @enderror" placeholder="Password" required autocomplete="current-password"> <br>
-                <button type="submit" value="Login">Login</button>
+            <div class="areainputLogin">
+                <div class="popUp--input">
+                    <h1 class="popUp--input__titulo">Login</h1>
+                    <input type="email" name="email" class="@error('email') is-invalid @enderror" value="{{ old('email') }}" placeholder="Email" required autocomplete="email"> <br>
+                    <input type="password" name="password" class="@error('password') is-invalid @enderror" placeholder="Password" required autocomplete="current-password"> <br>
+                    <button type="submit" value="Login">Login</button>
+                    @error('email')
+                    <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                @error('password')
+                    <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+                </div>
+                <div class="popUpImgSide">
+                    <img src="img/logo/logoFate-01.png" alt="">
+                </div>
             </div>
-            @error('email')
-                <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-                </span>
-            @enderror
-            @error('password')
-                <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-                </span>
-            @enderror
+            <div class="swapFormsArea">
             <p class="linkRegisto">Não tens conta? <a class="registarbtn" href="#">Regista-te aqui</a></p>
+            </div>
         </form>
 
         <form action="{{ route('register') }}" method="post" id='formRegister'>

@@ -6,8 +6,7 @@ const x = document.getElementsByClassName("clickProfile").length;
 
 for (let i = 0; i < x; i++) {
     document.getElementsByClassName("clickProfile")[i].onclick = function () { 
-        if (authArea.style.display = "none") {
-            console.log("entrar");
+        if (authArea.style.display = "none") {  
             authArea.style.display = "flex";
             disableBody.style.overflow = "hidden";
         }
@@ -22,10 +21,10 @@ document.getElementById("closeLogin").onclick = function () {
 
 document.getElementsByClassName("registarbtn")[0].onclick = function () {
         formLogin.style.display = "none";
-        formRegister.style.display = "block"
+        formRegister.style.display = "grid"
 }
 
 document.getElementsByClassName("loginBtn")[0].onclick = function () {
-    formLogin.style.display = "block";
     formRegister.style.display = "none"
+    formLogin.style.display = "grid";
 }

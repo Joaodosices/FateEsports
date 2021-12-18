@@ -44,6 +44,12 @@ span{
     color: white;
     padding: 0.30em 2.50em;
 }
+.callToAction:hover{
+    background: transparent;
+    color: var(--primaryColor);
+    border: 1px solid var(--primaryColor);
+    transition: 400ms ease-in-out;
+}
 #wrap {
     margin: 0 auto;
     max-width: 1920px;
@@ -168,6 +174,10 @@ span{
 .imgJogo{
     overflow: hidden;
     border: 1px solid black;
+    transition: 200ms ease-in;
+}
+.imgJogo:hover{
+    border: 3px solid var(--primaryColor);
 }
 .imgJogo img{
     object-fit: cover;      
