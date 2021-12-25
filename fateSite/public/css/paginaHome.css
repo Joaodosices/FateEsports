@@ -92,6 +92,7 @@ span{
 
 .areaSeta{
     text-align: center;
+    margin: 2rem 0;
 }
 .areaSeta a{
     background: none;
@@ -255,7 +256,7 @@ span{
 }
 @media (min-width: 1427px){
     .heroLanding--AreaImg img{
-        transform: scale(110%);
+        transform: scale(110%) translateX(8rem);
         /* width: 44.9rem;
         height: 44.9rem; */
     }
