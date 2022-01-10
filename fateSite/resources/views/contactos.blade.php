@@ -15,7 +15,7 @@
         
             <div id="areaContacto" class="row">
             
-                <div class="col-xl-7  col-lg-12">
+                <div class="area-Form col-xl-7  col-lg-12">
 
                 @if (Session::has('success'))
                     <div class="alert alert-success">
@@ -53,7 +53,7 @@
                         </form>
                     </div>
                 </div>
-                <div class="col-xl-5 col-lg-12 ">
+                <div class="area-Texto col-xl-5 col-lg-12 ">
                     <div id="areaTexto">
                         <div id="areaFala" class="tituloSecundario">
                             <h1>FALA<span> CONNOSCO!</span></h1>
@@ -125,4 +125,6 @@
 @endsection
 
 @section('scripts')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js" integrity="sha512-gWlyRVDsJvp5kesJt4cSdPPLZIBdln/uSwzYgUicQcbTgRNQE4QhP5KUBIYlLYLkiKIQiuD7KUMHzqGNW/D2bQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="{{ asset('js/contactos.js') }}"></script>
 @endsection
