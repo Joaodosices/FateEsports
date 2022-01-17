@@ -24,10 +24,8 @@
 </div>
 
 <div id="area-video">
-
-    <iframe class="video" width="75%" height="90%" src="https://www.youtube.com/embed/WQI5hP2CZaM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-    </div>
+    <iframe class="video" width="75%" height="90%" src="https://www.youtube.com/embed/b_AD5Qtnbnc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 
 
