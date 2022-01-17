@@ -69,6 +69,9 @@ Route::get('/perfil', function () {
 Route::get('/perfil', [PerfilController::class, 'index'])->name('perfil.index');
 Route::post('/perfil', [PerfilController::class, 'update'])->name('perfil.update');
 
+//Rota perfil para eliminar utilizador
+Route::get('utilizadores/delete/{id}', [PerfilController::class, 'destroy']);
+
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('index');

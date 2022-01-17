@@ -39,7 +39,13 @@ class PerfilController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $users = User::create([
+            'name' => $request->name,
+            'surname' => $request->surname,
+            'email' => $request->email,
+        ]);
+
+        return redirect()->route('perfil.index')->withSuccess("Editado com sucesso!");
     }
 
     /**
@@ -93,6 +99,9 @@ class PerfilController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $userDel = User::find($id);
+        $userDel->delete();
+
+        return redirect()->route('perfil.index')->withSuccess("Mensagem apagada!");
     }
 }

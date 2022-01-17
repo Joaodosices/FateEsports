@@ -81,6 +81,18 @@
   bottom: 400px;
 }
 
+#atual_pass {
+  position: relative;
+  left: 600px;
+  bottom: 250px;
+}
+
+#nova_pass {
+  position: relative;
+  left: 970px;
+  bottom: 302px;
+}
+
 form input[type=text] {
   width: 320px;
   height: 25px;
@@ -143,12 +155,49 @@ border: 1px solid #bd0202;
   margin-top: -150px;
 }
 
+#submeterpass {
+  display: none;
+  position: relative;
+
+  margin-left: 30px;
+  bottom: 240px;
+}
+
 span {
   color: #d50101;
 }
 
 ::placeholder {
   color: black;
+}
+#backoffice-perfil {
+  margin-bottom: 10px;
+}
+
+#backoffice-titulo {
+  text-align: center;
+}
+
+#tabela {
+  border: 1px solid black;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#tabela th{
+  padding: 10px;
+  border: 1px solid black;
+  background-color: #bd0202;
+  color: white;
+}
+
+#tabela td {
+  border: 1px solid black;
+  text-align: center;
+}
+
+.eliminar {
+  width: 40px;
 }
 
 @media screen and (max-width:900px) {
