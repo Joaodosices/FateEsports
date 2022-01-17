@@ -90,21 +90,19 @@
                                 <a href="CEO-profile.html">{{$user->name}} {{$user->surname}}</a>
                             </h4>
                             <ul class="social">
-                                <li>
+                               
                                     <a target="_blank" href="{{$user->facebook}}">
                                         <i class="fab fa-facebook-f"></i>
                                     </a>
-                                </li>
-                                <li>
+                               
                                     <a target="_blank" href="{{$user->twitter}}">
                                         <i class="fab fa-twitter"></i>
                                     </a>
-                                </li>
-                                <li>
+                             
                                     <a target="_blank" href="{{$user->instagram}}">
                                         <i class="fab fa-instagram"></i>
                                     </a>
-                                </li>
+                              
                             </ul>
                         </div>
                     </div>

@@ -37,7 +37,15 @@ class PartnerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $partners = Partner::create([
+            'id' => $request->id,
+            'name' => $request->name,
+            'description' => $request->description,
+            'linkpartner' => $request->linkpartner,
+            'img' => $request->img,
+        ]);
+
+        return redirect()->route('partner.index')->withSuccess("Editado com sucesso!");
     }
 
     /**
@@ -80,8 +88,11 @@ class PartnerController extends Controller
      * @param  \App\Models\Partner  $partner
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Partner $partner)
+    public function destroy($id)
     {
-        //
+        $partnerDel = Partner::find($id);
+        $partnerDel->delete();
+
+        return redirect()->route('partner.index')->withSuccess("Parceria Eliminada!");
     }
 }

@@ -6,6 +6,12 @@
 
 @section('content')
 
+@if (Session::has('success'))
+                    <div class="alert alert-success">
+                        <i class="fas fa-check-circle"></i> {{ Session::get('success') }}
+                    </div>
+                @endif
+
    <div class="container">  
       <h1> As Nossas Parcerias</h1>
 
@@ -42,6 +48,32 @@
       </div>
 
    </div>
+
+   @if(Session::get('authAdmin') == 1)
+                            <div id="backoffice-perfil">
+                                <div  id="backoffice-titulo">
+                                    <h1 >BACK <span>OFFICE</span></h1>
+                                </div>
+                            <table id="tabela">
+                                <tbody>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Partner Link</th>
+                                    <th>Image</th>
+                                    <th>Delete</th>
+                                    @foreach($partners as $partner)
+                                    <tr>
+                                        <td>{{ $partner->name }}</td>
+                                        <td>{{ $partner->description }}</td>
+                                        <td>{{ $partner->linkpartner }}</td>
+                                        <td> <img src="{{$partner->img}}"></td>
+                                        <td><a href="parcerias/delete/{{ $partner->id }}"><img class="eliminar"  src="{{ asset('img\paginacontactos\trash.png') }}"></a></td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                            </div>
+                            @endif
    
 @endsection
 

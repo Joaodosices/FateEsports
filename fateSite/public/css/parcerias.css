@@ -91,6 +91,36 @@ a.linkmarca:hover{
  transform:scale(1.2);
 }
 
+#backoffice-perfil {
+  margin-bottom: 10px;
+}
+
+#backoffice-titulo {
+  text-align: center;
+}
+
+#tabela {
+  border: 1px solid black;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#tabela th{
+  padding: 10px;
+  border: 1px solid black;
+  background-color: #bd0202;
+  color: white;
+}
+
+#tabela td {
+  border: 1px solid black;
+  text-align: center;
+}
+
+.eliminar {
+  width: 40px;
+}
+
 @media only screen and (max-width: 1530px) {
   div#grid-marcas {
   grid-template-columns:  auto;
