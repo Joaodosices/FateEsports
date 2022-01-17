@@ -56,7 +56,17 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $users = User::create([
+            'id' => $request->id,
+            'name' => $request->name,
+            'surname' => $request->surname,
+            'img' => $request->img,
+            'facebook' => $request->facebook,
+            'instagram' => $request->instagram,
+            'twitter' => $request->twitter,
+        ]);
+
+        return redirect()->route('admins.index')->withSuccess("Editado com sucesso!");
     }
 
     /**
@@ -101,6 +111,9 @@ class AdminController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $adminDel = Admin::find($id);
+        $adminDel->delete();
+
+        return redirect()->route('admins.index')->withSuccess("Admin Eliminado.");
     }
 }

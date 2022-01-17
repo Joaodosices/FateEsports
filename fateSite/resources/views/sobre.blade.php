@@ -10,6 +10,13 @@
     @endsection
     <body>
 @section('content')
+
+        @if (Session::has('success'))
+                    <div class="alert alert-success">
+                        <i class="fas fa-check-circle"></i> {{ Session::get('success') }}
+                    </div>
+        @endif
+
     <!-- ==========hero-area========== -->
     <section class="hero-section">
         <div class="hero-area bg_img" data-background="img/sobre/hero.jpg">
@@ -138,7 +145,37 @@
             </div>
         </div>
     </div>
-    
+
+    @if(Session::get('authAdmin') == 1)
+                            <div id="backoffice-perfil">
+                                <div  id="backoffice-titulo">
+                                    <h1 >BACK <span>OFFICE</span></h1>
+                                </div>
+                            <table id="tabela">
+                                <tbody>
+                                    <th>Name</th>
+                                    <th>Surname</th>
+                                    <th>imagem</th>
+                                    <th>facebook</th>
+                                    <th>instagram</th>
+                                    <th>twitter</th>
+                                    <th>Delete</th>
+                                    @foreach($users as $user)
+                                    <tr>
+                                        <td>{{ $user->name }}</td>
+                                        <td>{{ $user->surname }}</td>
+                                        <td> <img src="{{$user->img}}"></td>
+                                        <td>{{ $user->facebook }}</td>
+                                        <td>{{ $user->instagram }}</td>
+                                        <td>{{ $user->twitter }}</td>
+                                        <td><a href="sobre/delete/{{ $user->id }}"><img class="eliminar"  src="{{ asset('img\paginacontactos\trash.png') }}"></a></td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                            </div>
+                            @endif
+
 @endsection
 
 @section('scripts')

@@ -65,6 +65,9 @@ Route::get('/sobre', function () {
 
 Route::get('/sobre', [AdminController::class, 'index'])->name('admins.index');
 
+//Rota eleminar admins sobre
+Route::get('sobre/delete/{id}', [AdminController::class, 'destroy']);
+
 //Rota do Perfil
 Route::get('/perfil', function () {
     return view('perfil');
