@@ -9,7 +9,7 @@
 
                 @if (Session::has('success'))
                     <div class="alert alert-success">
-                        <i class="fas fa-check-circle"></i> {{ Session::get('success') }}
+                     {{ Session::get('success') }}
                     </div>
                 @endif 
 
@@ -83,7 +83,7 @@
     @if(Session::get('authAdmin') == 1)
                             <div id="backoffice-perfil">
                                 <div  id="backoffice-titulo">
-                                    <h1 >BACK <span>OFFICE</span></h1>
+                                    <h1 >ADMIN <span>SIDE</span></h1>
                                 </div>
                             <table id="tabela">
                                 <tbody>
@@ -96,7 +96,7 @@
                                         <td>{{ $user->name }}</td>
                                         <td>{{ $user->surname }}</td>
                                         <td>{{ $user->email }}</td>
-                                        <td><a href="utilizadores/delete/{{ $user->id }}"><img class="eliminar"  src="{{ asset('img\paginacontactos\trash.png') }}"></a></td>
+                                        <td><a href="utilizadores/delete/{{ $user->id }}" onclick="return confirm('Tem a certeza que deseja eliminar?')" ><img class="eliminar"  src="{{ asset('img\paginacontactos\trash.png') }}"></a></td>
                                     </tr>
                                     @endforeach
                                 </tbody>

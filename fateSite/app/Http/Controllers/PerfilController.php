@@ -102,6 +102,6 @@ class PerfilController extends Controller
         $userDel = User::find($id);
         $userDel->delete();
 
-        return redirect()->route('perfil.index')->withSuccess("Mensagem apagada!");
+        return redirect()->route('perfil.index')->withSuccess("Utilizador apagado!");
     }
 }

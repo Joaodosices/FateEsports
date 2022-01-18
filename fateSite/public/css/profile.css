@@ -170,36 +170,80 @@ span {
 ::placeholder {
   color: black;
 }
-#backoffice-perfil {
+/* #backoffice-perfil {
   margin-bottom: 10px;
+} */
+
+#backoffice-titulo h1{
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 0px;
 }
 
-#backoffice-titulo {
-  text-align: center;
+
+
+.alert {
+  font-size: 20px;
+  color: green;
+  position: absolute;
+  margin-left: 880px;
+  margin-top: 191px;
 }
 
 #tabela {
-  border: 1px solid black;
-  width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 40px auto;
+  width: 98%;
+  font-family: Mukta, Vaani, sans-serif;
+  font-weight: normal;
+  border-collapse:collapse;
 }
-#tabela th{
+
+
+
+#tabela table, #tabela td, #tabela tr, #tabela th{
+    border: 1px solid #353535;
+}
+
+#tabela td{
   padding: 10px;
-  border: 1px solid black;
-  background-color: #bd0202;
-  color: white;
-}
-
-#tabela td {
-  border: 1px solid black;
   text-align: center;
+  }
+
+#tabela tr:nth-child(even){
+    background-color: #e9e8e8;
 }
 
-.eliminar {
-  width: 40px;
+#tabela td:nth-child(1), td:nth-child(2) {
+    width: 125px;
 }
 
+#tabela td:nth-child(3) {
+  width: 450px;
+}
+
+#tabela td:nth-child(4) {
+  width: 80px;
+}
+
+#tabela th{
+    height: 45px;
+    /* padding: 10px; */
+    background-color: #bd0202;
+    text-align: center;
+    color: #ffffff; 
+    }
+
+.eliminar{
+  width: 35px;
+  height: 35px;
+  transition: 800ms;
+}
+
+.eliminar:hover{
+  transform: scale(1.2);
+
+}
 @media screen and (max-width:900px) {
 
   #primeiro_nome {
