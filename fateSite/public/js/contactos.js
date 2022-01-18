@@ -7,7 +7,7 @@ const localizacao = document.getElementById('localizacao')[0];
 
 const tl = gsap.timeline({duration: 0.55, ease: Power1.easeOut});
 
-tl.fromTo('#masterPage',{opacity: 0},{opacity: 1})
+
 tl.fromTo(tituloPrincipal,{opacity: 0, y: -30},{opacity: 1, y: 0})
 tl.fromTo(areaForm,{opacity: 0, x: -50},{opacity: 1, x: 0}, '<')
 tl.fromTo(areaTexto,{opacity: 0, x: 50},{opacity: 1, x: 0}, '<')

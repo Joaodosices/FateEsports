@@ -11,6 +11,7 @@
     <body>
 @section('content')
 
+        <div class="tudo">
         @if (Session::has('success'))
                     <div class="alert alert-success">
                         <i class="fas fa-check-circle"></i> {{ Session::get('success') }}
@@ -37,7 +38,7 @@
     <br><br><br><br>
     <!-- ==========overview-two-section========== -->
     <section class="overview-two-section overview-three-section">
-        <div class="container-fluid p-0">
+        <div class="container-fluid p-0 ">
             <div class="row m-0">
                 <div class="col-lg-6 p-0 bg_img" data-background="img/sobre/fundo1.jpg">
                     <!--mudar -->
@@ -147,7 +148,7 @@
     </div>
 
     @if(Session::get('authAdmin') == 1)
-                            <div id="backoffice-perfil">
+                            <div id="backoffice-sobre">
                                 <div  id="backoffice-titulo">
                                     <h1 >BACK <span>OFFICE</span></h1>
                                 </div>
@@ -175,10 +176,12 @@
                             </table>
                             </div>
                             @endif
-
+                            </div>
 @endsection
 
 @section('scripts')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js" integrity="sha512-gWlyRVDsJvp5kesJt4cSdPPLZIBdln/uSwzYgUicQcbTgRNQE4QhP5KUBIYlLYLkiKIQiuD7KUMHzqGNW/D2bQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/sobre/sobreanimacao.js" type="text/javascript"></script> 
     <script src="{{ asset('js/sobre/jquery-3.3.1.min.js') }}"></script>
     <script src="{{ asset('js/sobre/modernizr-3.6.0.min.js') }}"></script>
     <script src="{{ asset('js/sobre/plugins.js') }}"></script>
@@ -193,4 +196,5 @@
     <script src="{{ asset('js/sobre/viewport.jquery.js') }}"></script>
     <script src="{{ asset('js/sobre/nice-select.js') }}"></script>
     <script src="{{ asset('js/sobre/main.js') }}"></script>
+
 @endsection

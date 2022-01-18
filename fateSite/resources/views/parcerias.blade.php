@@ -13,7 +13,7 @@
                 @endif
 
    <div class="container">  
-      <h1> As Nossas Parcerias</h1>
+      <h1 class="titulopaginaparcerias"> As Nossas <span class="DestaqueTitulo"> Parcerias</span></h1>
 
       <div id="textoinicio">
          A nossa organização não só tem o apoio de todos os nossos fãs como também temos as nossas 
@@ -50,9 +50,9 @@
    </div>
 
    @if(Session::get('authAdmin') == 1)
-                            <div id="backoffice-perfil">
+                            <div id="backoffice-parcerias">
                                 <div  id="backoffice-titulo">
-                                    <h1 >BACK <span>OFFICE</span></h1>
+                                    <h1 >Admin <span class="DestaqueTitulo">Side</span></h1>
                                 </div>
                             <table id="tabela">
                                 <tbody>
@@ -78,4 +78,6 @@
 @endsection
 
 @section('scripts')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js" integrity="sha512-gWlyRVDsJvp5kesJt4cSdPPLZIBdln/uSwzYgUicQcbTgRNQE4QhP5KUBIYlLYLkiKIQiuD7KUMHzqGNW/D2bQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="{{ asset('js/parcerias.js') }}"></script>
 @endsection

@@ -22,6 +22,19 @@ document.getElementById("alterarpass").onclick = function () {
             x.style.display = "inline-block";
         }
 }
+
+
+
+// Animação Pagina Perfil
+const container = document.getElementsByClassName('container')[0];
+
+
+
+const tl = gsap.timeline({duration: 0.55, ease: Power1.easeOut});
+
+
+tl.fromTo(container,{opacity: 0, y: -30},{opacity: 1, y: 0})
+
  
 
    
