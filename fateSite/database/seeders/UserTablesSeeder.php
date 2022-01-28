@@ -143,5 +143,15 @@ class UserTablesSeeder extends Seeder
             'created_at'=>NULL,
             'updated_at'=>NULL
             ] );
+
+            User::create( [
+                'id'=>12,
+                'name'=>'Maria',
+                'surname'=>'Rodrigues',
+                'email'=>'mary@gmail.com',
+                'password'=>'$2y$10$Sj2mjp8TUj7apZx6BZ9CQe8xeC0n/nd0UZfi.pUPausoPG4v8f4AS',
+                'created_at'=>NULL,
+                'updated_at'=>NULL
+                ] );
     }
 }

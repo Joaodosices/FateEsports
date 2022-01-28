@@ -169,8 +169,10 @@ span{
     grid-gap: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     margin: 2rem auto;
+    margin-left: 5rem;
     place-items: center;
-    max-width: 27rem;
+    width: 100;
+    max-width: 22rem;
 }
 .imgJogo{
     overflow: hidden;
@@ -253,6 +255,11 @@ span{
      .heroLanding--texto h2{
         max-width: 22ch;
     } 
+}
+@media (max-width: 1427px){
+    .ondeEstamos--jogos{
+        margin-left: auto;
+    }
 }
 @media (min-width: 1427px){
     .heroLanding--AreaImg img{

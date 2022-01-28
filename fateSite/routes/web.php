@@ -20,7 +20,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\PartnerController; 
 use App\Http\Controllers\PerfilController;
-
+use App\Http\Controllers\JogoEquipaController;
 
 // Routes para a página index
 Route::get('/', function () {
@@ -29,6 +29,10 @@ Route::get('/', function () {
 Route::get('delete/{id}', [ImgHomePageController::class, 'destroy']);
 Route::get('/', [ImgHomePageController::class, 'index'])->name('index.main');
 Route::post('/', [ImgHomePageController::class, 'store'])->name('index.store');
+
+// Route para equipa de X jogo
+
+Route::get('/jogos/{id_game}/equipa', [JogoEquipaController::class, 'show']);
 //--------------------
 
 

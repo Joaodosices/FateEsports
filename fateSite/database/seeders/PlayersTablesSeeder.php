@@ -71,5 +71,26 @@ class PlayersTablesSeeder extends Seeder
             'created_at'=>NULL,
             'updated_at'=>NULL
             ] );
+
+            Player::create( [
+                'id'=>6,
+                'nickname'=>'João "ICE-iwnl-" Fonseca',
+                'img'=>'https://i.imgur.com/CDVqIQj.pn',
+                'id_game'=>2,
+                'id_user'=>2,
+                'created_at'=>NULL,
+                'updated_at'=>NULL
+                ] );
+
+                            
+            Player::create( [
+                'id'=>7,
+                'nickname'=>'Maria "Mary" Rodrigues',
+                'img'=>'https://i.imgur.com/CDVqIQj.png',
+                'id_game'=>2,
+                'id_user'=>12,
+                'created_at'=>NULL,
+                'updated_at'=>NULL
+                ] );
     }
 }
