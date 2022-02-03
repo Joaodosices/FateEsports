@@ -44,6 +44,7 @@ Route::get('/parcerias', function () {
 //     return view('jogos');
 // })->name('gm.jogos');
 
+
 Route::get('/jogos', [GameController::class, 'index'])->name('games.index');
 
 Route::get('/email/{contact}', [ContactController::class, 'email'])->name('gm.email');

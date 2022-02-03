@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Imagesgame;
+use App\Models\Player;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -16,8 +17,9 @@ class GameController extends Controller
     public function index()
     {
         {
+            $players = Player::all();
             $imgGames = Imagesgame::all();
-            return view('jogos', compact('imgGames'));
+            return view('jogos', compact('imgGames' , 'players'));
         }
     }
 

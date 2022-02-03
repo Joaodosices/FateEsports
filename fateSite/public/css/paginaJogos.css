@@ -13,16 +13,60 @@
     --paragrafos: 20px;
     --paragrafosMobile: 18px;
     }
+    .tituloPrincipal h1{
+        font-size: var(--tituloPrincipal);
+        text-align: center;
+        margin-bottom: 50px;
+        margin-top: 0px;
+    }
+
+    span{
+        color: var(--redCallAction) ;
+    }
+
 #area-jogos{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(274px, 1fr)) ;
     place-items: center;
+}
+.card{
+    transform-style: preserve-3d ;
+    background: none !important;
+    color: white;
+}
 
-    position: relative;
-    transform-style: preserve-3d;
-    perspective: 1000px;
+.card .face{
+    transform-style: preserve-3d ;
+    backface-visibility: hidden;
+    transition: 1s ease-in-out;
+    transform: perspective(500px) rotateY(0deg);
+}
+
+.card .face.front{
+    transform-style: preserve-3d ;
+}
+
+.card:hover .face.front{
+    transform: perspective(500px) rotateY(180deg);
 
 }
+.card .face.back{
+    background:rgb(26, 26, 26);
+    transform: perspective(500px) rotateY(180deg);
+    position: absolute;
+    width: 274px;
+    height: 436px;
+    text-align: center;
+    padding-top: 125px;
+
+
+}
+
+.card:hover .face.back{
+    transform: perspective(500px) rotateY(360deg);
+
+}
+
 /* 274x436 */
 .img-jogos{
 margin-bottom: 50px;

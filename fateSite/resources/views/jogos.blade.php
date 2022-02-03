@@ -9,15 +9,26 @@
 
 
 <div class="container">
+        <div class="tituloPrincipal">
+            <h1>EQUIPAS <span>FATE ESPORTS</span></h1>
+        </div>
+
     <div id="area-jogos">
         @foreach($imgGames as $imgGame)
             @if($imgGame->description == 'paginaJogos')
-                <div id="carta-jogo-frente" class="cartas">
+            <div class="card">
+                <div  class="face front">
                     <a href="jogos/{{ $imgGame->id_game }}/equipa"><img class="img-jogos" src="{{ $imgGame->img }}" alt="imagem de jogos"></a>
                 </div>
-                <!-- <div id="carta-jogo-atras" class="cartas">
-                    <img class="img-jogos"  src="{{ $imgGame->img }}" alt="imagem de jogos">
-                </div> -->
+                <div  class="face back">
+                <h3>EQUIPA:</h3>
+                @foreach($players as $player)
+                @if($imgGame->id_game == $player->id_game)
+                {{$player->nickname}} <br>
+                @endif
+                @endforeach
+                </div>
+            </div>
             @endif
         @endforeach
     </div>
