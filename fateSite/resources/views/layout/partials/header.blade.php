@@ -31,7 +31,7 @@
             @else
                 <li> <a class="profile" href="{{route('perfil.index')}}">{{ Auth::user()->name }}</a> </li>
                 <li><a class="" href="{{ route('logout') }}"
-                                onclick="document.getElementById('logout-form').submit();"> <img src="img/perfil/logout_icon.png" alt="user profile" width="30" height="30">
+                                onclick="document.getElementById('logout-form').submit();"> <img src="{{ asset('img/perfil/logout_icon.png') }}" alt="user profile" width="30" height="30">
                                 
                             </a></li>
             @endguest

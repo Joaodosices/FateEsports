@@ -6,9 +6,41 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class PerfilController extends Controller
 {
+
+    public function showChangePasswordGet() {
+        $users = User::all();
+
+        return view('/perfil', compact('users'));
+    }
+
+    public function changePasswordPost(Request $request) {
+        if (!(Hash::check($request->get('current-password'), Auth::user()->password))) {
+            // The passwords matches
+            return redirect()->back()->with("error","A sua password atual não corresponde.");
+        }
+
+        if(strcmp($request->get('current-password'), $request->get('new-password')) == 0){
+            // Current password and new password same
+            return redirect()->back()->with("error","A nova password não pode ser a mesma da password atual.");
+        }
+
+        $validatedData = $request->validate([
+            'current-password' => 'required',
+            'new-password' => 'required|string|min:8|confirmed',
+        ]);
+
+        //Change Password
+        $user = Auth::user();
+        $user->password = bcrypt($request->get('new-password'));
+        $user->save();
+
+        return redirect()->back()->with("success","Password alterada com sucesso!");
+    }
+
     /**
      * Display a listing of the resource.
      *

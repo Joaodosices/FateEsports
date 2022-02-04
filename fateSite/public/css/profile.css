@@ -81,19 +81,48 @@
   bottom: 400px;
 }
 
-#atual_pass {
+#label_pass_atual {
   position: relative;
   left: 600px;
+  bottom: 280px;
+}
+
+#current-password {
+  position: relative;
+  left: 432px;
   bottom: 250px;
 }
 
-#nova_pass {
+#label_pass_nova {
+  position: relative;
+  left: 600px;
+  bottom: 239px;
+}
+
+#new-password {
+  position: relative;
+  left: 438px;
+  bottom: 210px;
+}
+
+#label_confirma_pass {
   position: relative;
   left: 970px;
-  bottom: 302px;
+  bottom: 270px;
+}
+
+#new-password-confirm {
+  position: relative;
+  left: 697px;
+  bottom: 241px;
 }
 
 form input[type=text] {
+  width: 320px;
+  height: 25px;
+}
+
+form input[type=password] {
   width: 320px;
   height: 25px;
 }
@@ -136,7 +165,7 @@ border: 1px solid #bd0202;
   transition: 0.3s;
 
   position: relative;
-  bottom: 240px;
+  bottom: 200px;
   left: 600px;
 }
 
@@ -146,6 +175,7 @@ border: 1px solid #bd0202;
 border: 1px solid #bd0202;
 
 }
+
 
 #submeter {
   display: none;
@@ -160,7 +190,7 @@ border: 1px solid #bd0202;
   position: relative;
 
   margin-left: 30px;
-  bottom: 240px;
+  bottom: 200px;
 }
 
 span {
@@ -183,12 +213,24 @@ span {
 
 
 
-.alert {
+.alert-success {
   font-size: 20px;
   color: green;
   position: absolute;
   margin-left: 880px;
   margin-top: 191px;
+}
+
+
+.alert-danger {
+  color: red;
+}
+
+#error_pass_atual {
+  color: red;
+  position: absolute;
+  margin-left: 600px;
+  margin-top: -135px;
 }
 
 #tabela {
@@ -302,6 +344,44 @@ span {
     bottom: 260px;
 }
 
+
+
+#label_pass_atual {
+  position: relative;
+  left: 30px;
+  bottom: 280px;
+}
+
+#current-password {
+  position: relative;
+  left: 30px;
+  bottom: 276px;
+}
+
+#label_pass_nova {
+  position: relative;
+  left: 30px;
+  bottom: 239px;
+}
+
+#new-password {
+  position: relative;
+  left: 30px;
+  bottom: 235px;
+}
+
+#label_confirma_pass {
+  position: relative;
+  left: 30px;
+  bottom: 200px;
+}
+
+#new-password-confirm {
+  position: relative;
+  left: 30px;
+  bottom: 197px;
+}
+
 .submitbtn2 {
   color: #fff;
   background-color: #bd0202;
@@ -313,8 +393,16 @@ span {
   transition: 0.3s;
 
   position: relative;
-  bottom: 240px;
+  bottom: 160px;
   left: 80px;
+}
+
+#submeterpass {
+  display: none;
+  position: relative;
+  width: 225px;
+  margin-left: 1px;
+  bottom: 540px;
 }
 
 }

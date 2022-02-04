@@ -12,8 +12,9 @@ document.getElementById("alterar").onclick = function () {
 };
 
 document.getElementById("alterarpass").onclick = function () {
-    document.getElementById("pass_atual").disabled = false;
-    document.getElementById("pass_nova").disabled = false;
+    document.getElementById("current-password").disabled = false;
+    document.getElementById("new-password").disabled = false;
+    document.getElementById("new-password-confirm").disabled = false;
 
     let x = document.getElementById("submeterpass");
         if (x.style.display === "inline-block") {
