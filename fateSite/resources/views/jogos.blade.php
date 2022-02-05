@@ -17,16 +17,18 @@
         @foreach($imgGames as $imgGame)
             @if($imgGame->description == 'paginaJogos')
             <div class="card">
-                <div  class="face front">
+                <div class="face front">
                     <a href="jogos/{{ $imgGame->id_game }}/equipa"><img class="img-jogos" src="{{ $imgGame->img }}" alt="imagem de jogos"></a>
                 </div>
-                <div  class="face back">
-                <h3>EQUIPA:</h3>
-                @foreach($players as $player)
-                @if($imgGame->id_game == $player->id_game)
-                {{$player->nickname}} <br>
-                @endif
-                @endforeach
+                <div class="face back">
+                <a href="jogos/{{ $imgGame->id_game }}/equipa">
+                    <h3>EQUIPA:</h3>
+                    @foreach($players as $player)
+                    @if($imgGame->id_game == $player->id_game)
+                    {{$player->nickname}} <br>
+                    @endif
+                    @endforeach
+                </a>
                 </div>
             </div>
             @endif

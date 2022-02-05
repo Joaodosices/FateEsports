@@ -33,6 +33,7 @@
     transform-style: preserve-3d ;
     background: none !important;
     color: white;
+    border: none !important;
 }
 
 .card .face{
@@ -51,15 +52,18 @@
 
 }
 .card .face.back{
-    background:rgb(26, 26, 26);
     transform: perspective(500px) rotateY(180deg);
     position: absolute;
+    text-align: center;
+}
+.card .face.back a{
+    background:rgb(26, 26, 26);
+    display: block;
     width: 274px;
     height: 436px;
-    text-align: center;
     padding-top: 125px;
-
-
+    text-decoration: none;
+    color: white;
 }
 
 .card:hover .face.back{
