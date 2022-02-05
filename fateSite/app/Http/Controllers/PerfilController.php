@@ -31,6 +31,7 @@ class PerfilController extends Controller
         $validatedData = $request->validate([
             'current-password' => 'required',
             'new-password' => 'required|string|min:8|confirmed',
+            
         ]);
 
         //Change Password
@@ -40,7 +41,6 @@ class PerfilController extends Controller
 
         return redirect()->back()->with("success","Password alterada com sucesso!");
     }
-
     /**
      * Display a listing of the resource.
      *
@@ -76,6 +76,7 @@ class PerfilController extends Controller
             'surname' => $request->surname,
             'email' => $request->email,
         ]);
+
 
         return redirect()->route('perfil.index')->withSuccess("Editado com sucesso!");
     }

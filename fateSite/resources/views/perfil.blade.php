@@ -47,7 +47,7 @@
 
             <button type="button" class="submitbtn" id="alterar">  ALTERAR DADOS</button>
 
-            <button class="submitbtn" id="submeter" type="submit" " > SUBMETER </button>
+            <button class="submitbtn" id="submeter" type="submit" " onclick="return confirm('Tem a certeza que deseja editar?')" > SUBMETER </button>
         </form>
 
         <div class="panel-body">
@@ -107,7 +107,7 @@
                         <div class="form-group">
 
                         <button type="button" class="submitbtn2" id="alterarpass" > ALTERAR PASSWORD </button>
-                        <button class="submitbtn" id="submeterpass" type="submit" " > SUBMETER </button>
+                        <button class="submitbtn" id="submeterpass" type="submit" onclick="return confirm('Tem a certeza que deseja alterar a password?')"> SUBMETER </button>
                         
                         </div>
                     </form>
@@ -143,6 +143,7 @@
                             </table>
                             </div>
                             @endif
+
 
 
 @endsection

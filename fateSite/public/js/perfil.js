@@ -26,6 +26,8 @@ document.getElementById("alterarpass").onclick = function () {
 
 
 
+
+
 // Animação Pagina Perfil
 const container = document.getElementsByClassName('container')[0];
 

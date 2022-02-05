@@ -91,3 +91,4 @@ Route::get('logout',[HomeController::class, 'flush']);
 //Rota perfil para alterar a password
 Route::get('/perfil/password', [App\Http\Controllers\PerfilController::class, 'showChangePasswordGet'])->name('changePasswordGet');
 Route::post('/perfil/password', [App\Http\Controllers\PerfilController::class, 'changePasswordPost'])->name('changePasswordPost');
+
