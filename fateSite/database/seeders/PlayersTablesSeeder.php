@@ -29,7 +29,7 @@ class PlayersTablesSeeder extends Seeder
             Player::create( [
             'id'=>2,
             'nickname'=>'Antonio "AnT" Carvalho',
-            'img'=>'https://i.imgur.com/CDVqIQj.pn',
+            'img'=>'https://i.imgur.com/CDVqIQj.png',
             'id_game'=>8,
             'id_user'=>9,
             'created_at'=>NULL,
@@ -41,7 +41,7 @@ class PlayersTablesSeeder extends Seeder
             Player::create( [
             'id'=>3,
             'nickname'=>'Felipe "FELP" Jesus+',
-            'img'=>'https://i.imgur.com/CDVqIQj.pn',
+            'img'=>'https://i.imgur.com/CDVqIQj.png',
             'id_game'=>8,
             'id_user'=>8,
             'created_at'=>NULL,
@@ -53,7 +53,7 @@ class PlayersTablesSeeder extends Seeder
             Player::create( [
             'id'=>4,
             'nickname'=>'Francisco "Franc" Antony',
-            'img'=>'https://i.imgur.com/CDVqIQj.pn',
+            'img'=>'https://i.imgur.com/CDVqIQj.png',
             'id_game'=>8,
             'id_user'=>7,
             'created_at'=>NULL,
@@ -75,7 +75,7 @@ class PlayersTablesSeeder extends Seeder
             Player::create( [
                 'id'=>6,
                 'nickname'=>'João "ICE-iwnl-" Fonseca',
-                'img'=>'https://i.imgur.com/CDVqIQj.pn',
+                'img'=>'https://i.imgur.com/CDVqIQj.png',
                 'id_game'=>2,
                 'id_user'=>2,
                 'created_at'=>NULL,

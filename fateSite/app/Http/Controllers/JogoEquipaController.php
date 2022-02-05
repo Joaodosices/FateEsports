@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Player;
+use App\Models\Trophie;
 use Illuminate\Http\Request;
 
 class JogoEquipaController extends Controller
@@ -48,7 +49,13 @@ class JogoEquipaController extends Controller
     public function show($id_game)
     {
         $players = Player::where('id_game', '=', $id_game)->get();
-        return view('jogoEquipa', compact('id_game', 'players'));
+        $trophies = Trophie::where('id_game', '=', $id_game)->get();
+        $trophiesCount = count($trophies);
+        $firstPlaced = Trophie::where('position', '=', 1)->where('id_game', '=', $id_game)->get();
+        $firstPlaced = count($firstPlaced);
+        $otherPositions = Trophie::whereBetween('position', [2, 4])->where('id_game', '=', $id_game)->get();
+        $otherPositions = count($otherPositions);
+        return view('jogoEquipa', compact('id_game', 'players', 'trophies', 'trophiesCount', 'firstPlaced', 'otherPositions'));
     }
 
     /**
