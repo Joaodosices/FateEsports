@@ -11,7 +11,7 @@
     --secundaryColor: #353535;
     --accentColor: #f5f5f5;
     --sizeTitulo: 3.75rem;
-    --sizeSubTitulo: 2.5rem;
+    --sizeSubTitulo: 2rem;
     --sizeButao: 1.1rem;
     --sizeTexto: 1.56rem;
 }
@@ -29,6 +29,7 @@ span{
     font-size:var(--sizeTitulo);
     line-height: 5rem;
     margin-bottom: 1rem;
+    text-align: center;
 }
 .titulo-h2{
     font-size: var(--sizeSubTitulo);
@@ -50,7 +51,52 @@ span{
     border: 1px solid var(--primaryColor);
     transition: 400ms ease-in-out;
 }
-.areaPlayer--playerBackground img{
+
+/*
+
+grid players
+
+*/
+.areaTeam{
+    max-width: 83.9rem;
+    display: grid;
+    gap: 4rem 1rem;
+
+    margin: 100px auto;
+    grid-template-columns: repeat(auto-fit, minmax(431px, 1fr));
+}
+.areaTeam--areaPlayer h2{
+    padding-top: 1rem;
+    text-align: center;
+    transform: translateX(-25px);
+}
+.areaPlayer--playerBackground{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 403px;
+    height: 306px;
+    background-color: red;
+    position: relative;
+}
+.areaPlayer--playerBackground::before{
+    content: '';
+    position: absolute;
+    left: -27px;
+    top: -30px;
+    width: 403px;
+    height: 306px;
+    z-index: -1;
+    background-color: white;
+    outline: 1px solid black;
+}
+.logoBackgroundPlayer{
+    position: absolute;
+    width: 300px;
+}
+.logoPlayer{
+    z-index: 10;
     width: 203px;
-    height: auto;
+    height: 336px;
+    transform: translateY(-0.8rem);
 }

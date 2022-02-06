@@ -8,14 +8,15 @@
 
     <h1 class="titulo-h1">FATE ESPORTS</h1>
     <div class="areaTeam">
-        <div class="areaTeam--areaPlayer">
         @foreach($players as $player)
-            <div class="areaPlayer--playerBackground">
-                <img src="{{$player->img}}" alt="">
+            <div class="areaTeam--areaPlayer">
+                <div class="areaPlayer--playerBackground">
+                    <img src="https://i.imgur.com/hjEdeNY.png" alt="" class="logoBackgroundPlayer">
+                    <img src="{{$player->img}}" alt="" class="logoPlayer">
+                </div>
+                <h2 class="titulo-h2">{{$player->nickname}}</h2>
             </div>
-            <h2>{{$player->nickname}}</h2>
         @endforeach
-        </div>
     </div>
     <h1 class="titulo-h1">FATE ESPORTS CONQUISTA</h1>
     <div class="areaConquistas">

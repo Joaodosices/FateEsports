@@ -92,5 +92,25 @@ class PlayersTablesSeeder extends Seeder
                 'created_at'=>NULL,
                 'updated_at'=>NULL
                 ] );
+            
+            Player::create( [
+                'id'=>8,
+                'nickname'=>'Phillip "ImperialHal" Dosen',
+                'img'=>'https://i.imgur.com/CDVqIQj.png',
+                'id_game'=>2,
+                'id_user'=>13,
+                'created_at'=>NULL,
+                'updated_at'=>NULL
+                ] );
+
+            Player::create( [
+                'id'=>9,
+                'nickname'=>'Tyson "TenZ" Ngo',
+                'img'=>'https://i.imgur.com/CDVqIQj.png',
+                'id_game'=>7,
+                'id_user'=>14,
+                'created_at'=>NULL,
+                'updated_at'=>NULL
+                ] );
     }
 }
