@@ -101,3 +101,37 @@ grid players
     height: 336px;
     transform: translateY(-0.8rem);
 }
+.areaConquistas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 279px;
+    padding-top: 80px;
+    max-width: 83.9rem;
+    margin: 0 auto;
+    text-align: center;
+}
+.areaConquistas--QuantidadeTorneios p, .areaConquista--firstPlaces p, .areaConquista--otherPlaces p{
+    font-size: 60px;
+} 
+.listaTorneios--torneio{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 83.9rem;
+    margin: 0 auto;
+    text-align: center;
+    
+}
+.listaTorneios--torneio p{
+    font-size: 40px;
+}
+.tableTorneio {
+    text-align: center;
+    width: 100%;
+    max-width: 83.9rem;
+    margin: 0 auto;
+}
+.infoTorneio {
+    padding: 0rem;
+}

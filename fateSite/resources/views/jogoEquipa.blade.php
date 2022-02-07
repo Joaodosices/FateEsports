@@ -18,30 +18,36 @@
             </div>
         @endforeach
     </div>
-    <h1 class="titulo-h1">FATE ESPORTS CONQUISTA</h1>
+    <h1 class="titulo-h1">FATE ESPORTS <span>CONQUISTA</span></h1>
     <div class="areaConquistas">
         <div class="areaConquistas--QuantidadeTorneios">
             <h2 class="titulo-h2">Torneios</h2>
-            <p class="text-p">{{$trophiesCount}}</p>
+            <p class="text-p"><span>{{$trophiesCount}}</span></p>
         </div>
         <div class="areaConquista--firstPlaces">
             <h2 class="titulo-h2">1ª Posição</h2>
-            <p class="text-p">{{$firstPlaced}}</p>
+            <p class="text-p"><span>{{$firstPlaced}}</span></p>
         </div>
         <div class="areaConquista--otherPlaces">
             <h2 class="titulo-h2">2ª e 3/4 Posição</h2>
-            <p class="text-p">{{$otherPositions}}</p>
+            <p class="text-p"><span>{{$otherPositions}}</span></p>
         </div>
     </div>
     <h1 class="titulo-h1">FATE ESPORTS TROFEUS GANHOS</h1>
     <div class="listaTorneios">
+    <table class="tableTorneio">
     @foreach($trophies as $trophie)
-        <div class="listaTorneios--torneio">
-            <img src="as" alt="">
-            <p class="text-p">{{$trophie->name}}</p>
-            <p class="text-p">{{$trophie->date}}</p>
-        </div>
+            <!-- <div class="listaTorneios--torneio"> -->
+            
+                <tr class="infoTorneio">
+                    <td><img src="https://i.imgur.com/gU2Pr1d.png" alt=""></td>
+                    <td><p class="text-p">{{$trophie->name}}</p></td>
+                    <td> <p class="text-p">{{$trophie->date}}</p></td>
+                </tr>
+            
+        <!-- </div> -->
     @endforeach
+    </table>
     </div>
    
 @endsection
