@@ -73,8 +73,19 @@ a.icon  {
   display: none;
 }
 
+@media (min-width: 767px) {
+  #header-conteudo {
+    display: flex !important;
+  }
+ }
+
 
 @media screen and (max-width:900px) {
+
+  .stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
 
   
   #header-conteudo {
@@ -148,6 +159,7 @@ a.icon  {
 a.icon  {
   transform: scale(2);
   display: block;
+  color: #000000;
 }
 
 
