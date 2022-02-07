@@ -24,6 +24,7 @@ body{
 }
 span{
     color: var(--primaryColor);
+    text-transform: uppercase;
 }
 .titulo-h1{
     font-size:var(--sizeTitulo);

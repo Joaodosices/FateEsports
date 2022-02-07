@@ -6,7 +6,7 @@
 
 @section('content')
 
-    <h1 class="titulo-h1">FATE ESPORTS</h1>
+    <h1 class="titulo-h1">FATE ESPORTS <span>{{ $gameName[0]->name}}</span></h1>
     <div class="areaTeam">
         @foreach($players as $player)
             <div class="areaTeam--areaPlayer">
