@@ -24,9 +24,7 @@ class TrophiesTablesSeeder extends Seeder
             'created_at'=>NULL,
             'updated_at'=>NULL
             ] );
-            
-            
-                        
+                              
             Trophie::create( [
             'id'=>2,
             'name'=>'OMEN WGR Challenge 2020',
@@ -37,9 +35,7 @@ class TrophiesTablesSeeder extends Seeder
             'created_at'=>NULL,
             'updated_at'=>NULL
             ] );
-            
-            
-                        
+           
             Trophie::create( [
             'id'=>3,
             'name'=>'OMEN Retake Season 1',
@@ -51,6 +47,37 @@ class TrophiesTablesSeeder extends Seeder
             'updated_at'=>NULL
             ] );
             
-            
+            Trophie::create( [
+            'id'=>4,
+            'name'=>'Apex Legends Preseason Invitational',
+            'date'=>'2019-09-13',
+            'position'=>4,
+            'linktournament'=>'https://liquipedia.net/apexlegends/Apex_Legends_Invitational/Preseason',
+            'id_game'=>2,
+            'created_at'=>NULL,
+            'updated_at'=>NULL
+            ] );
+
+            Trophie::create( [
+            'id'=>5,
+            'name'=>'ALGS Championship 2021 - EMEA',
+            'date'=>'2021-06-12',
+            'position'=>1,
+            'linktournament'=>'https://liquipedia.net/apexlegends/Apex_Legends_Global_Series/Championship/EMEA/2021',
+            'id_game'=>2,
+            'created_at'=>NULL,
+            'updated_at'=>NULL
+            ] );
+
+            Trophie::create( [
+            'id'=>6,
+            'name'=>'Nickmercs Gauntlet #2',
+            'date'=>'2022-01-28',
+            'position'=>2,
+            'linktournament'=>'https://liquipedia.net/apexlegends/Apex_Legends_Global_Series/Championship/EMEA/2021',
+            'id_game'=>2,
+            'created_at'=>NULL,
+            'updated_at'=>NULL
+            ] );
     }
 }

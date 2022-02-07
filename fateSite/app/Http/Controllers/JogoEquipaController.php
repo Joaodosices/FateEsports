@@ -51,7 +51,7 @@ class JogoEquipaController extends Controller
     {
         $gameName = Game::where('id', '=', $id_game)->get();
         $players = Player::where('id_game', '=', $id_game)->get();
-        $trophies = Trophie::where('id_game', '=', $id_game)->get();
+        $trophies = Trophie::where('id_game', '=', $id_game)->orderBy('date', 'desc')->get();
         $trophiesCount = count($trophies);
         $firstPlaced = Trophie::where('position', '=', 1)->where('id_game', '=', $id_game)->get();
         $firstPlaced = count($firstPlaced);

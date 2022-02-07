@@ -12,7 +12,9 @@
                     <h1 class="titulo-h1">Fate <br> Esports</h1>
                     <h2 class="titulo-h2">Está a chegar a melhor organização do país</h2>
                     <div>
-                        <a href="#" class="clickProfile callToAction" >{{ __('Login') }}</a>
+                        @if(!Auth::check())
+                            <a href="#" class="clickProfile callToAction" >{{ __('Login') }}</a>
+                        @endif
                     </div>
                 </div>
                 <div class="heroLanding--AreaImg">
@@ -43,9 +45,11 @@
             <div class="ondeEstamos--jogos">
                 @foreach($imgs as $img)
                     @if($img->description == 'Monocromatico')
-                        <div class="imgJogo">
-                            <img src="{{ $img->img }}" alt="">
-                        </div>
+                        <a href="jogos/{{ $img->id_game }}/equipa">
+                            <div class="imgJogo">
+                                <img src="{{ $img->img }}" alt="">
+                            </div>
+                        </a>
                     @endif
                 @endforeach
             </div>

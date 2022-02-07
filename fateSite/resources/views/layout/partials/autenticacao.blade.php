@@ -1,7 +1,7 @@
 <div class="popUp-background">
     <div class="popUp-content">
         <div class="sairButton">
-            <a id="closeLogin" href="#"> <img src="img\autenticacao\close.png" alt=""></a>
+            <a id="closeLogin" href="#"> <img src="\img\autenticacao\close.png" alt=""></a>
         </div>
         <form action="{{ route('login') }}" method="post" id='formLogin'>
             @csrf
@@ -21,7 +21,7 @@
                     @enderror
                 </div>
                 <div class="popUpImgSide">
-                    <img src="img/logo/logoFate-01.png" alt="">
+                    <img src="/img/logo/logoFate-01.png" alt="">
                 </div>
             </div>
             <div class="swapFormsArea">

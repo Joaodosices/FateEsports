@@ -40,7 +40,7 @@ class PlayersTablesSeeder extends Seeder
                         
             Player::create( [
             'id'=>3,
-            'nickname'=>'Felipe "FELP" Jesus+',
+            'nickname'=>'Felipe "FELP" Jesus',
             'img'=>'https://i.imgur.com/CDVqIQj.png',
             'id_game'=>8,
             'id_user'=>8,
@@ -109,6 +109,42 @@ class PlayersTablesSeeder extends Seeder
                 'img'=>'https://i.imgur.com/CDVqIQj.png',
                 'id_game'=>7,
                 'id_user'=>14,
+                'created_at'=>NULL,
+                'updated_at'=>NULL
+                ] );
+            Player::create( [
+                'id'=>10,
+                'nickname'=>'Hunter "SicK" Mims',
+                'img'=>'https://i.imgur.com/CDVqIQj.png',
+                'id_game'=>7,
+                'id_user'=>15,
+                'created_at'=>NULL,
+                'updated_at'=>NULL
+                ] );
+            Player::create( [
+                'id'=>11,
+                'nickname'=>'Jared "zombs" Gitlin',
+                'img'=>'https://i.imgur.com/CDVqIQj.png',
+                'id_game'=>7,
+                'id_user'=>16,
+                'created_at'=>NULL,
+                'updated_at'=>NULL
+                ] );
+            Player::create( [
+                'id'=>12,
+                'nickname'=>'Michael "dapr" Gulino',
+                'img'=>'https://i.imgur.com/CDVqIQj.png',
+                'id_game'=>7,
+                'id_user'=>17,
+                'created_at'=>NULL,
+                'updated_at'=>NULL
+                ] );
+            Player::create( [
+                'id'=>13,
+                'nickname'=>'Shahzeb "ShahZaM" Khan',
+                'img'=>'https://i.imgur.com/CDVqIQj.png',
+                'id_game'=>7,
+                'id_user'=>18,
                 'created_at'=>NULL,
                 'updated_at'=>NULL
                 ] );

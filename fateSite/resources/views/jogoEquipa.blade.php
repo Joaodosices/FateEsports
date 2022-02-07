@@ -18,7 +18,7 @@
             </div>
         @endforeach
     </div>
-    <h1 class="titulo-h1">FATE ESPORTS <span>CONQUISTA</span></h1>
+    <h1 class="titulo-h1">FATE ESPORTS <span>CONQUISTAS</span></h1>
     <div class="areaConquistas">
         <div class="areaConquistas--QuantidadeTorneios">
             <h2 class="titulo-h2">Torneios</h2>
@@ -33,14 +33,14 @@
             <p class="text-p"><span>{{$otherPositions}}</span></p>
         </div>
     </div>
-    <h1 class="titulo-h1">FATE ESPORTS TROFEUS GANHOS</h1>
+    <h1 class="titulo-h1">FATE ESPORTS LISTA <span>TORNEIOS</span></h1>
     <div class="listaTorneios">
     <table class="tableTorneio">
     @foreach($trophies as $trophie)
             <!-- <div class="listaTorneios--torneio"> -->
             
                 <tr class="infoTorneio">
-                    <td><img src="https://i.imgur.com/gU2Pr1d.png" alt=""></td>
+                    <td><img src="https://i.imgur.com/gU2Pr1d.png" alt="" class="trophieAnimation"></td>
                     <td><p class="text-p">{{$trophie->name}}</p></td>
                     <td> <p class="text-p">{{$trophie->date}}</p></td>
                 </tr>

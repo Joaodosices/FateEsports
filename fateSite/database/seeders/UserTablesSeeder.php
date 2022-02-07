@@ -173,5 +173,41 @@ class UserTablesSeeder extends Seeder
                 'created_at'=>NULL,
                 'updated_at'=>NULL
                 ] );
+            User::create( [
+                'id'=>15,
+                'name'=>'Hunter',
+                'surname'=>'Mims',
+                'email'=>'junter@gmail.com',
+                'password'=>'$2y$10$Sj2mjp8TUj7apZx6BZ9CQe8xeC0n/nd0UZfi.pUPausoPG4v8f4AS',
+                'created_at'=>NULL,
+                'updated_at'=>NULL
+                ] );
+            User::create( [
+                'id'=>16,
+                'name'=>'Jared',
+                'surname'=>'Gitlin',
+                'email'=>'jared@gmail.com',
+                'password'=>'$2y$10$Sj2mjp8TUj7apZx6BZ9CQe8xeC0n/nd0UZfi.pUPausoPG4v8f4AS',
+                'created_at'=>NULL,
+                'updated_at'=>NULL
+                ] );
+            User::create( [
+                'id'=>17,
+                'name'=>'Michael',
+                'surname'=>'Gulino',
+                'email'=>'michael@gmail.com',
+                'password'=>'$2y$10$Sj2mjp8TUj7apZx6BZ9CQe8xeC0n/nd0UZfi.pUPausoPG4v8f4AS',
+                'created_at'=>NULL,
+                'updated_at'=>NULL
+                ] );
+            User::create( [
+                'id'=>18,
+                'name'=>'Shahzeb',
+                'surname'=>'Khan',
+                'email'=>'shahzeb@gmail.com',
+                'password'=>'$2y$10$Sj2mjp8TUj7apZx6BZ9CQe8xeC0n/nd0UZfi.pUPausoPG4v8f4AS',
+                'created_at'=>NULL,
+                'updated_at'=>NULL
+                ] );
     }
 }

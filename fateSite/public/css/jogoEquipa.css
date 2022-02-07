@@ -96,7 +96,6 @@ grid players
     width: 300px;
 }
 .logoPlayer{
-    z-index: 10;
     width: 203px;
     height: 336px;
     transform: translateY(-0.8rem);
@@ -107,6 +106,7 @@ grid players
     justify-content: space-evenly;
     gap: 279px;
     padding-top: 80px;
+    padding-bottom: 70px;
     max-width: 83.9rem;
     margin: 0 auto;
     text-align: center;
@@ -129,9 +129,21 @@ grid players
 .tableTorneio {
     text-align: center;
     width: 100%;
-    max-width: 83.9rem;
+    max-width: 70rem;
     margin: 0 auto;
 }
 .infoTorneio {
     padding: 0rem;
+}
+.trophieAnimation:hover {
+    animation: trophieAnimation 1.5s infinite ease-in;
+}
+
+@keyframes trophieAnimation {
+    30%{
+        transform: rotate(-15deg);
+    } 
+    70%{
+        transform: rotate(15deg);
+    }
 }
