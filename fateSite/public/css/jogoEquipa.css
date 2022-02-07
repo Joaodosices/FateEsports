@@ -138,7 +138,6 @@ grid players
 .trophieAnimation:hover {
     animation: trophieAnimation 1.5s infinite ease-in;
 }
-
 @keyframes trophieAnimation {
     30%{
         transform: rotate(-15deg);
@@ -146,4 +145,20 @@ grid players
     70%{
         transform: rotate(15deg);
     }
+}
+/* 
+
+ADMIN SIDE 
+
+*/
+.painelAdmin{
+    width: 75%;
+    margin: 0 auto;
+    background-color: var(--secundaryColor);
+}
+.tituloPainel{
+    text-align: center;
+    color: var(--primaryColor);
+    margin: 0;
+    padding-top: 1.3rem;
 }

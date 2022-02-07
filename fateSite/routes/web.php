@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,6 +34,7 @@ Route::post('/', [ImgHomePageController::class, 'store'])->name('index.store');
 // Route para equipa de X jogo
 
 Route::get('/jogos/{id_game}/equipa', [JogoEquipaController::class, 'show']);
+Route::post('/jogos/filtrar/equipa', [JogoEquipaController::class, 'updateGame'])->name('team.filter');
 //--------------------
 
 

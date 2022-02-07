@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Game;
 use App\Models\Player;
 use App\Models\Trophie;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Session;
 
 class JogoEquipaController extends Controller
 {
@@ -49,6 +51,10 @@ class JogoEquipaController extends Controller
      */
     public function show($id_game)
     {
+        $gamesList = [];
+        if (Session::get('authAdmin') == 1) {
+            $gamesList = Game::all();
+        }
         $gameName = Game::where('id', '=', $id_game)->get();
         $players = Player::where('id_game', '=', $id_game)->get();
         $trophies = Trophie::where('id_game', '=', $id_game)->orderBy('date', 'desc')->get();
@@ -57,7 +63,18 @@ class JogoEquipaController extends Controller
         $firstPlaced = count($firstPlaced);
         $otherPositions = Trophie::whereBetween('position', [2, 4])->where('id_game', '=', $id_game)->get();
         $otherPositions = count($otherPositions);
-        return view('jogoEquipa', compact('gameName','players', 'trophies', 'trophiesCount', 'firstPlaced', 'otherPositions'));
+        return view('jogoEquipa', compact('gameName','players', 'trophies', 'trophiesCount', 'firstPlaced', 'otherPositions', 'gamesList'));
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function updateGame()
+    {
+        //
     }
 
     /**
