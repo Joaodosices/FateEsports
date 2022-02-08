@@ -22,6 +22,7 @@ use App\Http\Controllers\GameController;
 use App\Http\Controllers\PartnerController; 
 use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\JogoEquipaController;
+use App\Http\Controllers\JogoEquipaAdminController;
 
 // Routes para a página index
 Route::get('/', function () {
@@ -34,7 +35,8 @@ Route::post('/', [ImgHomePageController::class, 'store'])->name('index.store');
 // Route para equipa de X jogo
 
 Route::get('/jogos/{id_game}/equipa', [JogoEquipaController::class, 'show']);
-Route::post('/jogos/filtrar/equipa', [JogoEquipaController::class, 'updateGame'])->name('team.filter');
+Route::get('/jogos/equipas/admin', [JogoEquipaAdminController::class, 'show']);
+Route::get('/jogos/equipas/admin/{id}', [JogoEquipaAdminController::class, 'filterGame']);
 //--------------------
 
 

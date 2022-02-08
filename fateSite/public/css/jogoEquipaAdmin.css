@@ -1,0 +1,65 @@
+*, 
+*::before, 
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --fontType: "Mukta", "sans-serif";
+    --primaryColor: #bd0202;
+    --secundaryColor: #353535;
+    --accentColor: #f5f5f5;
+    --sizeTitulo: 3.75rem;
+    --sizeSubTitulo: 2rem;
+    --sizeButao: 1.1rem;
+    --sizeTexto: 1.56rem;
+}
+html{
+    font-family: var(--fontType);
+    scroll-behavior: smooth;
+}
+span{
+    color: var(--primaryColor);
+    text-transform: uppercase;
+}
+.titulo-h1{
+    font-size:var(--sizeTitulo);
+    line-height: 5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.titulo-h2{
+    font-size: var(--sizeSubTitulo);
+}
+.text-p{
+    font-size: var(--sizeTexto);
+}
+/* button, input, a */
+.callToAction{
+    font-size: var(--sizeButao);
+    text-decoration: none;
+    background-color: var(--primaryColor);
+    color: white;
+    padding: 0.30em 2.50em;
+    border: 1px solid transparent;
+}
+.callToAction:hover{
+    background: transparent;
+    color: var(--primaryColor);
+    border: 1px solid var(--primaryColor);
+    transition: 400ms ease-in-out;
+}
+
+.painelAdmin{
+    width: 75%;
+    margin: 0 auto;
+    background-color: var(--secundaryColor);
+}
+.tituloPainel{
+    text-align: center;
+    color: var(--accentColor);
+    text-transform: uppercase;
+    margin: 0;
+    padding-top: 1.3rem;
+}

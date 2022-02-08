@@ -6,24 +6,8 @@
 
 @section('content')
     @if(Session::get('authAdmin') == 1)
-        <div class="painelAdmin" id="Removido">
-            <h1 class="tituloPainel titulo-h1"><span>Painel Admin</span></h1>
-            <div>
-                <div class="areaEquipa">
-                    <form action="{{ route('team.filter') }}" method="POST">
-                        @csrf
-                        <select name="id_game" id="listaJogos">
-                            @foreach($gamesList as $game)
-                                <option value="{{ $game->id }}">{{ $game->name }}</option>
-                            @endforeach
-                        </select>
-                        <button type="submit" class="addImgJogoBtn callToAction">Filtrar</button>
-                    </form>
-                </div>
-                <div class="areaTrophies">
-
-                </div>
-            </div>
+        <div class="painelAdmin" id="Removido">  
+            <a href="/jogos/equipas/admin"><h1 class="tituloPainel titulo-h1"><span>Painel Admin</span></h1></a>          
         </div>
     @endif
     <h1 class="titulo-h1">FATE ESPORTS <span>{{ $gameName[0]->name}}</span></h1>

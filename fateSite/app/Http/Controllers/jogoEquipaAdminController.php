@@ -5,13 +5,15 @@ namespace App\Http\Controllers;
 use App\Models\Game;
 use App\Models\Player;
 use App\Models\Trophie;
-use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Session;
 
-class JogoEquipaController extends Controller
+class jogoEquipaAdminController extends Controller
 {
-    
+    public function __construct(){
+        $this->gamesList = Game::all();
+    }
     /**
      * Display a listing of the resource.
      *
@@ -49,22 +51,31 @@ class JogoEquipaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id_game)
+    public function show()
     {
-        $gamesList = [];
-        if (Session::get('authAdmin') == 1) {
-            $gamesList = Game::all();
+        if (Session::get('authAdmin') != 1) {
+            return redirect()->back();
         }
-        $gameName = Game::where('id', '=', $id_game)->get();
-        $players = Player::where('id_game', '=', $id_game)->get();
-        $trophies = Trophie::where('id_game', '=', $id_game)->orderBy('date', 'desc')->get();
-        $trophiesCount = count($trophies);
-        $firstPlaced = Trophie::where('position', '=', 1)->where('id_game', '=', $id_game)->get();
-        $firstPlaced = count($firstPlaced);
-        $otherPositions = Trophie::whereBetween('position', [2, 4])->where('id_game', '=', $id_game)->get();
-        $otherPositions = count($otherPositions);
-        
-        return view('jogoEquipa', compact('gameName','players', 'trophies', 'trophiesCount', 'firstPlaced', 'otherPositions', 'gamesList'));
+        $listPlayers = [];
+        $trophieList = [];
+        $gamesList = $this->gamesList;
+        return view('jogoEquipaAdmin', compact('gamesList', 'listPlayers', 'trophieList'));
+    }
+
+     /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    
+    public function filterGame($id)
+    {
+        $gamesList = $this->gamesList;
+        $listPlayers = Player::where('id_game', '=', $id)->get();
+        $trophieList = Trophie::where('id_game', '=', $id)->get();
+
+        return view('jogoEquipaAdmin', compact('gamesList', 'listPlayers', 'trophieList'));
     }
 
     /**
