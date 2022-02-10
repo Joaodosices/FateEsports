@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Game;
 use App\Models\Player;
 use App\Models\Trophie;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Session;
+use DB;
 
 class jogoEquipaAdminController extends Controller
 {
@@ -56,10 +58,14 @@ class jogoEquipaAdminController extends Controller
         if (Session::get('authAdmin') != 1) {
             return redirect()->back();
         }
+
+        $listUsers = DB::table("users")->select('*')->whereNotIn('id',function($query) {
+            $query->select('id_user')->from('players');
+         })->get();
         $listPlayers = [];
         $trophieList = [];
         $gamesList = $this->gamesList;
-        return view('jogoEquipaAdmin', compact('gamesList', 'listPlayers', 'trophieList'));
+        return view('jogoEquipaAdmin', compact('gamesList', 'listPlayers', 'trophieList', 'listUsers'));
     }
 
      /**
@@ -71,11 +77,15 @@ class jogoEquipaAdminController extends Controller
     
     public function filterGame($id)
     {
+        Session::put('gameSelected', $id);
         $gamesList = $this->gamesList;
+        $listUsers = DB::table("users")->select('*')->whereNotIn('id',function($query) {
+            $query->select('id_user')->from('players');
+         })->get();
         $listPlayers = Player::where('id_game', '=', $id)->get();
         $trophieList = Trophie::where('id_game', '=', $id)->get();
 
-        return view('jogoEquipaAdmin', compact('gamesList', 'listPlayers', 'trophieList'));
+        return view('jogoEquipaAdmin', compact('gamesList', 'listPlayers', 'trophieList', 'listUsers'));
     }
 
     /**
@@ -107,8 +117,44 @@ class jogoEquipaAdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroyPlayer($idPlayer)
     {
-        //
+        $playerDelete = Player::find($idPlayer);
+        $playerDelete->delete();
+        return redirect()->back()->withSuccess("Player apagado!");
+    }
+
+    public function destroyTrophie($idTrophie)
+    {
+        $trophieDelete = Trophie::find($idTrophie);
+        $trophieDelete->delete();
+        return redirect()->back()->withSuccess("Player apagado!");
+    }
+
+    public function changeNamePlayer(Request $request, $idPlayer)
+    {
+        $changeNamePlayer = Player::find($idPlayer)->update([
+            'nickname' => $request->get('inputNomePlayer')
+          ]);
+        return redirect()->back()->withSuccess("Nome modificado!");
+    }
+
+    public function changeNameTrophie(Request $request, $idTrophie)
+    {
+        $changeNameTrophie = Trophie::find($idTrophie)->update([
+            'name' => $request->get('inputNomeTrophie')
+          ]);
+        return redirect()->back()->withSuccess("Nome modificado!");
+    }
+    
+    public function addPlayer(Request $request)
+    {
+        $addPlayer = Player::create([
+            'nickname' => $request->nomeJogador,
+            'img' => $request->imgJogador,
+            'id_game' => Session::get('gameSelected'),
+            'id_user' => $request->jogadorUser
+        ]);
+        return redirect()->back()->withSuccess("Nome modificado!");
     }
 }

@@ -37,6 +37,11 @@ Route::post('/', [ImgHomePageController::class, 'store'])->name('index.store');
 Route::get('/jogos/{id_game}/equipa', [JogoEquipaController::class, 'show']);
 Route::get('/jogos/equipas/admin', [JogoEquipaAdminController::class, 'show']);
 Route::get('/jogos/equipas/admin/{id}', [JogoEquipaAdminController::class, 'filterGame']);
+Route::get('/jogos/equipas/admin/delete/player/{idPlayer}', [JogoEquipaAdminController::class, 'destroyPlayer']);
+Route::get('/jogos/equipas/admin/delete/trophie/{idTrophie}', [JogoEquipaAdminController::class, 'destroyTrophie']);
+Route::post('/jogos/equipas/admin/player/{idPlayer}/changeName', [JogoEquipaAdminController::class, 'changeNamePlayer']);
+Route::post('/jogos/equipas/admin/trophie/{idTrophie}/changeName', [JogoEquipaAdminController::class, 'changeNameTrophie']);
+Route::post('/jogos/equipas/admin/add/player', [JogoEquipaAdminController::class, 'addPlayer']);
 //--------------------
 
 

@@ -13,7 +13,7 @@
     --sizeTitulo: 3.75rem;
     --sizeSubTitulo: 2rem;
     --sizeButao: 1.1rem;
-    --sizeTexto: 1.56rem;
+    --sizeTexto: 1.25rem;
 }
 html{
     font-family: var(--fontType);
@@ -34,6 +34,10 @@ span{
 }
 .text-p{
     font-size: var(--sizeTexto);
+    color: var(--secundaryColor);
+}
+.text-p:hover{
+    color: var(--primaryColor);
 }
 /* button, input, a */
 .callToAction{
@@ -41,19 +45,24 @@ span{
     text-decoration: none;
     background-color: var(--primaryColor);
     color: white;
-    padding: 0.30em 2.50em;
+    padding: 0.20em 0.7em;
     border: 1px solid transparent;
+}
+button.callToAction {
+    padding: 0.50em 0.75em;
 }
 .callToAction:hover{
     background: transparent;
     color: var(--primaryColor);
     border: 1px solid var(--primaryColor);
     transition: 400ms ease-in-out;
+    cursor: pointer;
 }
 
 .painelAdmin{
-    width: 75%;
+    width: 88%;
     margin: 0 auto;
+    padding-bottom: 1.5rem;
     background-color: var(--secundaryColor);
 }
 .tituloPainel{
@@ -62,4 +71,78 @@ span{
     text-transform: uppercase;
     margin: 0;
     padding-top: 1.3rem;
+}
+.areaEdicaoAdmin{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: 0 auto;
+    border: 2px solid black;
+}
+.areaEdicaoAdmin--listaJogos, .areaEdicaoAdmin--listaJogadores, .areaEdicaoAdmin--listaTrofeus{
+    margin: 1rem;
+    padding: 1rem;
+    background: var(--accentColor);
+    border: 3px solid black;
+    height: 330px;
+    overflow-y:auto
+}
+.areaEdicaoAdmin--listaJogos{
+    width: 100%;
+    max-width: 20%;
+}
+.areaEdicaoAdmin--listaJogadores{
+    width: 100%;
+    max-width: 40%;
+    
+}
+.areaEdicaoAdmin--listaTrofeus{
+    width: 100%;
+    max-width: 40%;
+}
+.areaEdicaoAdmin--listaJogos li{
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+.areaEdicaoAdmin--listaJogos li:hover{
+    background: grey;
+}
+.areaEdicaoAdmin--listaJogos a{
+    text-align: center;
+    text-decoration: none;
+}
+table {
+    width: 100%;
+}
+td{
+    padding: 1rem;
+}
+.removerBtn, .removerBtnTrophie{
+    display: flex;
+}
+.changePlayerNameInput, .btnPlayerNameInput, .playerNameChanger, .cancelarChangeName{
+    display: none;
+}
+.changeTrophieNameInput, .btnTrophieNameInput, .trophieNameChanger, .cancelarChangeTrophie{
+    display: none;
+}
+
+#btnCancelarAdicionarJogador, #areaInputsAdicionarJogador{
+    display: none;
+    flex-direction: column;
+}
+#areaAdicionarJogador {
+    flex-direction: row;
+}
+#areaAdicionarJogador input {
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+}
+#areaInputsAdicionarJogador p, #areaInputsAdicionarJogador input, #areaInputsAdicionarJogador select{
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+}
+#btnsubmeterPlayer {
+    display: none;
 }
