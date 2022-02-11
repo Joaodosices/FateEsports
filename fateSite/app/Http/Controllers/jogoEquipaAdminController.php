@@ -128,7 +128,7 @@ class jogoEquipaAdminController extends Controller
     {
         $trophieDelete = Trophie::find($idTrophie);
         $trophieDelete->delete();
-        return redirect()->back()->withSuccess("Player apagado!");
+        return redirect()->back()->withSuccess("Troféu apagado!");
     }
 
     public function changeNamePlayer(Request $request, $idPlayer)
@@ -136,7 +136,7 @@ class jogoEquipaAdminController extends Controller
         $changeNamePlayer = Player::find($idPlayer)->update([
             'nickname' => $request->get('inputNomePlayer')
           ]);
-        return redirect()->back()->withSuccess("Nome modificado!");
+        return redirect()->back()->withSuccess("Nome de jogador modificado!");
     }
 
     public function changeNameTrophie(Request $request, $idTrophie)
@@ -144,7 +144,7 @@ class jogoEquipaAdminController extends Controller
         $changeNameTrophie = Trophie::find($idTrophie)->update([
             'name' => $request->get('inputNomeTrophie')
           ]);
-        return redirect()->back()->withSuccess("Nome modificado!");
+        return redirect()->back()->withSuccess("Nome de troféu modificado!");
     }
     
     public function addPlayer(Request $request)
@@ -155,7 +155,7 @@ class jogoEquipaAdminController extends Controller
             'id_game' => Session::get('gameSelected'),
             'id_user' => $request->jogadorUser
         ]);
-        return redirect()->back()->withSuccess("Nome modificado!");
+        return redirect()->back()->withSuccess("Jogador adicionado!");
     }
 
     public function addTrophie(Request $request)
@@ -167,6 +167,6 @@ class jogoEquipaAdminController extends Controller
             'linktournament' =>$request->linkTrofeu,
             'id_game' => Session::get('gameSelected')
         ]);
-        return redirect()->back()->withSuccess("Nome modificado!");
+        return redirect()->back()->withSuccess("Trofeu modificado!");
     }
 }

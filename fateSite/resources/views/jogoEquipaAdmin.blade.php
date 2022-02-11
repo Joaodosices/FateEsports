@@ -97,6 +97,11 @@
             </table>
         </div>
     </div>
+    @if (Session::has('success'))
+        <div class="alertaSucess">
+            <i class="alertSubmit1"></i> {{ Session::get('success') }}
+        </div>
+    @endif
 </div>
 @endsection
 
