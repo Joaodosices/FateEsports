@@ -157,4 +157,16 @@ class jogoEquipaAdminController extends Controller
         ]);
         return redirect()->back()->withSuccess("Nome modificado!");
     }
+
+    public function addTrophie(Request $request)
+    {
+        $addTrophie = Trophie::create([
+            'name' => $request->nomeTrofeu,
+            'date' => $request->dataTrofeu,
+            'position' => $request->positionTrofeu,
+            'linktournament' =>$request->linkTrofeu,
+            'id_game' => Session::get('gameSelected')
+        ]);
+        return redirect()->back()->withSuccess("Nome modificado!");
+    }
 }

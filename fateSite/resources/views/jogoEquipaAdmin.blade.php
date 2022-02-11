@@ -16,49 +16,77 @@
             </ul>
         </div>  
         <div class="areaEdicaoAdmin--listaJogadores">
-                <form action="/jogos/equipas/admin/add/player" method="POST">
-                @csrf
-                    <div id="areaAdicionarJogador">
-                        <td><input type="button" class="callToAction" id="btnAdicionarJogador" value="Adicionar Jogador">
-                        <input type="submit" class="callToAction" id="btnsubmeterPlayer" value="Submeter"></td>
-                        <td><input type="button" class="callToAction" id="btnCancelarAdicionarJogador" value="Cancelar"></td>
-                    </div>
+            <form action="/jogos/equipas/admin/add/player" method="POST">
+            @csrf
+                <div id="areaAdicionarJogador">
+                    <input type="button" class="callToAction" id="btnAdicionarJogador" value="Adicionar Jogador">
+                </div>
             
-                    <div id="areaInputsAdicionarJogador">
-                            <p>Nome do jogador...</p>
-                            <input class="" type="text" name="nomeJogador">
-                            <p>Link da foto</p>
-                            <input class="" type="text" name="imgJogador" value="https://i.imgur.com/CDVqIQj.png">
-                            <p>Utilizador</p>
-                            <select name="" id="jogadorUser">
-                                @foreach($listUsers as $user)
-                                    <option value="{{$user->id}}">{{$user->email}}</option>
-                                @endforeach
-                            </select>
-                    </div>
-                </form>
-                <table>
+                <div id="areaInputsAdicionarJogador">
+                    <p>Nome do jogador...</p>
+                    <input class="" type="text" name="nomeJogador">
+                    <p>Link da foto</p>
+                    <input class="" type="text" name="imgJogador" value="https://i.imgur.com/CDVqIQj.png">
+                    <p>Utilizador</p>
+                    <select name="" id="jogadorUser">
+                        @foreach($listUsers as $user)
+                            <option value="{{$user->id}}">{{$user->email}}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="areaBtnSubmeterCancelar">
+                    <div><input type="submit" class="callToAction" id="btnsubmeterPlayer" value="Submeter"></div>
+                    <div><input type="button" class="callToAction" id="btnCancelarAdicionarJogador" value="Cancelar"></div>
+                </div>
+            </form>
+            <table>
                 @foreach($listPlayers as $player)
                     <tr class="playerRows">
+                        <div class="areaVotePlayer">
+                            
+                        </div>
                         <form action="/jogos/equipas/admin/player/{{$player->id}}/changeName" method="POST">
                         @csrf
-                        <td><p class="text-p playerNameHolder">{{$player->nickname}}</p> 
-                        <input disabled class="playerNameChanger" type="text" name="inputNomePlayer" value="{{$player->nickname}}"></td>
-                        <td><input type="button" class="callToAction showChangeName" value="Editar"></input>
-                        <input type="submit" value="Alterar" class="callToAction btnPlayerNameInput"></td>
+                            <td><p class="text-p playerNameHolder">{{$player->nickname}}</p> 
+                            <input disabled class="playerNameChanger" type="text" name="inputNomePlayer" value="{{$player->nickname}}"></td>
+                            <td><input type="button" class="callToAction showChangeName" value="Editar"></input>
+                            <input type="submit" value="Alterar" class="callToAction btnPlayerNameInput"></td>
                         </form>
-                        <td><input type="button" class="callToAction cancelarChangeName" value="Cancelar"><a href='/jogos/equipas/admin/delete/player/{{$player->id}}' class="callToAction removerBtn">remover</a></td>
+                            <td><input type="button" class="callToAction cancelarChangeName" value="Cancelar"><a href='/jogos/equipas/admin/delete/player/{{$player->id}}' class="callToAction removerBtn">remover</a></td>
                     </tr>
                 @endforeach
             </table>
         </div>
         <div class="areaEdicaoAdmin--listaTrofeus">
+            <form action="/jogos/equipas/admin/add/trophie" method="POST">
+                @csrf
+                <div id="areaAdicionarTrofeu">
+                    <input type="button" class="callToAction" id="btnAdicionarTrofeu" value="Adicionar Troféu">
+                </div>
+                <div id="areaInputsAdicionarTrofeu">
+                    <p>Nome do Torneio...</p>
+                    <input class="" type="text" name="nomeTrofeu">
+                    <p>Data</p>
+                    <input class="" type="date" name="dataTrofeu">
+                    <p>Posição</p>
+                    <select name="positionTrofeu">
+                        @for ($i = 0; $i < 15; $i++)
+                        <option value="{{ $i }}">{{ $i }}</option>
+                        @endfor
+                    </select>
+                    <p>Link do Torneio</p>
+                    <input class="" type="text" name="linkTrofeu">
+                    
+                </div>
+                <div class="areaBtnSubmeterCancelar">
+                    <div><input type="submit" class="callToAction" id="btnsubmeterTrofeu" value="Submeter"></div>
+                    <div><input type="button" class="callToAction" id="btnCancelarAdicionarTrofeu" value="Cancelar"></div>
+                </div>
+            </form>
+
             <table>
-                <tr>
-                    <td><input type="button" class="callToAction" id="btnAdicionarTrophie" value="Adicionar Troféu"></td>
-                </tr>
                 @foreach($trophieList as $trophie)
-                <tr>
+                <tr class="trophieRows">
                     <form action="/jogos/equipas/admin/trophie/{{$trophie->id}}/changeName" method="POST">
                     @csrf
                     <td><p class="text-p trophieNameHolder">{{$trophie->name}}</p>

@@ -60,7 +60,7 @@ button.callToAction {
 }
 
 .painelAdmin{
-    width: 88%;
+    width: 90%;
     margin: 0 auto;
     padding-bottom: 1.5rem;
     background-color: var(--secundaryColor);
@@ -128,21 +128,30 @@ td{
     display: none;
 }
 
-#btnCancelarAdicionarJogador, #areaInputsAdicionarJogador{
+#btnCancelarAdicionarJogador, #areaInputsAdicionarJogador, #btnCancelarAdicionarTrofeu, #areaInputsAdicionarTrofeu{
     display: none;
     flex-direction: column;
 }
-#areaAdicionarJogador {
+#areaAdicionarJogador , #areaAdicionarTrofeu{
     flex-direction: row;
 }
-#areaAdicionarJogador input {
+#areaAdicionarJogador input, #areaAdicionarTrofeu input{
     margin-top: 0.5rem;
     margin-left: 1rem;
 }
-#areaInputsAdicionarJogador p, #areaInputsAdicionarJogador input, #areaInputsAdicionarJogador select{
+#areaInputsAdicionarJogador p, #areaInputsAdicionarJogador input, #areaInputsAdicionarJogador select,
+#areaInputsAdicionarTrofeu p, #areaInputsAdicionarTrofeu input, #areaInputsAdicionarTrofeu select{
     margin-top: 0.5rem;
     margin-left: 1rem;
 }
-#btnsubmeterPlayer {
+#btnsubmeterPlayer, #btnsubmeterTrofeu{
     display: none;
+}
+
+.areaBtnSubmeterCancelar{
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+.areaBtnSubmeterCancelar div{
+    display: inline-block;
 }

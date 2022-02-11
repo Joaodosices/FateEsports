@@ -84,7 +84,7 @@ document.getElementById("btnAdicionarJogador").onclick = function (){
     document.getElementById("btnAdicionarJogador").style.display = "none"
 
     for (let i = 0; i < document.getElementsByClassName("playerRows").length; i++) {
-        document.getElementsByClassName("playerRows")[i].style.visibility = "hidden"
+        document.getElementsByClassName("playerRows")[i].style.display = "none"
     }
 }
 document.getElementById("btnCancelarAdicionarJogador").onclick = function(){
@@ -94,6 +94,27 @@ document.getElementById("btnCancelarAdicionarJogador").onclick = function(){
     document.getElementById("btnAdicionarJogador").style.display = "flex"
 
     for (let i = 0; i < document.getElementsByClassName("playerRows").length; i++) {
-        document.getElementsByClassName("playerRows")[i].style.visibility = "visible"
+        document.getElementsByClassName("playerRows")[i].style.display = "flex"
+    }
+}
+
+document.getElementById("btnAdicionarTrofeu").onclick = function (){
+    document.getElementById("btnCancelarAdicionarTrofeu").style.display = "flex"
+    document.getElementById("areaInputsAdicionarTrofeu").style.display = "flex"
+    document.getElementById("btnsubmeterTrofeu").style.display = "flex"
+    document.getElementById("btnAdicionarTrofeu").style.display = "none"
+
+    for (let i = 0; i < document.getElementsByClassName("trophieRows").length; i++) {
+        document.getElementsByClassName("trophieRows")[i].style.display = "none"
+    }
+}
+document.getElementById("btnCancelarAdicionarTrofeu").onclick = function(){
+    document.getElementById("btnCancelarAdicionarTrofeu").style.display = "none"
+    document.getElementById("areaInputsAdicionarTrofeu").style.display = "none"
+    document.getElementById("btnsubmeterTrofeu").style.display = "none"
+    document.getElementById("btnAdicionarTrofeu").style.display = "flex"
+
+    for (let i = 0; i < document.getElementsByClassName("trophieRows").length; i++) {
+        document.getElementsByClassName("trophieRows")[i].style.display = "flex"
     }
 }

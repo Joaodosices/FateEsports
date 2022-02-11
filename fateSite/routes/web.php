@@ -42,6 +42,7 @@ Route::get('/jogos/equipas/admin/delete/trophie/{idTrophie}', [JogoEquipaAdminCo
 Route::post('/jogos/equipas/admin/player/{idPlayer}/changeName', [JogoEquipaAdminController::class, 'changeNamePlayer']);
 Route::post('/jogos/equipas/admin/trophie/{idTrophie}/changeName', [JogoEquipaAdminController::class, 'changeNameTrophie']);
 Route::post('/jogos/equipas/admin/add/player', [JogoEquipaAdminController::class, 'addPlayer']);
+Route::post('/jogos/equipas/admin/add/trophie', [JogoEquipaAdminController::class, 'addTrophie']);
 //--------------------
 
 
