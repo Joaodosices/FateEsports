@@ -80,13 +80,37 @@ class PartnerController extends Controller
      * @param  \App\Models\Partner  $partner
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request,$id)
     {
 
+        // $share=new Partner;
+
+      
+
+       $array=$request->except('_token');
+
+       
+       
         $share = Partner::find($id);
 
-        if($share){
-            $share->name = $request->changename;
+
+        if($array){
+
+            // $share->name=$array['changename'];
+
+            $share->name=$array['changename'];
+            
+            $share->description=$array['changedescription'];
+
+            $share->linkpartner=$array['changelinkpartner'];
+
+            $share->img=$array['changeimg'];
+
+            // $share=array(
+            //     'name'=>$array['changename']
+            // );
+
+            // $share->name = $request->changename;
             $share->save();
         }
             

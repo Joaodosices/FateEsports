@@ -65,13 +65,15 @@
                                     <th>Editar</th>
                                     <th>Eliminar</th>
                                     @foreach($partners as $partner)
-                                    <form method="post" action="/parcerias/{$partner->id}" >
+                                    <form method="post" action="/parcerias/{{ $partner->id }}" >
                                     @csrf
+                                
                                     <tr>
-                                        <td><input disabled type="text" name="changename" class="nameadmin"  value="{{ $partner->name }}"></td>
-                                        <td><textarea disabled type="text" name="changedescription" class="descriptionadmin" cols="1" rows="1">{{ $partner->description }}</textarea></td>
-                                        <td><input disabled type="text" name="changelinkpartner" class="linkpartneradmin1"  value="{{ $partner->linkpartner }}"></td>
-                                        <td> <img class="marcaimgadmin" style="display:none " src="{{$partner->img}}"><div class="linkpartneradmin"><input disabled type="text" name="changeimg" class="imgadmin"  value="{{ $partner->img }}"></div></td>
+
+                                        <td><input readOnly type="text" name="changename" class="nameadmin"  value="{{ $partner->name }}"></td>
+                                        <td><textarea readOnly type="text" name="changedescription" class="descriptionadmin" cols="1" rows="1">{{ $partner->description }}</textarea></td>
+                                        <td><input readOnly type="text" name="changelinkpartner" class="linkpartneradmin1"  value="{{ $partner->linkpartner }}"></td>
+                                        <td> <img class="marcaimgadmin" style="display:none " src="{{$partner->img}}"><div class="linkpartneradmin"><input readOnly type="text" name="changeimg" class="imgadmin"  value="{{ $partner->img }}"></div></td>
                                         <td>
                                             <img  class="eliminar btadminimgmostrar"  src="{{ asset('img\parcerias\mostrar.png')}}">
                                             <img  class="eliminar btadminimgesconder" style="display:none" src="{{ asset('img\parcerias\fechar.png')}}">
@@ -79,16 +81,17 @@
                                         <td>
                                             <img  class="eliminar btadmineditar"  src="{{ asset('img\parcerias\editar.png')}}">
                                             <!-- <img  class="eliminar btadminconfirmar" style="display:none "  src="{{ asset('img\parcerias\confirmar.png')}}"></td> -->
-                                            <button class="eliminar btadminconfirmar" type="submit"  > SUBMETER </button>
+                                            <button style="background: url({{ asset('img\parcerias\editar.png')}})" class="eliminar btadminconfirmar" type="submit"  > SUBMETER </button>
                                         <td><a href="parcerias/delete/{{ $partner->id }}"><img class="eliminar"  src="{{ asset('img\paginacontactos\trash.png') }}"></a></td>
                                     </tr>
+                                    </form>
                                     @endforeach
 
                                     
                                     
                                 </tbody>
                             </table>
-                            </form>
+                            
                             </div>
                             @endif
    
@@ -138,10 +141,10 @@
        document.getElementsByClassName("btadmineditar")[i].onclick = function(){
         document.getElementsByClassName("btadminconfirmar")[i].style.display = "inline"
         document.getElementsByClassName("btadmineditar")[i].style.display = "none"
-        document.getElementsByClassName("nameadmin")[i].disabled = false;
-        document.getElementsByClassName("descriptionadmin")[i].disabled = false;
-        document.getElementsByClassName("linkpartneradmin1")[i].disabled = false;
-        document.getElementsByClassName("imgadmin")[i].disabled = false;
+        document.getElementsByClassName("nameadmin")[i].readOnly = false;
+        document.getElementsByClassName("descriptionadmin")[i].readOnly = false;
+        document.getElementsByClassName("linkpartneradmin1")[i].readOnly = false;
+        document.getElementsByClassName("imgadmin")[i].readOnly = false;
        }    
         
 
@@ -152,10 +155,10 @@
        document.getElementsByClassName("btadminconfirmar")[i].onclick = function(){
         document.getElementsByClassName("btadminconfirmar")[i].style.display = "none"
         document.getElementsByClassName("btadmineditar")[i].style.display = "inline"
-        document.getElementsByClassName("nameadmin")[i].disabled = true;
-        document.getElementsByClassName("descriptionadmin")[i].disabled = true;
-        document.getElementsByClassName("linkpartneradmin1")[i].disabled = true;
-        document.getElementsByClassName("imgadmin")[i].disabled = true;
+        document.getElementsByClassName("nameadmin")[i].readOnly = true;
+        document.getElementsByClassName("descriptionadmin")[i].readOnly = true;
+        document.getElementsByClassName("linkpartneradmin1")[i].readOnly = true;
+        document.getElementsByClassName("imgadmin")[i].readOnly = true;
        }    
         
 
