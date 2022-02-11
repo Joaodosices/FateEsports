@@ -94,7 +94,7 @@ class ImagesgamesTablesSeeder extends Seeder
             Imagesgame::create( [
             'id'=>8,
             'description'=>'paginaJogos',
-            'img'=>'https://i.imgur.com/fGrLlIY.png',
+            'img'=>'https://i.imgur.com/PHkMphp.png',
             'id_game'=>1,
             'created_at'=>NULL,
             'updated_at'=>NULL

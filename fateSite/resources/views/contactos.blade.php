@@ -111,6 +111,9 @@
                                     @endforeach
                                 </tbody>
                             </table>
+                                <div class="paginacao">
+                                    {{ $contacts->links() }}
+                                </div>
                             </div>
                             @endif
 

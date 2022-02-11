@@ -16,8 +16,14 @@ class ContactController extends Controller
      */
     public function index()
     {
-        $contacts = Contact::all();
+
+        $contacts = Contact::where("id" , ">"  , "0" )
+        ->paginate(10);
         return view('contactos', compact('contacts'));
+
+
+        // $contacts = Contact::all();
+        // return view('contactos', compact('contacts'));
     }
 
     /**

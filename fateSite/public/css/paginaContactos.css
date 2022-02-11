@@ -16,6 +16,7 @@
 
 span{
     color: var(--redCallAction) ;
+    margin-right: -4px;
 }
 
 #areaContacto{
@@ -150,8 +151,12 @@ form select{
 padding: 10px;
 text-align: center;
 }
+
 #tabela-admin tr:nth-child(even){
     background-color: var(--brancoGelo);
+}
+#tabela-admin tr:nth-child(odd){
+    background-color: white;
 }
 #tabela-admin th{
     padding: 10px;
@@ -168,9 +173,44 @@ text-align: center;
 
 .botao-delete:hover{
     transform: scale(1.2);
-    /* transition: 400ms; */
 }
 
+svg{
+    width: 50px;
+    height: 50px;
+}
+
+.paginacao{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.paginacao p:first-of-type{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 14pt;
+}
+.font-medium{
+    padding: 0 8px 0 3px !important;
+}
+.flex-1{
+    display: none;
+}
+
+.px-4 a:hover{
+    border: 0px;
+}
+
+#area-tabela-admin{
+    padding: 20px 0 20px 0;
+    background-color: var(--pretoCinza);
+}
+
+#area-tabela-admin h1{
+    color: white;
+}
 
 @media (max-width: 1200px) {
 
