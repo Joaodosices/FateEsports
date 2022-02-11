@@ -94,7 +94,7 @@ document.getElementById("btnCancelarAdicionarJogador").onclick = function(){
     document.getElementById("btnAdicionarJogador").style.display = "flex"
 
     for (let i = 0; i < document.getElementsByClassName("playerRows").length; i++) {
-        document.getElementsByClassName("playerRows")[i].style.display = "flex"
+        document.getElementsByClassName("playerRows")[i].style.display = "table-row"
     }
 }
 
@@ -115,6 +115,6 @@ document.getElementById("btnCancelarAdicionarTrofeu").onclick = function(){
     document.getElementById("btnAdicionarTrofeu").style.display = "flex"
 
     for (let i = 0; i < document.getElementsByClassName("trophieRows").length; i++) {
-        document.getElementsByClassName("trophieRows")[i].style.display = "flex"
+        document.getElementsByClassName("trophieRows")[i].style.display = "table-row"
     }
 }
