@@ -21,6 +21,12 @@ margin: 0 auto;
 
 }
 
+.descriptionadmin{
+  width:270px;
+  height:200px;
+  resize:none;
+}
+
 h1.titulopaginaparcerias{
 text-align:center;
 font-size:45pt;
@@ -66,6 +72,11 @@ div#grid-marcas {
 .imgmarca{
   width:237px;
   height:133px;
+  transition:1s;
+}
+
+.imgmarca:hover{
+  transform:scale(1.1);
 }
 
 div.containerimgmarca{
@@ -94,19 +105,14 @@ div.containertextomarca{
 }
 
 a.linkmarca{  
-  float:right;
-    text-decoration:none;
-    color:#D50101;
-    font-size:25px;
+ 
     transition:1s;
-    position:absolute;
-    bottom:10px;
-    right:40px;
-    font-weight:900;
+
 }
 
 a.linkmarca:hover{  
- transform:scale(1.2);
+ 
+ filter: grayscale(100%);
 }
 
 #backoffice-parcerias {
@@ -153,6 +159,11 @@ text-align: center;
 .eliminar:hover{
   transform: scale(1.2);
   /* transition: 400ms; */
+}
+
+.marcaimgadmin{
+  width:200px ;
+  height:120px;
 }
 
 @media only screen and (max-width: 1530px) {

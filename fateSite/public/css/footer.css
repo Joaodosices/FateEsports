@@ -46,7 +46,7 @@ img#discord,img#facebook,img#reddit,img#instagram,img#youtube,img#linkedin,img#t
 
 div#fateesportsfooter{
 
-    margin-top:60px;
+    margin-top:30px;
     margin-left:40px;
     text-align:left;
     font-size:16pt;
@@ -69,7 +69,7 @@ footer h3{
 } */
 
 div#equipasfooter{
-    margin-top:60px;
+    margin-top:30px;
     margin-left:40px;
     text-align:left;    
     font-size:16pt;
@@ -88,10 +88,7 @@ footer h4{
     margin-bottom:0px;
 }
 
-footer h4:before{
-    color:red;
-    content: "A";
-}
+
 
 input#emailnewsletter{
     background-color:#353535;
@@ -121,6 +118,7 @@ input#emailnewsletter{
   div#newsletterfooter{
        
         margin-left:40px;
+        color:#D50101;
   }
 
   .titulopagamento{
@@ -130,21 +128,20 @@ input#emailnewsletter{
     margin-top:50px !important;
 }
 
-  .titulopagamento:before{
-    color:red;
-    content: "M";
-}
+ 
 
 div#metodosdepagamentofooter{
 
   margin-left:40px;
  margin-top:10px;
+ color:#D50101;
 }
 div#imagenspagamentofooter{
     display:grid;
     grid-template-columns: repeat(3,1fr);
         gap:10px;
         border-radius:5px;
+   justify-items: center;
 }
 
 img#ApplePay,img#GooglePay,img#Mastercard,img#Maestro,img#PayPal,img#Visa{
@@ -167,9 +164,7 @@ div.divcopyrightfooter{
 
 @media only screen and (max-width: 1400px) {
   
-    div#containerfooter {
-        /* flex-direction:column; */
-    }
+ 
 
     div#logoeredescontainer{
         margin-left:100px;
