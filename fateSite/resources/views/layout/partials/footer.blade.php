@@ -36,7 +36,7 @@
 
   
    <div id="metodosdepagamentofooter">
-      <h5 class="titulopagamento">étodos de Pagamento</h5><br>
+      <h5 class="titulopagamento">Métodos de Pagamento</h5><br>
 
       <div id="imagenspagamentofooter">
       <img id="ApplePay" src="{{ asset('img/footer/apay.png') }}" alt="" width="60"> 
@@ -49,7 +49,7 @@
 </div>  
 
 <div id="newsletterfooter">
-      <h4>dere ao nosso newsletter!</h4><br>
+      <h4>Adere ao nosso newsletter!</h4><br>
       <input type="text" id="emailnewsletter" name="emailnewsletter" placeholder="Introduz o teu email">
       <button type="submit" name="submitnewsletter">Aderir!</button> 
    </div>

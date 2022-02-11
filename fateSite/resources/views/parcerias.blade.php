@@ -32,14 +32,14 @@
 
         <div class="containerimgmarca"> 
 
-      <img class="imgmarca" src="{{$partner->img}}">
+        <a class="linkmarca" target="_blank" href="{{$partner->linkpartner}}"><img class="imgmarca" src="{{$partner->img}}"></a>
       </div>
       <div class="containertextomarca">
 
         <h2 class="titulomarca"> {{$partner->name}} </h2>
         <p class="descricaomarca"> {{$partner->description}} </p>
         </div>
-        <a class="linkmarca" target="_blank" href="{{$partner->linkpartner}}"> Visitar Site</a>
+
          
          </div>
 
@@ -53,25 +53,42 @@
                             <div id="backoffice-parcerias">
                                 <div  id="backoffice-titulo">
                                     <h1 >Admin <span class="DestaqueTitulo">Side</span></h1>
-                                </div>
+                                </div>              
+                            
                             <table id="tabela">
                                 <tbody>
-                                    <th>Name</th>
-                                    <th>Description</th>
-                                    <th>Partner Link</th>
-                                    <th>Image</th>
-                                    <th>Delete</th>
+                                    <th>Nome</th>
+                                    <th>Descrição</th>
+                                    <th>Link do Parceiro</th>
+                                    <th>Imagem</th>
+                                    <th>Mostrar</th>
+                                    <th>Editar</th>
+                                    <th>Eliminar</th>
                                     @foreach($partners as $partner)
+                                    <form method="post" action="/parcerias/{$partner->id}" >
+                                    @csrf
                                     <tr>
-                                        <td>{{ $partner->name }}</td>
-                                        <td>{{ $partner->description }}</td>
-                                        <td>{{ $partner->linkpartner }}</td>
-                                        <td> <img src="{{$partner->img}}"></td>
+                                        <td><input disabled type="text" name="changename" class="nameadmin"  value="{{ $partner->name }}"></td>
+                                        <td><textarea disabled type="text" name="changedescription" class="descriptionadmin" cols="1" rows="1">{{ $partner->description }}</textarea></td>
+                                        <td><input disabled type="text" name="changelinkpartner" class="linkpartneradmin1"  value="{{ $partner->linkpartner }}"></td>
+                                        <td> <img class="marcaimgadmin" style="display:none " src="{{$partner->img}}"><div class="linkpartneradmin"><input disabled type="text" name="changeimg" class="imgadmin"  value="{{ $partner->img }}"></div></td>
+                                        <td>
+                                            <img  class="eliminar btadminimgmostrar"  src="{{ asset('img\parcerias\mostrar.png')}}">
+                                            <img  class="eliminar btadminimgesconder" style="display:none" src="{{ asset('img\parcerias\fechar.png')}}">
+                                        </td>
+                                        <td>
+                                            <img  class="eliminar btadmineditar"  src="{{ asset('img\parcerias\editar.png')}}">
+                                            <!-- <img  class="eliminar btadminconfirmar" style="display:none "  src="{{ asset('img\parcerias\confirmar.png')}}"></td> -->
+                                            <button class="eliminar btadminconfirmar" type="submit"  > SUBMETER </button>
                                         <td><a href="parcerias/delete/{{ $partner->id }}"><img class="eliminar"  src="{{ asset('img\paginacontactos\trash.png') }}"></a></td>
                                     </tr>
                                     @endforeach
+
+                                    
+                                    
                                 </tbody>
                             </table>
+                            </form>
                             </div>
                             @endif
    
@@ -80,4 +97,73 @@
 @section('scripts')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js" integrity="sha512-gWlyRVDsJvp5kesJt4cSdPPLZIBdln/uSwzYgUicQcbTgRNQE4QhP5KUBIYlLYLkiKIQiuD7KUMHzqGNW/D2bQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="{{ asset('js/parcerias.js') }}"></script>
+
+<script>
+    const l = document.getElementsByClassName("btadminimgesconder").length;
+    const ll = document.getElementsByClassName("btadminimgmostrar").length;
+    const lll = document.getElementsByClassName("btadmineditar").length;
+    const llll = document.getElementsByClassName("btadminconfirmar").length;
+
+
+   
+
+
+    for (let i = 0; i < ll; i++) {
+       document.getElementsByClassName("btadminimgmostrar")[i].onclick = function(){
+        document.getElementsByClassName("btadminimgmostrar")[i].style.display = "none"
+        document.getElementsByClassName("btadminimgesconder")[i].style.display = "inline"
+        document.getElementsByClassName("marcaimgadmin")[i].style.display = "inline"
+        document.getElementsByClassName("linkpartneradmin")[i].style.display = "none"
+       }    
+        
+
+    }
+    
+
+    
+    for (let i = 0; i < l; i++) {
+       document.getElementsByClassName("btadminimgesconder")[i].onclick = function(){
+        document.getElementsByClassName("btadminimgesconder")[i].style.display = "none"
+        document.getElementsByClassName("btadminimgmostrar")[i].style.display = "inline"
+        document.getElementsByClassName("marcaimgadmin")[i].style.display = "none"
+        document.getElementsByClassName("linkpartneradmin")[i].style.display = "inline"
+       }    
+        
+
+    }
+  
+
+      
+    for (let i = 0; i < lll; i++) {
+       document.getElementsByClassName("btadmineditar")[i].onclick = function(){
+        document.getElementsByClassName("btadminconfirmar")[i].style.display = "inline"
+        document.getElementsByClassName("btadmineditar")[i].style.display = "none"
+        document.getElementsByClassName("nameadmin")[i].disabled = false;
+        document.getElementsByClassName("descriptionadmin")[i].disabled = false;
+        document.getElementsByClassName("linkpartneradmin1")[i].disabled = false;
+        document.getElementsByClassName("imgadmin")[i].disabled = false;
+       }    
+        
+
+    }
+
+      
+    for (let i = 0; i < llll; i++) {
+       document.getElementsByClassName("btadminconfirmar")[i].onclick = function(){
+        document.getElementsByClassName("btadminconfirmar")[i].style.display = "none"
+        document.getElementsByClassName("btadmineditar")[i].style.display = "inline"
+        document.getElementsByClassName("nameadmin")[i].disabled = true;
+        document.getElementsByClassName("descriptionadmin")[i].disabled = true;
+        document.getElementsByClassName("linkpartneradmin1")[i].disabled = true;
+        document.getElementsByClassName("imgadmin")[i].disabled = true;
+       }    
+        
+
+    }
+
+   
+    
+
+</script>
+
 @endsection

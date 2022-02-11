@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Partner;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
+
 
 class PartnerController extends Controller
 {
@@ -77,9 +80,25 @@ class PartnerController extends Controller
      * @param  \App\Models\Partner  $partner
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Partner $partner)
+    public function update(Request $request, $id)
     {
-        //
+
+        $share = Partner::find($id);
+
+        if($share){
+            $share->name = $request->changename;
+            $share->save();
+        }
+            
+    
+            // 'name' => $request->get('changename'),
+            // 'description' => $request->get('changedescription'),
+            // 'linkpartner' => $request->get('changelinkpartner'),
+            // 'img' => $request->get('changeimg'),
+
+
+          
+          return redirect()->route('partner.index')->withSuccess("Editado com sucesso!");
     }
 
     /**
