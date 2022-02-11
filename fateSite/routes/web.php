@@ -35,6 +35,7 @@ Route::post('/', [ImgHomePageController::class, 'store'])->name('index.store');
 // Route para equipa de X jogo
 
 Route::get('/jogos/{id_game}/equipa', [JogoEquipaController::class, 'show']);
+Route::get('/jogos/equipa/{idGame}/upvote/{upvotes}/player/{idPlayer}', [JogoEquipaController::class, 'upvotePlayer']);
 Route::get('/jogos/equipas/admin', [JogoEquipaAdminController::class, 'show']);
 Route::get('/jogos/equipas/admin/{id}', [JogoEquipaAdminController::class, 'filterGame']);
 Route::get('/jogos/equipas/admin/delete/player/{idPlayer}', [JogoEquipaAdminController::class, 'destroyPlayer']);

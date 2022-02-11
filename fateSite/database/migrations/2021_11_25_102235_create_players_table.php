@@ -21,6 +21,7 @@ class CreatePlayersTable extends Migration
             $table->foreign('id_game')->references('id')->on('games');
             $table->unsignedBigInteger('id_user')->nullable(); 
             $table->foreign('id_user')->references('id')->on('users');
+            $table->string('upvotes')->default('0')->nullable();
             $table->timestamps();
         });
     }

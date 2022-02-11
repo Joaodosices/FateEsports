@@ -14,6 +14,16 @@
     <div class="areaTeam">
         @foreach($players as $player)
             <div class="areaTeam--areaPlayer">
+                <div class="areaVotePlayer">
+                @if(Auth::check())
+                    @if($cookieChecker == 0)
+                    <a href="/jogos/equipa/{{ $player->id_game }}/upvote/{{ $player->upvotes }}/player/{{ $player->id }}"><img src="https://i.imgur.com/0ob8CaM.png" alt=""></a>
+                    @else
+                    <img src="https://i.imgur.com/c74BxzQ.png" alt="">
+                    @endif
+                @endif
+                    <p>{{ $player->upvotes }}</p>
+                </div>
                 <div class="areaPlayer--playerBackground">
                     <img src="https://i.imgur.com/hjEdeNY.png" alt="" class="logoBackgroundPlayer">
                     <img src="{{$player->img}}" alt="" class="logoPlayer">
@@ -57,4 +67,5 @@
 @endsection
 
 @section('scripts')
+<script src="{{ asset('js/jogoEquipa.js') }}"></script>
 @endsection

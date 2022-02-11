@@ -42,9 +42,6 @@
             <table>
                 @foreach($listPlayers as $player)
                     <tr class="playerRows">
-                        <div class="areaVotePlayer">
-                            
-                        </div>
                         <form action="/jogos/equipas/admin/player/{{$player->id}}/changeName" method="POST">
                         @csrf
                             <td><p class="text-p playerNameHolder">{{$player->nickname}}</p> 

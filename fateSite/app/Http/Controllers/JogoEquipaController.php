@@ -11,7 +11,9 @@ use Session;
 
 class JogoEquipaController extends Controller
 {
-    
+    public function __construct(){
+        $this->cookie = 0;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -52,6 +54,16 @@ class JogoEquipaController extends Controller
     public function show($id_game)
     {
         $gamesList = [];
+        $cookieChecker = 0;
+        if (isset($_COOKIE[$id_game])){
+            if ($_COOKIE[$id_game] == 1) {
+                $this->cookie = 1;
+                $cookieChecker  = $this->cookie;
+            } else {
+                $this->cookie = 0;
+                $cookieChecker  = $this->cookie;
+            }
+        }
         if (Session::get('authAdmin') == 1) {
             $gamesList = Game::all();
         }
@@ -64,9 +76,23 @@ class JogoEquipaController extends Controller
         $otherPositions = Trophie::whereBetween('position', [2, 4])->where('id_game', '=', $id_game)->get();
         $otherPositions = count($otherPositions);
         
-        return view('jogoEquipa', compact('gameName','players', 'trophies', 'trophiesCount', 'firstPlaced', 'otherPositions', 'gamesList'));
+        return view('jogoEquipa', compact('gameName','cookieChecker' ,'players', 'trophies', 'trophiesCount', 'firstPlaced', 'otherPositions', 'gamesList'));
     }
 
+    public function upvotePlayer($idGame, $upvotes, $idPlayer)
+    {
+        $Addupvotes = $upvotes + 1;
+        $player = Player::find($idPlayer);
+
+        setcookie($idGame, "1", time() + (86400 * 1000), "/");
+
+        if($player) {
+            $player->upvotes = $Addupvotes;
+            $player->save();
+        }
+
+        return redirect()->back();
+    }
     /**
      * Show the form for editing the specified resource.
      *

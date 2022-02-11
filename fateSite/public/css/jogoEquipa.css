@@ -63,6 +63,9 @@ grid players
     margin: 100px auto;
     grid-template-columns: repeat(auto-fit, minmax(431px, 1fr));
 }
+.areaTeam--areaPlayer {
+    position: relative;
+}
 .areaTeam--areaPlayer h2{
     padding-top: 1rem;
     text-align: center;
@@ -142,4 +145,11 @@ grid players
     70%{
         transform: rotate(15deg);
     }
+}
+.areaVotePlayer{
+    z-index: 1;
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    overflow: hidden;
 }
