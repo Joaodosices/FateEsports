@@ -90,7 +90,7 @@ class UserTablesSeeder extends Seeder
             'id'=>7,
             'name'=>'Francisco',
             'surname'=>'antony',
-            'email'=>'francisco@gmail.com',
+            'email'=>'francisco.antony@gmail.com',
             'password'=>'$2y$10$Sj2mjp8TUj7apZx6BZ9CQe8xeC0n/nd0UZfi.pUPausoPG4v8f4AS',
             'created_at'=>NULL,
             'updated_at'=>NULL
@@ -209,5 +209,201 @@ class UserTablesSeeder extends Seeder
                 'created_at'=>NULL,
                 'updated_at'=>NULL
                 ] );
+
+                User::create( [
+                    'id'=>19,
+                    'name'=>'Manuel',
+                    'surname'=>'Sousa',
+                    'email'=>'manuel@gmail.com',
+                    'password'=>'$2y$10$Sj2mjp8TUj7apZx6BZ9CQe8xeC0n/nd0UZfi.pUPausoPG4v8f4AS',
+                    'created_at'=>NULL,
+                    'updated_at'=>NULL
+                    ] );
+                
+                User::create( [
+                    'id'=>20,
+                    'name'=>'Carl',
+                    'surname'=>'Gyldenkærne',
+                    'email'=>'carl@gmail.com',
+                    'password'=>'$2y$10$Sj2mjp8TUj7apZx6BZ9CQe8xeC0n/nd0UZfi.pUPausoPG4v8f4AS',
+                    'created_at'=>NULL,
+                    'updated_at'=>NULL
+                    ] );       
+
+                User::create( [
+                    'id'=>21,
+                    'name'=>'Tiago',
+                    'surname'=>'Mendes',
+                    'email'=>'tiago@gmail.com',
+                    'password'=>'$2y$10$Sj2mjp8TUj7apZx6BZ9CQe8xeC0n/nd0UZfi.pUPausoPG4v8f4AS',
+                    'created_at'=>NULL,
+                    'updated_at'=>NULL
+                    ] );   
+
+                User::create( [
+                    'id'=>22,
+                    'name'=>'Paulo',
+                    'surname'=>'Rebocho',
+                    'email'=>'paulo@gmail.com',
+                    'password'=>'$2y$10$Sj2mjp8TUj7apZx6BZ9CQe8xeC0n/nd0UZfi.pUPausoPG4v8f4AS',
+                    'created_at'=>NULL,
+                    'updated_at'=>NULL
+                    ] );
+                    
+                User::create( [
+                    'id'=>23,
+                    'name'=>'Dragomir',
+                    'surname'=>'Antonio-Cosmin',
+                    'email'=>'dragomir@gmail.com',
+                    'password'=>'$2y$10$Sj2mjp8TUj7apZx6BZ9CQe8xeC0n/nd0UZfi.pUPausoPG4v8f4AS',
+                    'created_at'=>NULL,
+                    'updated_at'=>NULL
+                    ] );
+                    
+                User::create( [
+                    'id'=>24,
+                    'name'=>'Ricardo',
+                    'surname'=>'Mendonsa',
+                    'email'=>'ricardo.mendonsa@gmail.com',
+                    'password'=>'$2y$10$Sj2mjp8TUj7apZx6BZ9CQe8xeC0n/nd0UZfi.pUPausoPG4v8f4AS',
+                    'created_at'=>NULL,
+                    'updated_at'=>NULL
+                    ] );
+
+                User::create( [
+                    'id'=>25,
+                    'name'=>'Joaquim',
+                    'surname'=>'Mendonsa',
+                    'email'=>'joaquim@gmail.com',
+                    'password'=>'$2y$10$Sj2mjp8TUj7apZx6BZ9CQe8xeC0n/nd0UZfi.pUPausoPG4v8f4AS',
+                    'created_at'=>NULL,
+                    'updated_at'=>NULL
+                    ] );
+                    
+                User::create( [
+                    'id'=>26,
+                    'name'=>'João',
+                    'surname'=>'Carlos',
+                    'email'=>'joao.carlos@gmail.com',
+                    'password'=>'$2y$10$Sj2mjp8TUj7apZx6BZ9CQe8xeC0n/nd0UZfi.pUPausoPG4v8f4AS',
+                    'created_at'=>NULL,
+                    'updated_at'=>NULL
+                    ] );
+                    
+                User::create( [
+                    'id'=>27,
+                    'name'=>'Francisco',
+                    'surname'=>'Gonçalves',
+                    'email'=>'francisco@gmail.com',
+                    'password'=>'$2y$10$Sj2mjp8TUj7apZx6BZ9CQe8xeC0n/nd0UZfi.pUPausoPG4v8f4AS',
+                    'created_at'=>NULL,
+                    'updated_at'=>NULL
+                    ] );
+                
+                User::create( [
+                    'id'=>28,
+                    'name'=>'Antonia',
+                    'surname'=>'Conceição',
+                    'email'=>'antonia@gmail.com',
+                    'password'=>'$2y$10$Sj2mjp8TUj7apZx6BZ9CQe8xeC0n/nd0UZfi.pUPausoPG4v8f4AS',
+                    'created_at'=>NULL,
+                    'updated_at'=>NULL
+                    ] );
+            
+                User::create( [
+                    'id'=>29,
+                    'name'=>'Joana',
+                    'surname'=>'Pimenta',
+                    'email'=>'joana@gmail.com',
+                    'password'=>'$2y$10$Sj2mjp8TUj7apZx6BZ9CQe8xeC0n/nd0UZfi.pUPausoPG4v8f4AS',
+                    'created_at'=>NULL,
+                    'updated_at'=>NULL
+                    ] ); 
+                    
+                User::create( [
+                    'id'=>30,
+                    'name'=>'Chris',
+                    'surname'=>'Abroad',
+                    'email'=>'chris@gmail.com',
+                    'password'=>'$2y$10$Sj2mjp8TUj7apZx6BZ9CQe8xeC0n/nd0UZfi.pUPausoPG4v8f4AS',
+                    'created_at'=>NULL,
+                    'updated_at'=>NULL
+                    ] );
+                    
+                User::create( [
+                    'id'=>31,
+                    'name'=>'Tiago',
+                    'surname'=>'Saramago',
+                    'email'=>'tiago.saramago@gmail.com',
+                    'password'=>'$2y$10$Sj2mjp8TUj7apZx6BZ9CQe8xeC0n/nd0UZfi.pUPausoPG4v8f4AS',
+                    'created_at'=>NULL,
+                    'updated_at'=>NULL
+                    ] );
+
+                User::create( [
+                    'id'=>32,
+                    'name'=>'Claudia',
+                    'surname'=>'Mushrooms',
+                    'email'=>'claudia@gmail.com',
+                    'password'=>'$2y$10$Sj2mjp8TUj7apZx6BZ9CQe8xeC0n/nd0UZfi.pUPausoPG4v8f4AS',
+                    'created_at'=>NULL,
+                    'updated_at'=>NULL
+                    ] );
+
+                User::create( [
+                    'id'=>33,
+                    'name'=>'Ricardo',
+                    'surname'=>'Fazeres',
+                    'email'=>'ricardo.fazeres@gmail.com',
+                    'password'=>'$2y$10$Sj2mjp8TUj7apZx6BZ9CQe8xeC0n/nd0UZfi.pUPausoPG4v8f4AS',
+                    'created_at'=>NULL,
+                    'updated_at'=>NULL
+                    ] );
+
+                User::create( [
+                    'id'=>34,
+                    'name'=>'Diogo',
+                    'surname'=>'Bataguas',
+                    'email'=>'diogo.bataguas@gmail.com',
+                    'password'=>'$2y$10$Sj2mjp8TUj7apZx6BZ9CQe8xeC0n/nd0UZfi.pUPausoPG4v8f4AS',
+                    'created_at'=>NULL,
+                    'updated_at'=>NULL
+                    ] );
+
+                User::create( [
+                    'id'=>35,
+                    'name'=>'Hugo',
+                    'surname'=>'Bomboca',
+                    'email'=>'hugo.bomboca@gmail.com',
+                    'password'=>'$2y$10$Sj2mjp8TUj7apZx6BZ9CQe8xeC0n/nd0UZfi.pUPausoPG4v8f4AS',
+                    'created_at'=>NULL,
+                    'updated_at'=>NULL
+                    ] );
+
+                User::create( [
+                    'id'=>36,
+                    'name'=>'Cristiano',
+                    'surname'=>'Ronaldo',
+                    'email'=>'cristiano.ronaldo@gmail.com',
+                    'password'=>'$2y$10$Sj2mjp8TUj7apZx6BZ9CQe8xeC0n/nd0UZfi.pUPausoPG4v8f4AS',
+                    'created_at'=>NULL,
+                    'updated_at'=>NULL
+                    ] );
+
+                User::create( [
+                    'id'=>37,
+                    'name'=>'Lionel',
+                    'surname'=>'Messi',
+                    'email'=>'lionel.messi@gmail.com',
+                    'password'=>'$2y$10$Sj2mjp8TUj7apZx6BZ9CQe8xeC0n/nd0UZfi.pUPausoPG4v8f4AS',
+                    'created_at'=>NULL,
+                    'updated_at'=>NULL
+                    ] );
+
+
+                    
+        
+    
+
     }
 }
