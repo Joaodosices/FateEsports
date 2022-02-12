@@ -11,7 +11,6 @@
     <body>
 @section('content')
 
-        <div class="tudo">
         @if (Session::has('success'))
                     <div class="alert alert-success">
                         <i class="fas fa-check-circle"></i> {{ Session::get('success') }}
@@ -19,6 +18,7 @@
         @endif
 
     <!-- ==========hero-area========== -->
+    <br>
     <section class="hero-section">
         <div class="hero-area bg_img" data-background="img/sobre/hero.jpg">
             <!--mudar -->
@@ -38,10 +38,9 @@
     <br><br><br><br>
     <!-- ==========overview-two-section========== -->
     <section class="overview-two-section overview-three-section">
-        <div class="container-fluid p-0 ">
+        <div class="container-fluid p-0">
             <div class="row m-0">
                 <div class="col-lg-6 p-0 bg_img" data-background="img/sobre/fundo1.jpg">
-                    <!--mudar -->
                 </div>
                 <div class="col-lg-6 p-0">
                     <div class="overview-two-content w-100 h-100 padding-top padding-bottom theme-overlay-deep bg_img" data-background="img/sobre/fundo2.png">
@@ -53,15 +52,15 @@
                             <div class="choose-area light-color">
                                 <div class="choose-item">
                                     <h4 class="title">Produtos de alta qualidade.</h4>
-                                    <p>Lorem ipsum dolor sit ampendisse illum elit nunc suspendisse dolor, sed nulla nec, tempor amet ac venenatis praesent libero. Ante ea justo aptent</p>
+                                    <p>Todos os produtos vendidos na loja Fate são produtos da mais alta qualidade com o objetivo de oferecer o maior conforto a um custo justo. </p>
                                 </div>
                                 <div class="choose-item">
                                     <h4 class="title">Doação de 25% dos lucros.</h4>
-                                    <p>Lorem ipsum dolor sit ampendisse illum elit nunc suspendisse dolor, sed nulla nec, tempor amet ac venenatis praesent libero. Ante ea justo aptent</p>
+                                    <p>25% de todos os lucros obtidos através da nossa loja e torneios serão separados para apoiar as causas mais necessitadas.</p>
                                 </div>
                                 <div class="choose-item">
                                     <h4 class="title">Suporte 24/7.</h4>
-                                    <p>Lorem ipsum dolor sit ampendisse illum elit nunc suspendisse dolor, sed nulla nec, tempor amet ac venenatis praesent libero. Ante ea justo aptent</p>
+                                    <p>Suporte e atendimento pessoal a qualquer hora na nossa página contactos.</p>
                                 </div>
                             </div>
                         </div>
@@ -79,8 +78,6 @@
                     <div class="section-header left-style">
                         <h2 class="title">CEO Team</h2>
                         <span class="d-inline-block mx-auto shape-header"></span>
-                        <p>Lorem ipsum dolor sit ampendisse illum elit nunc suspendisse dolor, sed nulla nec, tempor amet ac venenatis praesent libero. Ante ea justo aptentLorem ipsum dolor sit ampendisse illum elit nunc suspendisse dolor, sed nulla nec,
-                            tempor amet ac venenatis praesent libero. Ante ea justo aptent</p>
                     </div>
                 </div>
             </div>
@@ -89,9 +86,9 @@
                 <div class="col-md-6 col-lg-4 col-sm-10">
                     <div class="CEO-item CEO-item-two">
                         <div class="c-thumb">
-                            <a href="CEO-profile.html">
-                                <img src="{{$user->img}}" alt="CEO">
-                            </a>
+                            <img href="CEO-profile.html" >
+                                <img src="{{$user->img}}" width="auto"  height="340" alt="CEO">
+                            </img>
                         </div>
                         <div class="CEO-content">
                             <h4 class="sub-title">
@@ -110,7 +107,6 @@
                                     <a target="_blank" href="{{$user->instagram}}">
                                         <i class="fab fa-instagram"></i>
                                     </a>
-                              
                             </ul>
                         </div>
                     </div>
@@ -148,40 +144,54 @@
     </div>
 
     @if(Session::get('authAdmin') == 1)
-                            <div id="backoffice-sobre">
+                            <div id="backoffice-perfil">
                                 <div  id="backoffice-titulo">
                                     <h1 >BACK <span>OFFICE</span></h1>
                                 </div>
                             <table id="tabela">
                                 <tbody>
                                     <th>Name</th>
-                                    <th>Surname</th>
-                                    <th>imagem</th>
+                                    <th>Apelido</th>
                                     <th>facebook</th>
                                     <th>instagram</th>
                                     <th>twitter</th>
-                                    <th>Delete</th>
+                                    <th>imagem</th>
+                                    <th>mostrar</th>
+                                    <th>editar</th>
+                                    <th>Eliminar</th>
                                     @foreach($users as $user)
+                                    <form method="post" action="/sobre/{{ $user->id }}">
+                                    @csrf
                                     <tr>
-                                        <td>{{ $user->name }}</td>
-                                        <td>{{ $user->surname }}</td>
-                                        <td> <img src="{{$user->img}}"></td>
-                                        <td>{{ $user->facebook }}</td>
-                                        <td>{{ $user->instagram }}</td>
-                                        <td>{{ $user->twitter }}</td>
+                                        <td><input readOnly type="text" name="changename" class="nameadmin"  value="{{ $user->name }}"></td>
+                                        <td><input readOnly type="text" name="changesurname" class="surnameadmin"  value="{{ $user->surname }}"></td>
+                                        <td><input readOnly type="text" name="changefacebook" class="facebookadmin"  value="{{ $user->facebook }}"></td>
+                                        <td><input readOnly type="text" name="changeinstagram" class="instagramadmin"  value="{{ $user->instagram }}"></td>
+                                        <td><input readOnly type="text" name="changetwitter" class="twitteradmin"  value="{{ $user->twitter }}"></td>
+                                        <td><img class="adminimgadmin" style="display:none " src="{{$user->img}}"><div class="linkimgdmin">
+                                            <input readOnly type="text" name="changeimg" class="imgadmin"  value="{{ $user->img }}"></div></td>
+                                        
+                                        <td>
+                                            <img  class="eliminar btadminimgmostrar"  src="{{ asset('img\parcerias\mostrar.png')}}">
+                                            <img  class="eliminar btadminimgesconder" style="display:none" src="{{ asset('img\parcerias\fechar.png')}}">
+                                        </td>
+                                        <td>
+                                            <img  class="eliminar btadmineditar"  src="{{ asset('img\parcerias\editar.png')}}">
+                                            <button style="background: url({{ asset('img\parcerias\editar.png')}})" class="eliminar btadminconfirmar" type="submit"> SUB </button>
+
+
                                         <td><a href="sobre/delete/{{ $user->id }}"><img class="eliminar"  src="{{ asset('img\paginacontactos\trash.png') }}"></a></td>
                                     </tr>
+                                    </form>
                                     @endforeach
                                 </tbody>
                             </table>
                             </div>
                             @endif
-                            </div>
+
 @endsection
 
 @section('scripts')
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js" integrity="sha512-gWlyRVDsJvp5kesJt4cSdPPLZIBdln/uSwzYgUicQcbTgRNQE4QhP5KUBIYlLYLkiKIQiuD7KUMHzqGNW/D2bQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="js/sobre/sobreanimacao.js" type="text/javascript"></script> 
     <script src="{{ asset('js/sobre/jquery-3.3.1.min.js') }}"></script>
     <script src="{{ asset('js/sobre/modernizr-3.6.0.min.js') }}"></script>
     <script src="{{ asset('js/sobre/plugins.js') }}"></script>
@@ -197,4 +207,74 @@
     <script src="{{ asset('js/sobre/nice-select.js') }}"></script>
     <script src="{{ asset('js/sobre/main.js') }}"></script>
 
+<!-- ==================== -->
+
+<script>
+    const l = document.getElementsByClassName("btadminimgesconder").length;
+    const ll = document.getElementsByClassName("btadminimgmostrar").length;
+    const lll = document.getElementsByClassName("btadmineditar").length;
+    const llll = document.getElementsByClassName("btadminconfirmar").length;
+
+
+   
+
+
+    for (let i = 0; i < ll; i++) {
+        document.getElementsByClassName("btadminimgmostrar")[i].onclick = function(){
+        document.getElementsByClassName("btadminimgmostrar")[i].style.display = "none"
+        document.getElementsByClassName("btadminimgesconder")[i].style.display = "inline"
+        document.getElementsByClassName("adminimgadmin")[i].style.display = "inline"
+        document.getElementsByClassName("linkimgdmin")[i].style.display = "none"
+       }    
+        
+
+    }
+    
+
+    
+    for (let i = 0; i < l; i++) {
+        document.getElementsByClassName("btadminimgesconder")[i].onclick = function(){
+        document.getElementsByClassName("btadminimgesconder")[i].style.display = "none"
+        document.getElementsByClassName("btadminimgmostrar")[i].style.display = "inline"
+        document.getElementsByClassName("adminimgadmin")[i].style.display = "none"
+        document.getElementsByClassName("linkimgdmin")[i].style.display = "inline"
+       }    
+        
+
+    }
+  
+
+      
+    for (let i = 0; i < lll; i++) {
+        document.getElementsByClassName("btadmineditar")[i].onclick = function(){
+        document.getElementsByClassName("btadminconfirmar")[i].style.display = "inline"
+        document.getElementsByClassName("btadmineditar")[i].style.display = "none"
+        document.getElementsByClassName("nameadmin")[i].readOnly = false;
+        document.getElementsByClassName("surnameadmin")[i].readOnly = false;
+        document.getElementsByClassName("facebookadmin")[i].readOnly = false;
+        document.getElementsByClassName("instagramadmin")[i].readOnly = false;
+        document.getElementsByClassName("twitteradmin")[i].readOnly = false;
+        document.getElementsByClassName("imgadmin")[i].readOnly = false;
+       }    
+        
+
+    }
+
+      
+    for (let i = 0; i < llll; i++) {
+        document.getElementsByClassName("btadminconfirmar")[i].onclick = function(){
+        document.getElementsByClassName("btadminconfirmar")[i].style.display = "none"
+        document.getElementsByClassName("btadmineditar")[i].style.display = "inline"
+        document.getElementsByClassName("nameadmin")[i].readOnly = true;
+        document.getElementsByClassName("surnameadmin")[i].readOnly = true;
+        document.getElementsByClassName("facebookadmin")[i].readOnly = true;
+        document.getElementsByClassName("insagramadmin")[i].readOnly = true;
+        document.getElementsByClassName("twitteradmin")[i].readOnly = true;
+        document.getElementsByClassName("imgadmin")[i].readOnly = true;
+       }    
+        
+
+    }
+
+</script>
 @endsection

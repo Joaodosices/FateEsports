@@ -319,12 +319,6 @@ textarea {
     padding: 10px;
 }
 
-input,
-select {
-    height: 50px;
-    color: #f5f5f5;
-}
-
 label,
 select {
     cursor: pointer;

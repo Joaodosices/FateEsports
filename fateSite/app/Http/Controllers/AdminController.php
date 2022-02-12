@@ -100,7 +100,56 @@ class AdminController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        $mudaruser = User::find($id)->update([
+            'name' => $request->get('changename'),
+            'surname' => $request->get('changesurname')
+        ]);
+
+        $mudaradmin = Admin::where("id_user","=",$id)->update([
+            'facebook' => $request->get('changefacebook'),
+            'instagram' => $request->get('changeinstagram'),
+            'twitter' => $request->get('changetwitter'),
+            'img' => $request->get('changeimg'),
+        ]);
+    // $array=$request->except('_token');
+
+    
+    
+    // $share = User::find($id);
+
+
+    // if($array){
+
+    //     $share->name=$array['changename'];
+
+    //     $share->name=$array['changename'];
+        
+    //     $share->surname=$array['changesurname'];
+
+    //     $share->facebook=$array['changefacebook'];
+
+    //     $share->instagram=$array['changeinstagram'];
+
+    //     $share->twitter=$array['changetwitter'];
+
+    //     // $share=array(
+    //     //     'name'=>$array['changename']
+    //     // );
+
+    //     // $share->name = $request->changename;
+    //     $share->save();
+    // }
+        
+
+    //     // 'name' => $request->get('changename'),
+    //     // 'description' => $request->get('changedescription'),
+    //     // 'linkpartner' => $request->get('changelinkpartner'),
+    //     // 'img' => $request->get('changeimg'),
+
+
+        
+     return redirect()->route('admins.index')->withSuccess("Editado com sucesso!");
     }
 
     /**
