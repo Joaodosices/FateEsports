@@ -23,7 +23,7 @@
         <div class="hero-area bg_img" data-background="img/sobre/hero.jpg">
             <!--mudar -->
             <div class="container">
-                <h1 class="title">about us</h1>
+                <h1 class="title">Sobre Nós</h1>
             </div>
         </div>
         <div class="container">
@@ -76,7 +76,7 @@
             <div class="row align-items-end">
                 <div class="col-md-7">
                     <div class="section-header left-style">
-                        <h2 class="title">CEO Team</h2>
+                        <h2 class="title">Founders Team</h2>
                         <span class="d-inline-block mx-auto shape-header"></span>
                     </div>
                 </div>
@@ -141,12 +141,14 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div><br><br>
 
     @if(Session::get('authAdmin') == 1)
-                            <div id="backoffice-perfil">
+                             <div id="fundo">
+                            <div id="backoffice-sobre">
                                 <div  id="backoffice-titulo">
-                                    <h1 >BACK <span>OFFICE</span></h1>
+                                    <br>
+                                    <h1>BACK <span>OFFICE</span></h1>
                                 </div>
                             <table id="tabela">
                                 <tbody>
@@ -177,16 +179,16 @@
                                         </td>
                                         <td>
                                             <img  class="eliminar btadmineditar"  src="{{ asset('img\parcerias\editar.png')}}">
-                                            <button style="background: url({{ asset('img\parcerias\editar.png')}})" class="eliminar btadminconfirmar" type="submit"> SUB </button>
-
-
-                                        <td><a href="sobre/delete/{{ $user->id }}"><img class="eliminar"  src="{{ asset('img\paginacontactos\trash.png') }}"></a></td>
+                                            <input type="image" class="eliminar btadminconfirmar" alt="confirmar" src="{{ asset('img\parcerias\confirmar.png')}}" style="display:none">
+                                            <td><a href="sobre/delete/{{ $user->id }}"><img class="eliminar"  src="{{ asset('img\paginacontactos\trash.png') }}"></a></td>
                                     </tr>
                                     </form>
                                     @endforeach
                                 </tbody>
                             </table>
+                            </div><br><br><br>
                             </div>
+                            
                             @endif
 
 @endsection
