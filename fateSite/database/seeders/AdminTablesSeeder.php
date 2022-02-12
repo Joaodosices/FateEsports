@@ -16,7 +16,7 @@ class AdminTablesSeeder extends Seeder
     {
             Admin::create( [
             'id'=>1,
-            'img'=>'https://i.imgur.com/f1g7gvbh.jpg',
+            'img'=>'https://i.imgur.com/LX4NaXx.png',
             'description'=>'',
             'facebook'=>'https://www.facebook.com/',
             'instagram'=>'https://www.instagram.com/',
@@ -28,7 +28,7 @@ class AdminTablesSeeder extends Seeder
                         
             Admin::create( [
             'id'=>2,
-            'img'=>'https://i.imgur.com/7DIwlN3h.jpg',
+            'img'=>'https://i.imgur.com/2q98lIZ.png',
             'description'=>'',
             'facebook'=>'https://www.facebook.com/',
             'instagram'=>'https://www.instagram.com/',
@@ -40,7 +40,7 @@ class AdminTablesSeeder extends Seeder
                         
             Admin::create( [
             'id'=>3,
-            'img'=>'https://i.imgur.com/hQMoftSh.jpg',
+            'img'=>'https://i.imgur.com/vBAeEmE.png',
             'description'=>'',
             'facebook'=>'https://www.facebook.com/',
             'instagram'=>'https://www.instagram.com/',
@@ -52,7 +52,7 @@ class AdminTablesSeeder extends Seeder
                         
             Admin::create( [
             'id'=>4,
-            'img'=>'https://i.imgur.com/GzbZnRRh.jpg',
+            'img'=>'https://i.imgur.com/jCOQ5aE.png',
             'description'=>'',
             'facebook'=>'https://www.facebook.com/',
             'instagram'=>'https://www.instagram.com/',
@@ -64,24 +64,12 @@ class AdminTablesSeeder extends Seeder
                         
             Admin::create( [
             'id'=>5,
-            'img'=>'https://i.imgur.com/2uTidLmh.jpg',
+            'img'=>'https://i.imgur.com/8VZwRHy.png',
             'description'=>'',
             'facebook'=>'https://www.facebook.com/',
             'instagram'=>'https://www.instagram.com/',
             'twitter'=>'https://www.twitter.com/',
             'id_user'=>5,
-            'created_at'=>NULL,
-            'updated_at'=>NULL
-            ] );
-                        
-            Admin::create( [
-            'id'=>6,
-            'img'=>'https://i.imgur.com/kf9j2EAh.jpg',
-            'description'=>'',
-            'facebook'=>'https://www.facebook.com/',
-            'instagram'=>'https://www.instagram.com/',
-            'twitter'=>'https://www.twitter.com/',
-            'id_user'=>6,
             'created_at'=>NULL,
             'updated_at'=>NULL
             ] );
