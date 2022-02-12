@@ -49,6 +49,8 @@ class PerfilController extends Controller
     public function index()
     {
         $users = User::all();
+        $users = User::where("id" , ">"  , "0" )
+        ->paginate(10);
 
         return view('perfil', compact('users'));
     }

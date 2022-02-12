@@ -35,8 +35,7 @@
                                 
                             </a></li>
             @endguest
-            <li> <img src="{{ asset('img/header/profile_icon.png') }}" class="user_profile" alt="user profile" width="50" height="40"></li>
-
+            
         </div>
         </ul>
     </nav>

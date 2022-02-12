@@ -3,6 +3,7 @@
 @section('styles')
     <link rel="stylesheet" href="{{ asset('css/profile.css') }}" type="text/css">
     
+    
 @endsection
 
 @section('content')
@@ -18,9 +19,10 @@
         <h1> Bem-Vindo, <span> {{ Auth::user()->name }} </span>!</h1>
 
         <ul>
-            <li> <a href="#"> <img src="{{ asset('img/perfil/profile_icon.png') }}" alt="user profile" width="38"
+            <li id="detalhe_conta"> <a href="#"> <img src="{{ asset('img/perfil/profile_icon.png') }}" alt="user profile" width="38"
                         height="35"> DETALHES DA CONTA</a> </li>
-            <li> <a class="" href="#"> <img src="{{ asset('img/perfil/logout_icon.png') }}" alt="user profile" width="38" height="35">
+            <li> <a class="" href="{{ route('logout') }}"
+                                onclick="document.getElementById('logout-form').submit();"> <img src="{{ asset('img/perfil/logout_icon.png') }}" alt="user profile" width="38" height="35">
                     LOGOUT</a> </li>
         </ul>
 
@@ -141,6 +143,9 @@
                                     @endforeach
                                 </tbody>
                             </table>
+                            <div class="paginacao">
+                                    {{ $users->links() }}
+                                </div>
                             </div>
                             @endif
 

@@ -232,14 +232,19 @@ color: #d50101;
 color: black;
 }
 
+
+
 #backoffice-titulo h1{
-font-size: 60px;
-text-align: center;
-margin-bottom: 50px;
-margin-top: 0px;
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 0px;
+  color: white;
 }
 
-
+#backoffice-perfil {
+  background-color: #353535;
+}
 
 .alert-success {
 font-size: 20px;
@@ -280,6 +285,10 @@ padding: 10px;
 text-align: center;
 }
 
+#tabela tr{
+  background-color: #ffffff;
+}
+
 #tabela tr:nth-child(even){
   background-color: #e9e8e8;
 }
@@ -301,6 +310,43 @@ width: 80px;
   background-color: #bd0202;
   text-align: center;
   color: #ffffff;
+}
+
+svg{
+  width: 50px;
+  height: 50px;
+}
+
+a{
+  color: white;
+}
+
+#detalhe_conta {
+  border-left: 3px solid #bd0202;
+}
+
+.paginacao{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.paginacao p:first-of-type{
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 14pt;
+}
+
+.font-medium{
+  padding: 0 8px 0 3px !important;
+}
+.flex-1{
+  display: none;
+}
+
+.px-4 a:hover{
+  border: 0px;
 }
 
 
@@ -462,6 +508,7 @@ bottom: 540px;
   margin-bottom: 50px;
   margin-top: 0px;
   margin-left: 0px;
+  color: white;
   }
   
 

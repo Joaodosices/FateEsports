@@ -73,7 +73,7 @@ a.icon  {
   display: none;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 901px) {
   #header-conteudo {
     display: flex !important;
   }
