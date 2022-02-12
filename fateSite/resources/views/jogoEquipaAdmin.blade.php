@@ -24,9 +24,9 @@
             
                 <div id="areaInputsAdicionarJogador">
                     <p>Nome do jogador...</p>
-                    <input class="" type="text" name="nomeJogador">
+                    <input required class="" type="text" name="nomeJogador">
                     <p>Link da foto</p>
-                    <input class="" type="text" name="imgJogador" value="https://i.imgur.com/CDVqIQj.png">
+                    <input required class="" type="text" name="imgJogador" value="https://i.imgur.com/CDVqIQj.png">
                     <p>Utilizador</p>
                     <select name="" id="jogadorUser">
                         @foreach($listUsers as $user)
@@ -62,9 +62,9 @@
                 </div>
                 <div id="areaInputsAdicionarTrofeu">
                     <p>Nome do Torneio...</p>
-                    <input class="" type="text" name="nomeTrofeu">
+                    <input required class="" type="text" name="nomeTrofeu">
                     <p>Data</p>
-                    <input class="" type="date" name="dataTrofeu">
+                    <input required class="" type="date" name="dataTrofeu">
                     <p>Posição</p>
                     <select name="positionTrofeu">
                         @for ($i = 0; $i < 15; $i++)
