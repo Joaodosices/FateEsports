@@ -136,6 +136,7 @@ class jogoEquipaAdminController extends Controller
         $changeNamePlayer = Player::find($idPlayer)->update([
             'nickname' => $request->get('inputNomePlayer')
           ]);
+    
         return redirect()->back()->withSuccess("Nome de jogador modificado!");
     }
 
@@ -144,6 +145,7 @@ class jogoEquipaAdminController extends Controller
         $changeNameTrophie = Trophie::find($idTrophie)->update([
             'name' => $request->get('inputNomeTrophie')
           ]);
+          
         return redirect()->back()->withSuccess("Nome de troféu modificado!");
     }
     
