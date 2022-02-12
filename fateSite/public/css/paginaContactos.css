@@ -212,6 +212,14 @@ svg{
     color: white;
 }
 
+div#equipasfooter {
+    margin-top: 58px !important;
+}
+
+div#fateesportsfooter {
+    margin-top: 58px !important;
+}
+
 @media (max-width: 1200px) {
 
     #areaFala p{
