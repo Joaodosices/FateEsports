@@ -48,7 +48,7 @@ class PartnerController extends Controller
             'img' => $request->img,
         ]);
 
-        return redirect()->route('partner.index')->withSuccess("Editado com sucesso!");
+        return redirect()->route('partner.index')->withSuccess("Parceria criada com sucesso!");
     }
 
     /**

@@ -50,11 +50,11 @@
    </div>
 
    @if(Session::get('authAdmin') == 1)
+                            <div id="fundo">
                             <div id="backoffice-parcerias">
                                 <div  id="backoffice-titulo">
-                                    <h1 >Admin <span class="DestaqueTitulo">Side</span></h1>
-                                </div>              
-                            
+                                    <h1 class="TituloAdminSidePartner" >Admin <span class="DestaqueTitulo">Side</span></h1>                           
+                                <div  id="divcriar" class="eliminar"><input type="image"   class=" btadmincriar" alt="criar" src="{{ asset('img\parcerias\criar.png')}}" ></div> </div>  
                             <table id="tabela">
                                 <tbody>
                                     <th>Nome</th>
@@ -63,7 +63,7 @@
                                     <th>Imagem</th>
                                     <th>Mostrar</th>
                                     <th>Editar</th>
-                                    <th>Eliminar</th>
+                                    <th>Eliminar</th>                           
                                     @foreach($partners as $partner)
                                     <form method="post" action="/parcerias/{{ $partner->id }}" >
                                     @csrf
@@ -80,9 +80,8 @@
                                         </td>
                                         <td>
                                             <img  class="eliminar btadmineditar"  src="{{ asset('img\parcerias\editar.png')}}">
-                                            <!-- <img  class="eliminar btadminconfirmar" style="display:none "  src="{{ asset('img\parcerias\confirmar.png')}}"></td> -->
-                                            <button style="background: url({{ asset('img\parcerias\editar.png')}})" class="eliminar btadminconfirmar" type="submit"  > SUBMETER </button>
-                                        <td><a href="parcerias/delete/{{ $partner->id }}"><img class="eliminar"  src="{{ asset('img\paginacontactos\trash.png') }}"></a></td>
+                                            <input type="image" class="eliminar btadminconfirmar" alt="confirmar" src="{{ asset('img\parcerias\confirmar.png')}}" style="display:none" >
+                                            <td><a href="parcerias/delete/{{ $partner->id }}"><img class="eliminar"  src="{{ asset('img\paginacontactos\trash.png') }}"></a></td>
                                     </tr>
                                     </form>
                                     @endforeach
@@ -92,7 +91,40 @@
                                 </tbody>
                             </table>
                             
+                            
+
+                            <div class="FormAdicionar">
+                            <form class="Form123" method="post" action="">
+                            @csrf
+                
+                            <a  href="#"> <img class="eliminar btadminfechar" src="{{ asset('img\parcerias\close.png')}}" alt=""></a>
+
+                            <p class="TituloAdicionarPartner">Adicionar Parceria</p>
+
+                             <label for="">Nome</label><br/>
+                             <input  required type="text" name="name" class="nameadmin"><br/>
+                           
+                             <label for="">Descrição</label><br/>
+                             <textarea   required type="text" name="description" class="descriptionadmin" cols="1" rows="1"></textarea><br/>
+                                        
+                             <label for="">Link do Parceiro</label><br/>
+                             <input required type="text" name="linkpartner" class="linkpartneradmin1" ><br/>
+                                        
+                             <label for="">Link da Imagem (Imgur)</label><br/>
+                             <input required type="text" name="img" class="imgadmin"><br/>
+                                        
+                             <input type="image" class="eliminar btadminconfirmar" alt="confirmar" src="{{ asset('img\parcerias\confirmarnovo.png')}}" >
+                             <!-- <input type="image" class="eliminar btadminreset" alt="reset" src="{{ asset('img\parcerias\reset.png')}}" > -->
+                             <button type="reset"  class="eliminar btadminreset"><img src="{{ asset('img\parcerias\reset.png')}}"></button>
+                        
+
+
+                            </form>
                             </div>
+
+                            </div>
+                            </div>
+                            
                             @endif
    
 @endsection
@@ -107,8 +139,6 @@
     const lll = document.getElementsByClassName("btadmineditar").length;
     const llll = document.getElementsByClassName("btadminconfirmar").length;
 
-
-   
 
 
     for (let i = 0; i < ll; i++) {
@@ -164,6 +194,15 @@
 
     }
 
+    document.getElementsByClassName("btadmincriar")[0].onclick = function(){
+        document.getElementsByClassName("FormAdicionar")[0].style.display = "flex"
+    }
+        
+    document.getElementsByClassName("btadminfechar")[0].onclick = function(){
+        document.getElementsByClassName("FormAdicionar")[0].style.display = "none"
+    }
+
+    
    
     
 

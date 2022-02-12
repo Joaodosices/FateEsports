@@ -62,6 +62,7 @@ Route::get('/email/{contact}', [ContactController::class, 'email'])->name('gm.em
 Route::post('/email', [ContactController::class, 'sendEmail'])->name('gm.sendEmail');
 Route::get('/parcerias', [PartnerController::class, 'index'])->name('partner.index');
 Route::post('/parcerias/{id}', [PartnerController::class, 'update'])->name('partner.update');
+Route::post('/parcerias', [PartnerController::class, 'store'])->name('partner.store');
 
 //Rota parcerias para eliminar dados
 Route::get('parcerias/delete/{id}', [PartnerController::class, 'destroy']);
