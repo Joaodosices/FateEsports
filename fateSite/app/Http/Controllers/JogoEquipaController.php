@@ -11,9 +11,6 @@ use Session;
 
 class JogoEquipaController extends Controller
 {
-    public function __construct(){
-        $this->cookie = 0;
-    }
     /**
      * Display a listing of the resource.
      *
@@ -54,15 +51,21 @@ class JogoEquipaController extends Controller
     public function show($id_game)
     {
         $gamesList = [];
-        $cookieChecker = 0;
-        if (isset($_COOKIE[$id_game])){
-            if ($_COOKIE[$id_game] == 1) {
-                $this->cookie = 1;
-                $cookieChecker  = $this->cookie;
+        $idUser = Auth::id();
+
+         if (isset($_COOKIE[$idUser . "-" . $id_game])){
+            if ($_COOKIE[$idUser . "-" . $id_game] == 1) {
+                $cookieChecker = 1;
+                echo $cookieChecker;
+                print_r($cookieChecker);
             } else {
-                $this->cookie = 0;
-                $cookieChecker  = $this->cookie;
+                $cookieChecker = 0;
+                echo $cookieChecker;
+                print_r($cookieChecker);
             }
+         }
+        if (!isset($cookieChecker)) {
+            $cookieChecker = 0;
         }
         if (Session::get('authAdmin') == 1) {
             $gamesList = Game::all();
@@ -83,8 +86,9 @@ class JogoEquipaController extends Controller
     {
         $Addupvotes = $upvotes + 1;
         $player = Player::find($idPlayer);
+        $idUser = Auth::id();
 
-        setcookie($idGame, "1", time() + (86400 * 1000), "/");
+        setcookie($idUser . "-" . $idGame, "1", time() + (86400 * 1000), "/");
 
         if($player) {
             $player->upvotes = $Addupvotes;

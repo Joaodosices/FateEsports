@@ -153,3 +153,7 @@ grid players
     top: 1rem;
     overflow: hidden;
 }
+.areaVotePlayer p{
+    padding-left: 0.6rem;
+    padding-top: 0.6rem;
+}
