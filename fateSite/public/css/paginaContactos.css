@@ -88,7 +88,7 @@ form select{
     border-bottom: 0px ;
 }
 
-#botaoForm{
+#areaForm #botaoForm{
     background-color: var(--redCallAction);
     color: white;
     display: flex;
