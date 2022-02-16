@@ -77,7 +77,12 @@ class jogoEquipaAdminController extends Controller
     
     public function filterGame($id)
     {
-        Session::put('gameSelected', $id);
+        if (Session::get('authAdmin') != 1) {
+            return redirect()->back();
+        }
+
+        
+
         $gamesList = $this->gamesList;
         $listUsers = DB::table("users")->select('*')->whereNotIn('id',function($query) {
             $query->select('id_user')->from('players');
